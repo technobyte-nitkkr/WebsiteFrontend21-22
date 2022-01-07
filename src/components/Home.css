@@ -3,7 +3,7 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
-  background: url(../images/background5.gif);
+  background: url(../images/b8.jpg);
   background-attachment: fixed;
   background-size: cover;
   width: 100vw;
@@ -28,6 +28,7 @@
   letter-spacing: 10px;
   text-align: center;
   margin-top: 15%;
+  margin-left: 350px;
 }
 
 .home-links {

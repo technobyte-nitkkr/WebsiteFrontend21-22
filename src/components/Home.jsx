@@ -5,9 +5,14 @@ import "./Home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import dat from "dat.gui";
-import "./home.scss";
+// import "./home.scss";
+import { interaction } from "./button";
+
+import "./button.scss";
+
 export default function Home() {
   useEffect(() => {
+    interaction();
     AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -43,7 +48,23 @@ export default function Home() {
             <span>S</span>
           </div>
         </div>
-        <nav class="circle-menu">
+
+        <div className="component">
+        <div className="csstranforms">
+				<button className="cn-button" id="cn-button">+</button>
+				<div className="cn-wrapper" id="cn-wrapper">
+				    <ul>
+				      <li><a href="#"><span className="icon-picture"></span></a></li>
+				      <li><a href="#"><span className="icon-headphones"></span></a></li>
+				      <li><a href="#"><span className="icon-home"></span></a></li>
+				      <li><a href="#"><span className="icon-facetime-video"></span></a></li>
+				      <li><a href="#"><span className="icon-envelope-alt"></span></a></li>
+				     </ul>
+				</div>
+				<div id="cn-overlay" class="cn-overlay"></div>
+        </div>
+      </div>
+        {/* <nav class="circle-menu">
           <div class="center"></div>
           <ul>
             <li>
@@ -65,12 +86,12 @@ export default function Home() {
               <a href="#">Developers</a>
             </li>
           </ul>
-        </nav>
+        </nav> */}
       </div>
 
-      <div className="footer">
+      {/* <div className="footer">
         <p></p>
-      </div>
+      </div> */}
     </div>
   );
 }
