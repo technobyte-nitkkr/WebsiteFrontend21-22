@@ -1,105 +1,103 @@
-.developers
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #000;
-
+.developers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #152233;
 }
-.developers h1
-{
-    color: white;
-    margin-top: 50px;
+.developers h1 {
+  color: white;
+  margin-top: 50px;
 }
-.developers-container
-{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.developers-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.hexagon
-{
-    position: relative;
-    width: 350px;
-    height: 400px;
-    margin: 100px 30px 80px;
+.hexagon {
+  position: relative;
+  width: 350px;
+  height: 400px;
+  margin: 100px 30px 80px;
 }
 
-.hexagon::before
-{
-    content: '';
-    position: absolute;
-    bottom: -70px;
-    width: 100%;
-    height: 60px;
-    background: radial-gradient(rgba(255,255,255,0.5),transparent,transparent);
-    border-radius: 50%;
-    transition: 0.5s;
+.hexagon::before {
+  content: "";
+  position: absolute;
+  bottom: -90px;
+  width: 140%;
+  margin-left: -20%;
+  height: 100px;
+  background: radial-gradient(
+    rgba(255, 255, 255, 0.5),
+    transparent,
+    transparent
+  );
+  border-radius: 50%;
+  transition: 0.5s;
 }
-.hexagon:hover::before
-{
-    opacity: 0.8;
-    transform:scale(0.8);
+.hexagon:hover::before {
+  opacity: 0.8;
+  transform: scale(0.9);
+}
+.shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: 0.5s;
+}
+.hexagon:hover .shape {
+  transform: translateY(-30px);
+}
+.shape img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.developers-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+  background: rgba(113, 10, 91, 0.5);
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+}
+.hexagon:hover .developers-content {
+  opacity: 1;
+}
+.developers-content p {
+  line-height: 60px;
+}
+.developers-content p a i {
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  font-size: 30px;
+}
 
-}
-.shape
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: #000;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    transition: 0.5s;
-}
-.hexagon:hover .shape
-{
-    transform:translateY(-30px)
-}
-.shape img
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.developers-content
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-    background:rgba(42, 81, 255, 0.7);
-    color: #fff;
-    opacity: 0;
-    transition: 0.5s;
-}
-.hexagon:hover .developers-content
-{
-    opacity: 1;
-}
-.developers-content p 
-{
-    line-height: 60px;
-}
-.developers-content p a i
-{
-    height: 50px;
-    width: 50px;
-    color: #fff;
-    font-size: 30px;
+.name {
+  position: absolute;
+  bottom: -60px;
+  width: 100%;
+  text-align: center;
+  color: rgba(113, 10, 91, 1);
 }
