@@ -20,7 +20,7 @@
 }
 
 .home-text {
-  width: 50%;
+  width: 100%;
   padding-bottom: 150px;
   font-size: 150px;
   line-height: 46px;
@@ -28,7 +28,8 @@
   letter-spacing: 10px;
   text-align: center;
   margin-top: 15%;
-  margin-left: 350px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .home-links {
@@ -256,47 +257,62 @@
 }
 
 @media screen and (max-width: 600px) {
-  .home-text span::before {
-    content: "";
-    background: rgb(182, 255, 218);
-    width: 0;
-    height: 0;
-    justify-content: center;
-    top: 0;
-    left: 0;
+  .home-text {
+    width: 100%;
+    margin-left: 1%;
+    margin-right: 10%;
   }
   .home-text-div span:nth-child(1) {
-    top: 0;
-    left: 10%;
+    top: 45%;
+    left: 0%;
   }
-
-  .home-text-div span:nth-child(6) {
-    left: 160%;
-  }
-  .home-text-div span:nth-child(3) {
-    left: 70%;
-    top: 0;
-    transform: none;
-  }
-  .home-text-div span:nth-child(5) {
-    left: 125%;
-    top: 0;
-    transform: none;
+  .home-text-div span:nth-child(1)::before {
+    left: 40%;
+    height: 751%;
   }
   .home-text-div span:nth-child(2) {
-    left: 45%;
-    top: 0;
+    top: 30%;
+    left: 20%;
   }
-
+  .home-text-div span:nth-child(2)::before {
+    left: 20%;
+    height: 750%;
+  }
+  .home-text-div span:nth-child(3) {
+    top: 45%;
+    left: 40%;
+    transform: rotate(20deg);
+  }
+  .home-text-div span:nth-child(3)::before {
+    left: -100%;
+    height: 775%;
+    transform: rotate(-20deg);
+  }
   .home-text-div span:nth-child(4) {
-    left: 105%;
-    top: 0;
+    top: 30%;
+    left: 60%;
   }
-  .home-img {
-    margin-top: -100px;
+  .home-text-div span:nth-child(4)::before {
+    left: 25%;
+    height: 750%;
   }
-  .home-img img {
-    margin-top: -40px;
+  .home-text-div span:nth-child(5) {
+    top: 45%;
+    left: 74%;
+    transform: rotate(-20deg);
+  }
+  .home-text-div span:nth-child(5)::before {
+    left: 155%;
+    height: 775%;
+    transform: rotate(20deg);
+  }
+  .home-text-div span:nth-child(6) {
+    top: 30%;
+    left: 95%;
+  }
+  .home-text-div span:nth-child(6)::before {
+    left: 30%;
+    height: 750%;
   }
 }
 

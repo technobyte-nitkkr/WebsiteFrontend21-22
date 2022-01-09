@@ -1,13 +1,9 @@
 import React, { useEffect } from "react";
-import laptop from "../images/laptop.svg";
-import wave from "../images/wave.svg";
 import "./Home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import dat from "dat.gui";
-// import "./home.scss";
 import { interaction } from "./button";
-
+import HomeButtons from "./homeButtons";
 import "./button.scss";
 
 export default function Home() {
@@ -50,43 +46,8 @@ export default function Home() {
         </div>
 
         <div className="component">
-        <div className="csstranforms">
-				<button className="cn-button" id="cn-button">+</button>
-				<div className="cn-wrapper" id="cn-wrapper">
-				    <ul>
-				      <li><a href="#"><span className="icon-picture"></span></a></li>
-				      <li><a href="#"><span className="icon-headphones"></span></a></li>
-				      <li><a href="#"><span className="icon-home"></span></a></li>
-				      <li><a href="#"><span className="icon-facetime-video"></span></a></li>
-				      <li><a href="#"><span className="icon-envelope-alt"></span></a></li>
-				     </ul>
-				</div>
-				<div id="cn-overlay" class="cn-overlay"></div>
+          <HomeButtons></HomeButtons>
         </div>
-      </div>
-        {/* <nav class="circle-menu">
-          <div class="center"></div>
-          <ul>
-            <li>
-              <a href="#">Categories</a>
-            </li>
-            <li>
-              <a href="#">Team Altius</a>
-            </li>
-            <li>
-              <a href="#">Guest Lecture</a>
-            </li>
-            <li>
-              <a href="#">Sponsors</a>
-            </li>
-            <li>
-              <a href="#">Testimonial</a>
-            </li>
-            <li>
-              <a href="#">Developers</a>
-            </li>
-          </ul>
-        </nav> */}
       </div>
 
       {/* <div className="footer">
