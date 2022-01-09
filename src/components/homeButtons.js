@@ -10,37 +10,37 @@ export default function HomeButtons() {
         <div className="cn-wrapper" id="cn-wrapper">
           <ul>
             <li>
-              <a href="/a">
+              <a className="link" href="/a">
                 <span className="icon-picture"></span>
               </a>
             </li>
             <li>
-              <a href="/b">
+              <a className="link" href="/b">
                 <span className="icon-headphones"></span>
               </a>
             </li>
             <li>
-              <a href="/c">
+              <a className="link" href="/c">
                 <span className="icon-home"></span>
               </a>
             </li>
             <li>
-              <a href="/d">
+              <a className="link" href="/d">
                 <span className="icon-facetime-video"></span>
               </a>
             </li>
             <li>
-              <a href="/e">
+              <a className="link" href="/e">
                 <span className="icon-envelope-alt"></span>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a className="link" href="#">
                 <span className="icon-envelope-alt"></span>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a className="link" href="#">
                 <span className="icon-envelope-alt"></span>
               </a>
             </li>

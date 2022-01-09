@@ -105,7 +105,7 @@
   transition: border 0.3s ease;
 }
 
-.csstransforms .cn-wrapper li a {
+.csstransforms .cn-wrapper li .link {
   display: block;
   font-size: 1.18em;
   height: 14.5em;
@@ -127,7 +127,7 @@
   transition: opacity 0.3s, color 0.3s;
 }
 
-.csstransforms .cn-wrapper li a span {
+.csstransforms .cn-wrapper li .link span {
   font-size: 1.1em;
   margin-left: -1.5em;
   opacity: 0.7;
@@ -184,30 +184,30 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
   transform: rotate(156deg) skew(50deg);
 }
 
-.csstransforms .cn-wrapper li:nth-child(odd) a {
+.csstransforms .cn-wrapper li:nth-child(odd) .link {
   background-color: #a11313;
   background-color: #000000;
 }
 
-.csstransforms .cn-wrapper li:nth-child(even) a {
+.csstransforms .cn-wrapper li:nth-child(even) .link {
   background-color: #a61414;
   background-color: #000000;
 }
 
 /* active style */
-.csstransforms .cn-wrapper li.active a {
+.csstransforms .cn-wrapper li.active .link {
   background-color: #b31515;
   background-color: #000000;
 }
 
 /* hover style */
-.csstransforms .cn-wrapper li:not(.active) a:hover,
-.csstransforms .cn-wrapper li:not(.active) a:active,
-.csstransforms .cn-wrapper li:not(.active) a:focus {
+.csstransforms .cn-wrapper li:not(.active) .link:hover,
+.csstransforms .cn-wrapper li:not(.active) .link:active,
+.csstransforms .cn-wrapper li:not(.active) .link:focus {
   background-color: #b31515;
   background-color: hsla(0, 88%, 70%, 1);
 }
-.csstransforms .cn-wrapper li:not(.active) a:focus {
+.csstransforms .cn-wrapper li:not(.active) .link:focus {
   position: fixed;
 }
 
@@ -227,7 +227,7 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
   line-height: 5em;
 }
 
-.no-csstransforms .cn-wrapper li a {
+.no-csstransforms .cn-wrapper li .link {
   display: block;
   width: 100%;
   height: 100%;
@@ -237,17 +237,17 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
   border-right: 1px solid #ddd;
 }
 
-.no-csstransforms .cn-wrapper li a:last-child {
+.no-csstransforms .cn-wrapper li .link:last-child {
   border: none;
 }
 
-.no-csstransforms .cn-wrapper li a:hover,
-.no-csstransforms .cn-wrapper li a:active,
-.no-csstransforms .cn-wrapper li a:focus {
+.no-csstransforms .cn-wrapper li .link:hover,
+.no-csstransforms .cn-wrapper li .link:active,
+.no-csstransforms .cn-wrapper li .link:focus {
   background-color: white;
 }
 
-.no-csstransforms .cn-wrapper li.active a {
+.no-csstransforms .cn-wrapper li.active .link {
   background-color: #6f325c;
   color: #fff;
 }
