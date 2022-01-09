@@ -1,5 +1,6 @@
 import React from "react";
 import { interaction } from "./button";
+import { Link } from "react-router-dom";
 export default function HomeButtons() {
   return (
     <div>
@@ -10,39 +11,39 @@ export default function HomeButtons() {
         <div className="cn-wrapper" id="cn-wrapper">
           <ul>
             <li>
-              <a className="link" href="/a">
+              <Link className="link" to="/about">
                 <span className="icon-picture"></span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="link" href="/b">
+              <Link className="link" to="/categories">
                 <span className="icon-headphones"></span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="link" href="/c">
+              <Link className="link" to="/contact">
                 <span className="icon-home"></span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="link" href="/d">
+              <Link className="link" to="/lectures">
                 <span className="icon-facetime-video"></span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="link" href="/e">
+              <Link className="link" to="/sponsors">
                 <span className="icon-envelope-alt"></span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="link" href="#">
+              <Link className="link" to="/testimonial">
                 <span className="icon-envelope-alt"></span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="link" href="#">
+              <Link className="link" to="/devs">
                 <span className="icon-envelope-alt"></span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
