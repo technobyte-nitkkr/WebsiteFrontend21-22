@@ -1,0 +1,83 @@
+.team
+{
+ 
+background: url('https://i.ytimg.com/vi/XJqQHuAj4RI/maxresdefault.jpg');
+height: 100vh;
+width: 125vw;
+}
+.diamond-shape
+{
+    width: 20vw;
+    height: 20vw;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    z-index: 3;
+}
+.diamond-shape img
+{
+    width: 100%;
+}
+.diamond-shape-outer
+{
+    display: flex;
+}
+
+.team-slider
+{
+    position: absolute;
+    height: 50%;
+   bottom: 0;
+    animation: move 5s linear infinite;
+}
+
+@keyframes move
+{
+    0%
+    {
+        left: 0;
+    }
+    100%
+    {
+        left: -20vw;
+    }
+}
+.team-slider:hover
+{
+    animation-play-state: paused;
+}
+.diamond-shape:hover
+{
+    cursor: pointer;
+}
+.diamond{
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+
+.dev-info
+{
+    color:white;
+    background-color: rgb(17, 0, 255);
+    position: absolute;
+    width: 140%;
+    height: 15vw;
+    bottom: 15vw;
+    left: -20%;
+    z-index: 1;
+    border-radius: 20px;
+    padding: 10px;
+    opacity: 0;
+    box-shadow: 0 0  30px #fff;
+}
+.diamond-shape:hover ~ .dev-info
+{
+    opacity: 1;
+}
+
+.team-heading
+{
+    font-size: 100px;
+    color: white;
+    padding-top: 3%;
+    padding-left: 10%;
+}
