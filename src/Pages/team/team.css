@@ -1,83 +1,81 @@
-.team
-{
- 
-background: url('https://i.ytimg.com/vi/XJqQHuAj4RI/maxresdefault.jpg');
-height: 100vh;
-width: 125vw;
+.team {
+  background: #000;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
-.diamond-shape
-{
-    width: 20vw;
-    height: 20vw;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    z-index: 3;
+.diamond {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  width: 25vh;
+  height: 25vh;
 }
-.diamond-shape img
-{
-    width: 100%;
+.diamond-shape {
+  width: 25vh;
+  height: 25vh;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  z-index: 3;
 }
-.diamond-shape-outer
-{
-    display: flex;
+.diamond-shape img {
+  width: 100%;
+  height: 100%;
 }
-
-.team-slider
-{
-    position: absolute;
-    height: 50%;
-   bottom: 0;
-    animation: move 5s linear infinite;
+.diamond-shape-outer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
-
-@keyframes move
-{
-    0%
-    {
-        left: 0;
-    }
-    100%
-    {
-        left: -20vw;
-    }
+.team-divide {
+  position: relative;
+  display: flex;
+  flex-direction: row;
 }
-.team-slider:hover
-{
-    animation-play-state: paused;
+.team-middle {
+  margin-top: -12.5vh;
+  margin-left: -12.5vh;
 }
-.diamond-shape:hover
-{
-    cursor: pointer;
-}
-.diamond{
-    display: flex;
-    position: relative;
-    height: 100%;
+.team-bottom {
+  margin-top: -12.5vh;
 }
 
-.dev-info
-{
-    color:white;
-    background-color: rgb(17, 0, 255);
-    position: absolute;
-    width: 140%;
-    height: 15vw;
-    bottom: 15vw;
-    left: -20%;
-    z-index: 1;
-    border-radius: 20px;
-    padding: 10px;
-    opacity: 0;
-    box-shadow: 0 0  30px #fff;
-}
-.diamond-shape:hover ~ .dev-info
-{
-    opacity: 1;
+.team-slider {
+  position: relative;
+  width: 100%;
+  height: 10vw;
+  bottom: 0;
+  animation: move 15s linear infinite;
 }
 
-.team-heading
-{
-    font-size: 100px;
-    color: white;
-    padding-top: 3%;
-    padding-left: 10%;
+@keyframes move {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+.team-slider:hover {
+  animation-play-state: paused;
+}
+.diamond-shape:hover {
+  cursor: pointer;
+}
+.diamond {
+  display: flex;
+  position: relative;
+  height: 100%;
+  transform: scale(0.9);
+}
+
+.dev-info {
+  position: absolute;
+}
+
+.team-heading {
+  font-size: 100px;
+  color: white;
+  padding-top: 3%;
+  padding-left: 10%;
 }
