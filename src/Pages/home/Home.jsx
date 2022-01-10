@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import "./Home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { interaction } from "./components/button";
-import HomeButtons from "./components/bottomNav";
-import "./components/button.scss";
+import { interaction } from "../../components/button";
+import HomeButtons from "../../components/bottomNav";
+import "../../components/button.scss";
 
 export default function Home() {
   useEffect(() => {
@@ -36,12 +36,12 @@ export default function Home() {
       <div className="home-content">
         <div className="home-text" data-aos="flip-left">
           <div className="home-text-div">
-            <span>A</span>
-            <span>L</span>
-            <span>T</span>
-            <span>I</span>
-            <span>U</span>
-            <span>S</span>
+            <span id="span">A</span>
+            <span id="span">L</span>
+            <span id="span">T</span>
+            <span id="span">I</span>
+            <span id="span">U</span>
+            <span id="span">S</span>
           </div>
         </div>
 

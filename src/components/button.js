@@ -78,7 +78,8 @@ const interaction = () => {
 
     var button = document.getElementById("cn-button"),
       wrapper = document.getElementById("cn-wrapper"),
-      overlay = document.getElementById("cn-overlay");
+      overlay = document.getElementById("cn-overlay"),
+      outerText = document.querySelectorAll("#span");
 
     //open and close menu when the button is clicked
     var open = false;
@@ -104,12 +105,19 @@ const interaction = () => {
       button.innerHTML = "-";
       classie.add(overlay, "on-overlay");
       classie.add(wrapper, "opened-nav");
+      //console.log(outerText);
+      for (var i = 0; i < outerText.length; i++) {
+        outerText[i].style.animationPlayState = "paused";
+      }
     }
     function closeNav() {
       open = false;
       button.innerHTML = "+";
       classie.remove(overlay, "on-overlay");
       classie.remove(wrapper, "opened-nav");
+      for (var i = 0; i < outerText.length; i++) {
+        outerText[i].style.animationPlayState = "running";
+      }
     }
     document.addEventListener("click", closeNav);
   })(window);

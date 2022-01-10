@@ -1,13 +1,13 @@
 import React from "react";
 import { interaction } from "./button";
 import { Link } from "react-router-dom";
-import Lecture from "../../../icons/lecture.png";
-import Team from "../../../icons/team.png";
-import About from "../../../icons/about.png";
-import testimonial from "../../../icons/testimonial.png";
-import event from "../../../icons/event.png";
-import sponsor from "../../../icons/sponsor.png";
-import dev from "../../../icons/dev.png";
+import Lecture from "../icons/lecture.png";
+import Team from "../icons/team.png";
+import About from "../icons/about.png";
+import testimonial from "../icons/testimonial.png";
+import event from "../icons/event.png";
+import sponsor from "../icons/sponsor.png";
+import dev from "../icons/dev.png";
 
 export default function HomeButtons() {
   return (
