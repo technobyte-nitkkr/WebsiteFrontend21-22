@@ -6,7 +6,7 @@ import { interaction } from "../../components/button";
 import HomeButtons from "../../components/bottomNav";
 import "../../components/button.scss";
 
-export default function Home() {
+function Home() {
   useEffect(() => {
     interaction();
     AOS.init({
@@ -62,3 +62,5 @@ export default function Home() {
     </div>
   );
 }
+
+export {Home}

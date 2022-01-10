@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import anshika from "../../images/anshika.jpeg";
 import "./team.css";
 import axios from "axios";
-export default function Team() {
+function Team() {
   const [data, setData] = useState();
   useEffect(() => {
     const getData = async () => {
@@ -44,3 +44,5 @@ export default function Team() {
     </div>
   );
 }
+
+export {Team}

@@ -4,7 +4,7 @@ import anshika from "../images/anshika.jpeg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function Developers() {
+function Developers() {
   useEffect(() => {
     AOS.init({
       // Global settings:
@@ -112,3 +112,5 @@ export default function Developers() {
     </div>
   );
 }
+
+export {Developers}
