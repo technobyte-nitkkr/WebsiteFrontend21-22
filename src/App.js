@@ -7,21 +7,21 @@ import {
   Routes,
   useHistory,
 } from "react-router-dom";
-import { Sponsors } from "./Pages/Sponsors";
+import { Sponsors } from "./Pages/sponsors/Sponsors";
 
 // import Reducer from "./Store/Reducer";
 import { Home } from "./Pages/home/Home";
-import { About } from "./Pages/About";
+import { About } from "./Pages/about/About";
 import { Team } from "./Pages/team/Team";
-import { Developers } from "./Pages/Developers";
-import { EventDescription } from "./Pages/EventDescription";
-import { Events } from "./Pages/Events";
-import { Queries } from "./Pages/Queries";
-import { Category } from "./Pages/Category";
-import { GuestLecture } from "./Pages/GuestLecture";
-import { ErrorPage } from "./Pages/ErrorPage";
-import { UserProfilePage } from "./Pages/UserProfilePage";
-import { Testimonial } from "./Pages/Testimonial";
+import { Developers } from "./Pages/developers/Developers";
+import { EventDescription } from "./Pages/eventDescription/EventDescription";
+import { Events } from "./Pages/events/Events";
+import { Queries } from "./Pages/queries/Queries";
+import { Category } from "./Pages/category/Category";
+import { GuestLecture } from "./Pages/guestLecture/GuestLecture";
+import { ErrorPage } from "./Pages/errorPage/ErrorPage";
+import { UserProfilePage } from "./Pages/userProfilePage/UserProfilePage";
+import { Testimonial } from "./Pages/testimonial/Testimonial";
 // import SplashScreen from "./Components/SplashScreen";
 // import TopBar from "./Components/TopBar";
 // import Footer from "./Components/Footer";

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./developers.css";
-import anshika from "../images/anshika.jpeg";
+import anshika from "../../images/anshika.jpeg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
