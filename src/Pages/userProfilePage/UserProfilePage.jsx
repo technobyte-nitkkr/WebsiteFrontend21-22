@@ -8,4 +8,4 @@ const UserProfilePage = () => {
     )
 }
 
-export {UserProfilePage}
+export default UserProfilePage

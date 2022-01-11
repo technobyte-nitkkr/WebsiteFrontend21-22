@@ -8,4 +8,4 @@ const EventDescription = () => {
     )
 }
 
-export {EventDescription}
+export default EventDescription

@@ -8,4 +8,4 @@ const Queries = () => {
     )
 }
 
-export {Queries}
+export default Queries

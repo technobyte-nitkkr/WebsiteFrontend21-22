@@ -113,4 +113,4 @@ function Developers() {
   );
 }
 
-export {Developers}
+export default Developers

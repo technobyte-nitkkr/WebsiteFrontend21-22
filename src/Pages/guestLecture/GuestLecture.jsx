@@ -8,4 +8,4 @@ const GuestLecture = () => {
     )
 }
 
-export {GuestLecture}
+export default GuestLecture

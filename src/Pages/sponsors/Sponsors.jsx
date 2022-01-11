@@ -8,4 +8,4 @@ const Sponsors = () => {
     )
 }
 
-export {Sponsors}
+export default Sponsors
