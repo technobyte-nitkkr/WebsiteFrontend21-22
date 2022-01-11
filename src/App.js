@@ -4,7 +4,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Developers from "./Pages/developers";
 import Home from "./Pages/home/Home";
-import Team from "./Pages/team/team";
+import Team from "./Pages/team/Team";
 
 function App() {
   return (
