@@ -1,5 +1,5 @@
 import { useContext, useReducer, useState } from "react";
-// import Store from "./Store/Store";
+import Store from "./Store/Store";
 
 import {
   BrowserRouter as Router,
@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import  Sponsors  from "./Pages/sponsors/Sponsors";
 
-// import Reducer from "./Store/Reducer";
+import Reducer from "./Store/Reducer";
 import  Home  from "./Pages/home/Home";
 import  About  from "./Pages/about/About";
 import  Team  from "./Pages/team/Team";
@@ -23,12 +23,12 @@ import  ErrorPage  from "./Pages/errorPage/ErrorPage";
 import  UserProfilePage  from "./Pages/userProfilePage/UserProfilePage";
 import  Testimonial  from "./Pages/testimonial/Testimonial";
 // import SplashScreen from "./Components/SplashScreen";
-// import TopBar from "./Components/TopBar";
+import TopBar from "./components/TopBar";
 // import Footer from "./Components/Footer";
 
 function App() {
-  // const initialState = useContext(Store);
-  // const [state, dispatch] = useReducer(Reducer, initialState);
+  const initialState = useContext(Store);
+  const [state, dispatch] = useReducer(Reducer, initialState);
   // const [splash, setSplash] = useState(true);
   let routes = (
     <Routes>
@@ -63,16 +63,16 @@ function App() {
   // if (splash) return <SplashScreen />;
 
   return (
-    // <Store.Provider value={[state, dispatch]}>
+     <Store.Provider value={[state, dispatch]}>
       <div className="App">
         <Router>
-          {/* <TopBar /> */}
+          <TopBar />
           {routes}
         </Router>
         <Queries />
         {/* <Footer /> */}
       </div>
-    // </Store.Provider>
+     </Store.Provider>
   );
 }
 

@@ -5,6 +5,8 @@ import "aos/dist/aos.css";
 import { interaction } from "../../components/button";
 import HomeButtons from "../../components/bottomNav";
 import "../../components/button.scss";
+import LoginButton from "../../components/LoginButton";
+import TopBar from "../../components/TopBar";
 
 function Home() {
   useEffect(() => {
@@ -55,6 +57,7 @@ function Home() {
         <span></span>
         <span></span>
         LOGIN
+        
       </div>
       {/* <div className="footer">
         <p></p>
