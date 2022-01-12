@@ -1,7 +1,7 @@
 .team-slider {
   position: relative;
   width: 100%;
-  margin-top: 10%;
+  margin-top: 30vh;
   animation: move 15s linear infinite;
 }
 

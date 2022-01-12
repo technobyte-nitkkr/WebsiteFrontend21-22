@@ -3,6 +3,9 @@ import "./teamDetails.css";
 import axios from "axios";
 export default function TeamDetails() {
   const [data, setData] = useState();
+  const [people, setPeople] = useState();
+  const [current, setCurrent] = useState();
+
   useEffect(() => {
     const getData = async () => {
       try {
@@ -11,27 +14,62 @@ export default function TeamDetails() {
         );
         setData(res.data.data.contacts);
         console.log(res.data.data.contacts);
+        setPeople(res.data.data.contacts[0].people);
+        setCurrent(res.data.data.contacts[0].section);
+        var x = document.getElementById(res.data.data.contacts[0].section);
+        x.style.background = "#0e101b";
       } catch (err) {
         console.log(err);
       }
     };
     getData();
   }, []);
+
+  const changePeople = async (e) => {
+    try {
+      var y = document.getElementById(current);
+      y.style.background = "#203354";
+      console.log(e.target.id);
+      setCurrent(e.target.id);
+      for (var i = 0; i < data.length; i++) {
+        if (data[i].section === e.target.id) {
+          setPeople(data[i].people);
+          console.log(data[i].people);
+        }
+      }
+      var x = document.getElementById(e.target.id);
+      x.style.background = "#0e101b";
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <div className="team-details">
       <div className="team-links">
         {data
           ? data.map((x) => {
-              return <button className="teams">{x.section}</button>;
+              return (
+                <button
+                  id={x.section}
+                  onClick={(e) => {
+                    changePeople(e);
+                  }}
+                  className="teams"
+                >
+                  {x.section}
+                </button>
+              );
             })
           : ""}
       </div>
       <div className="team-card-container">
-        {data
-          ? data[3].people.map((x) => {
+        {people
+          ? people.map((x) => {
               return (
                 <div className="team-card">
                   <img src={x.imageUrl}></img>
+                  <div className="person-name">{x.name}</div>
+                  <div className="person-post">{x.post}</div>
                 </div>
               );
             })
