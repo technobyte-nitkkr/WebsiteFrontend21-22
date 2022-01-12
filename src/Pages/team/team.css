@@ -24,3 +24,19 @@
   background: url(../../images/bg.jpg);
   background-attachment: fixed;
 }
+
+.sub-team-heading {
+  color: #fff;
+  font-size: 20px;
+  width: 50%;
+  margin-left: 8%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(155, 155, 155);
+  border-radius: 12px;
+}
