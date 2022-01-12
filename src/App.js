@@ -12,7 +12,7 @@ import  Sponsors  from "./Pages/sponsors/Sponsors";
 import Reducer from "./Store/Reducer";
 import  Home  from "./Pages/home/Home";
 import  About  from "./Pages/about/About";
-import  Team  from "./Pages/team/Team";
+import  Team  from "./Pages/team/team";
 import  Developers  from "./Pages/developers/Developers";
 import  EventDescription  from "./Pages/eventDescription/EventDescription";
 import  Events  from "./Pages/events/Events";
