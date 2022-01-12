@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Slab:wght@700&display=swap");
 .team-heading {
-  font-size: 6em;
+  font-size: 9em;
   color: white;
   padding-top: 3%;
-  padding-left: 10%;
+  padding-left: 8%;
+  font-family: "Concert One", cursive;
 }
 
 .team {
@@ -11,4 +13,6 @@
   width: 100%;
   position: relative;
   overflow-x: hidden;
+  background: url(../../images/bg.jpg);
+  background-attachment: fixed;
 }
