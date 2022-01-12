@@ -1,10 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Slab:wght@700&display=swap");
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(../../Hanged\ Letters.ttf);
+}
+
 .team-heading {
-  font-size: 9em;
+  font-size: 7em;
   color: white;
-  padding-top: 3%;
   padding-left: 8%;
   font-family: "Concert One", cursive;
+  font-family: "Roboto Slab", serif;
+  font-family: myFirstFont;
+  letter-spacing: 10px;
 }
 
 .team {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./teamDetails.css";
+import "./teamDetails.scss";
 import axios from "axios";
 export default function TeamDetails() {
   const [data, setData] = useState();
@@ -66,10 +67,17 @@ export default function TeamDetails() {
         {people
           ? people.map((x) => {
               return (
-                <div className="team-card">
-                  <img src={x.imageUrl}></img>
-                  <div className="person-name">{x.name}</div>
-                  <div className="person-post">{x.post}</div>
+                <div class="nft">
+                  <div class="team-card-main">
+                    <img
+                      class="tokenImage"
+                      src={x.imageUrl}
+                      alt="post-holder"
+                    />
+                    <h2 className="person-name">{x.name}</h2>
+                    <hr />
+                    <p class="person-post">{x.post}</p>
+                  </div>
                 </div>
               );
             })
