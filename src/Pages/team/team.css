@@ -40,3 +40,12 @@
   background: rgb(155, 155, 155);
   border-radius: 12px;
 }
+
+@media screen and (max-width: 500px) {
+  .team-heading {
+    font-size: 6em;
+  }
+  .sub-team-heading {
+    width: 92%;
+  }
+}

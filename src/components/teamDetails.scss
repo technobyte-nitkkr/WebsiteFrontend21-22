@@ -71,3 +71,9 @@
 .person-name {
   margin-top: 10px;
 }
+
+@media screen and (max-width: 500px) {
+  .nft {
+    margin: 1rem;
+  }
+}

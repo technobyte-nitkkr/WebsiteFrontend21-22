@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./teamDetails.css";
 import "./teamDetails.scss";
 import axios from "axios";
@@ -6,6 +6,7 @@ export default function TeamDetails() {
   const [data, setData] = useState();
   const [people, setPeople] = useState();
   const [current, setCurrent] = useState();
+  const Ref = useRef();
 
   useEffect(() => {
     const getData = async () => {
@@ -19,6 +20,7 @@ export default function TeamDetails() {
         setCurrent(res.data.data.contacts[0].section);
         var x = document.getElementById(res.data.data.contacts[0].section);
         x.style.background = "#0e101b";
+        window.scrollTo(".team-card-container");
       } catch (err) {
         console.log(err);
       }
@@ -40,6 +42,7 @@ export default function TeamDetails() {
       }
       var x = document.getElementById(e.target.id);
       x.style.background = "#0e101b";
+      Ref.current.scrollIntoView();
     } catch (err) {
       console.log(err);
     }
@@ -63,7 +66,7 @@ export default function TeamDetails() {
             })
           : ""}
       </div>
-      <div className="team-card-container">
+      <div ref={Ref} className="team-card-container">
         {people
           ? people.map((x) => {
               return (

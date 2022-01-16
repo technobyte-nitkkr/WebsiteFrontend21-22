@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   width: 290px;
-  height: 45px;
+  height: 8%;
   outline: none;
   font-size: 18px;
   font-weight: 700;
@@ -28,9 +28,10 @@
   text-align: left;
   border-radius: 10px 0 0 10px;
   margin: 3px 0;
-  padding: 12px 0 12px 20px;
-  margin-top: 10px;
+  padding: 1%;
+  padding-left: 15px;
   cursor: pointer;
+  justify-content: center;
 }
 .team-card-container {
   display: flex;
@@ -65,4 +66,30 @@
 }
 .person-post {
   font-weight: 500;
+}
+
+@media screen and (max-width: 500px) {
+  .team-details {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .teams {
+    padding: 3%;
+  }
+  .team-links {
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+  .team-card-container {
+    margin: 2%;
+    width: 96%;
+  }
+  .team-card {
+    margin: 0px;
+  }
+  .teams {
+    border-radius: 10px;
+    width: 100%;
+  }
 }
