@@ -6,6 +6,7 @@ import { withRouter, Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Keys from "../config.keys";
 import logo from "../logo.svg";
+import "./TopBar.css";
 import { LOGOUT } from "../Store/Types";
 const TopBar = (props) => {
   const [{ isAuth, authLoading, user }, dispatch] = useContext(Store);
@@ -21,7 +22,7 @@ const TopBar = (props) => {
 
   return (
     <>
-      <div className="top-bar">
+      <div className="top-bar" style={{zIndex: "1000"}}>
         <div className="top-title">
           <Link to="/" className="no-style-link">
             <img
@@ -40,7 +41,7 @@ const TopBar = (props) => {
 
         <div className="flex-it">
           {isAuth ? (
-            <div className="flex-it">
+            <div className="flex-it" style={{float: "right"}}>
             <Link to="/user">
               <div className="mr-2 hover">
                 <i className="fa fa-user icon" aria-hidden="true"></i>{" "}

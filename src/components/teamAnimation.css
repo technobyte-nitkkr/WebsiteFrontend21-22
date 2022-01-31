@@ -1,0 +1,65 @@
+.team-slider {
+    position: relative;
+    width: 100%;
+    margin-top: 25vh;
+    animation: move 15s linear infinite;
+  }
+  
+  .team-slider:hover {
+    animation-play-state: paused;
+  }
+  
+  .diamond {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    width: 25vh;
+    height: 25vh;
+  }
+  .diamond-shape {
+    width: 25vh;
+    height: 25vh;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    z-index: 3;
+  }
+  .diamond-shape img {
+    width: 100%;
+    height: 100%;
+  }
+  .diamond-shape-outer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .team-divide {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+  .team-middle {
+    margin-top: -12.5vh;
+    margin-left: -12.5vh;
+  }
+  .team-bottom {
+    margin-top: -12.5vh;
+  }
+  
+  @keyframes move {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+  
+  .diamond {
+    display: flex;
+    position: relative;
+    height: 100%;
+    transform: scale(0.9);
+  }
+  
+  .dev-info {
+    position: absolute;
+  }
