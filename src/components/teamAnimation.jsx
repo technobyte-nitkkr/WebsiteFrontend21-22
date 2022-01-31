@@ -19,7 +19,7 @@ export default function TeamAnimation() {
   const getData = async () => {
     try {
       const res = await axios.get(
-        " https://techspardhabackend.herokuapp.com/contacts"
+        "https://us-central1-techspardha-87928.cloudfunctions.net/api2/contacts"
       );
       let array = [];
       let array1 = [];

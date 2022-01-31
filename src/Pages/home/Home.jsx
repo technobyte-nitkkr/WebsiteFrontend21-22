@@ -36,12 +36,17 @@ export default function Home() {
       <div className="home-content">
         <div className="home-text" data-aos="flip-left">
           <div className="home-text-div">
-            <span id="span">A</span>
-            <span id="span">L</span>
             <span id="span">T</span>
-            <span id="span">I</span>
-            <span id="span">U</span>
+            <span id="span">E</span>
+            <span id="span">C</span>
+            <span id="span">H</span>
             <span id="span">S</span>
+            <span id="span">P</span>
+            <span id="span">A</span>
+            <span id="span">R</span>
+            <span id="span">D</span>
+            <span id="span">H</span>
+            <span id="span">A</span>
           </div>
         </div>
 

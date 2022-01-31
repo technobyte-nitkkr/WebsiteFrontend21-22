@@ -12,7 +12,7 @@ export default function TeamDetails() {
     const getData = async () => {
       try {
         const res = await axios.get(
-          " https://techspardhabackend.herokuapp.com/contacts"
+          "https://us-central1-techspardha-87928.cloudfunctions.net/api2/contacts"
         );
         setData(res.data.data.contacts);
         console.log(res.data.data.contacts);

@@ -41,11 +41,14 @@
   border-radius: 12px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .team-heading {
-    font-size: 6em;
+    font-size: 3em;
+    letter-spacing: 1px;
   }
   .sub-team-heading {
-    width: 92%;
+    width: 90%;
+    font-size: 15px;
+    margin-top: 20px;
   }
 }
