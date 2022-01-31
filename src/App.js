@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Developers from "./Pages/developers";
 import Home from "./components/Home";
 import Team from "./Pages/team";
+import GuestLecture from './Pages/lecture'
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         {
           //<Contact></Contact>
         }
-        {<Home></Home>}
+        {<GuestLecture></GuestLecture>}
         {
           //<Team></Team>
         }
