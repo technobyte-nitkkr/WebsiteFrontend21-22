@@ -51,7 +51,7 @@ export default function TeamDetails() {
     <div className="team-details">
       <div className="team-links">
         {data
-          ? data.map((x) => {
+          ? data.reverse().map((x) => {
               return (
                 <button
                   id={x.section}
