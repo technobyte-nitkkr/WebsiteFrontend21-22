@@ -1,4 +1,4 @@
-body{
+  body{
     background-image: url("https://image.freepik.com/free-vector/gradient-dark-dynamic-lines-background_23-2148995950.jpg");
     background-position: center center;
     background-size: cover;
@@ -24,14 +24,14 @@ body{
       background-clip: text;
       -webkit-text-fill-color: transparent;
       margin: 4.5%;
-      font-size: 3.4rem
+      font-size: 4rem
 
   }
   
   .sponsi-container {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 200px));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
     grid-auto-rows: 250px;
     grid-auto-flow: row dense;
     grid-gap: 40px;
@@ -146,6 +146,7 @@ body{
   } */
   .sponsi-card-top:hover{
     transform: scale3d(1.08,1.08,1);
+    transition: all 500ms ease;
     /* box-shadow: solid 50px black; */
   }
   .sponsi-card-text p {
@@ -164,43 +165,51 @@ body{
   
   @media (max-width:960px){
     .sponsor-headline{
-      font-size:2.5rem;
+      font-size:3.4rem;
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 541px) {
     .sponsor-headline{
-      font-size:1.7rem;
+      font-size:2.5rem;
+      margin: 10%;
     }
-    .sponsi-card-top {
+    /* .sponsi-card-top {
       flex-direction: row;
       grid-column: auto / span 2;
       grid-row: auto / span 1;
-    }
-  
-    .sponsi-card-bottom {
+    } */
+    /* .sponsi-card-top{
+      margin-bottom:-20%;
+    } */
+    /* .sponsi-card-bottom {
       flex-direction: row-reverse;
       grid-column: auto / span 2;
       grid-row: auto / span 1;
-    }
+    } */
   
-    .sponsi-card-top .sponsi-card-image, .sponsi-card-bottom .sponsi-card-image {
+    .sponsi-card-top .sponsi-card-image{
       height: 100%;
-      width: 50%;
+      width: 100%;
     }
   
-    .sponsi-card-top img {
+    /* .sponsi-card-top img {
       border-radius: 95.2380952381px 0 0 95.2380952381px;
-    }
+    } */
   
     /* .sponsi-card-bottom img {
       border-radius: 0 95.2380952381px 95.2380952381px 0;
     } */
   
     .sponsi-card-top .sponsi-card-text {
-      height: auto;
-      width: 50%;
-      padding-right: 36.8px;
+      /* height: auto; */
+      /* width: 50%; */
+      /* padding-right: 36.8px; */
+      /* text-align: center;*/
+      
     }
+    /* .sponsi-headline{
+      font-size
+    } */
   
     /* .sponsi-card-bottom .sponsi-card-text {
       height: auto;
@@ -210,11 +219,11 @@ body{
   }
   @media (max-width: 400px) {
     .sponsi-card-image {
-      width: 38% !important;
+      width: 100% !important;
     }
   
     .sponsi-card-text {
-      width: 62% !important;
+      /* width: 62% !important; */
     }
   }
   
