@@ -48,41 +48,67 @@
   background-color: #8B28AE;
   position: absolute;
   border-radius: 50%;
-  top: -40vh;
   height: 100vh;
-  width: 100vw;
+  width: 100vh;
   filter: blur(250px);
-  left: 80vw;
+  top: -50vh;
+  right: -50vh;
+  animation: circle1 20s linear infinite;
 }
-.top-circle2{
-  background-color: #8B28AE;
-  position: absolute;
-  border-radius: 50%;
-  top: -30vh;
-  height: 100vh;
-  width: 100vw;
-  left: 60vw;
-  backdrop-filter: blur(10px);
+@keyframes circle1 {
+  0%{
+    top: -50vh;
+    right: -50vh;
+  }
+  25%{
+    top: -50vh;
+    right: 150vh;
+  }
+  50%{
+    top: 50vh;
+    right: 150vh;
+  }
+  75%{
+    top: 50vh;
+    right: -50vh;
+  }
+  100%{
+    top: -50vh;
+    right: -50vh;
+  }
 }
 .bottom-circle{
   background-color: #4D26BA;
   position: absolute;
   border-radius: 50%;
   height: 100vh;
-  width: 100vw;
+  width: 100vh;
   filter: blur(250px);
   top: 50vh;
-  left: -70vw;
+  right: 150vh;
+  animation: circle2 20s linear infinite;
 }
-.bottom-circle2{
-  background-color: #4D26BA;
-  position: absolute;
-  border-radius: 50%;
-  height: 100vh;
-  width: 100vw;
-  top: 50vh;
-  left: -40vw;
-  backdrop-filter: blur(10px);
+@keyframes circle2 {
+  0%{
+    top: 50vh;
+    right: 150vh;
+  }
+  25%{
+    top: 50vh;
+    right: -50vh;
+  }
+  50%{
+    top: -50vh;
+    right: -50vh;
+  }
+  75%{
+    top: -50vh;
+    right: 150vh;
+  }
+  100%{
+    top: 50vh;
+    right: 150vh;
+  }
 }
 .nav{
   z-index: 2;
