@@ -10,14 +10,16 @@ const Reducer = (state, action) => {
 
         case LOGIN:
             // const userData = jwt.verify(payload, Keys.JWT_SECRET);
-            const userData = decodeToken(payload);
-            console.log(userData);
-            localStorage.setItem("ts20token", payload);
+            // const userData = decodeToken(payload);
+            const {user,token} = payload;
+            // console.log(userData);
+            localStorage.setItem("ts20token", token);
             return {
                 ...state,
                 isAuth: true,
-                user: userData,
-                token: payload
+                // user: userData,
+                // token: payload
+                user,token
             }
         case LOGOUT:
             console.log("logged out")

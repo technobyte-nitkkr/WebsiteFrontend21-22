@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    padding:0;
+    margin:0;
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("https://image.freepik.com/free-vector/gradient-dark-dynamic-lines-background_23-2148995950.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+}
+.mainContent{
+    padding-top: 60px;
+    align-items:center;
+    justify-content: center;
+}
+.userInfo{
+    min-height: 80vh;
+}
+.userImage{
+    height:30vh;
+    border-radius: 50%;
+    width: 30vh;
+    margin:auto;
+    margin-bottom:-15vh;
+    margin-top:10%;
+    z-index:2;
+}
+.userImage img{
+    height:30vh;
+    border-radius: 50%;
+    width: 30vh;
+}
+.userDesc{
+    color:white;
+    min-height:63vh;
+    padding-top: 20vh;
+    text-align:center;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(182, 186, 194, 0.25);
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.175);
+}
+
+.regEvents-heading{
+    width:100%;
+    margin-top:100px;
+    margin-bottom: 30px;
+    justify-content: center;
+    text-align:center;
+    color:white;
+}
+.event{
+    min-height: 300px;
+    margin-top: 20px;
+    padding-top: 20px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(182, 186, 194, 0.25);
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.175);
+    color:white;
+    text-align: center;
+}
+.regEventImage img{
+    height: 150px;
+    width:150px;
+    margin-bottom: 20px;
+    overflow:hidden;
+}
+
+
+
+
+
