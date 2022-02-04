@@ -51,14 +51,14 @@ function Home() {
           <HomeButtons></HomeButtons>
         </div>
       </div>
-      <div className="login">
+    { /* <div className="login">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         LOGIN
         
-      </div>
+       </div> */} 
       {/* <div className="footer">
         <p></p>
       </div> */}

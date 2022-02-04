@@ -68,6 +68,7 @@ function App() {
         <Router>
           <TopBar />
           {/* < GuestLecture /> */}
+          <TopBar /> 
           {routes}
         </Router>
         {/* <Queries /> */}

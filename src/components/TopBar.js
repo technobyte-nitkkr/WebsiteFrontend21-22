@@ -7,7 +7,9 @@ import { useNavigate } from "react-router-dom";
 import Keys from "../config.keys";
 import logo from "../logo.svg";
 import "./TopBar.css";
+import { Row,Col} from 'react-bootstrap';
 import { LOGOUT } from "../Store/Types";
+
 const TopBar = (props) => {
   const [{ isAuth, authLoading, user }, dispatch] = useContext(Store);
   const navigate = useNavigate();
@@ -22,14 +24,17 @@ const TopBar = (props) => {
 
   return (
     <>
+   
       <div className="top-bar" style={{zIndex: "1000"}}>
+      <Row>
+      <Col lg ={8} sm={8}>
         <div className="top-title">
           <Link to="/" className="no-style-link">
             <img
               src={logo}
               alt="Altius/2020"
               style={{
-                width: "140px",
+                width: "60px",
                 height: "auto",
                 padding: "0",
                 margin: "0",
@@ -38,7 +43,8 @@ const TopBar = (props) => {
             />
           </Link>
         </div>
-
+        </Col>
+        <Col>
         <div className="flex-it">
           {isAuth ? (
             <div className="flex-it" style={{float: "right"}}>
@@ -56,8 +62,9 @@ const TopBar = (props) => {
                       className="login-button"
                       onClick={renderProps.onClick}
                       disabled={renderProps.disabled}
+                      style = {{color: "white"}}
                     >
-                      &nbsp; <i class="fas fa-sign-out-alt"></i>
+                      Logout <i class="fas fa-sign-out-alt" style = {{color: "white"}}></i>
                     </p>
                   )}
                   onLogoutSuccess={logout}
@@ -66,12 +73,16 @@ const TopBar = (props) => {
               </div>
             </div>
           ) : (
-            <div>
+            <div style={{}}>
               <LoginButton />
             </div>
           )}
         </div>
+        </Col>
+        </Row>
       </div>
+      
+      
     </>
   );
 };
