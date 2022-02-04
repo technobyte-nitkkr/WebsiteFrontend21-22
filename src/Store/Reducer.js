@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT, AUTH } from './Types'
+import { LOGIN, LOGOUT, AUTH, ONBOARD } from './Types'
 // import jwt from 'jsonwebtoken'
 import { decodeToken } from "react-jwt";
 import Keys from '../config.keys';
@@ -35,6 +35,15 @@ const Reducer = (state, action) => {
             return {
                 ...state,
                 authLoading: false
+            }
+        case ONBOARD:
+            console.log("onboard reducer");
+            user = payload;
+            console.log(payload);
+            return{
+                ...state,
+                onBoard:true,
+                user
             }
 
         default:

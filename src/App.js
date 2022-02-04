@@ -66,7 +66,8 @@ function App() {
      <Store.Provider value={[state, dispatch]}>
       <div className="App">
         <Router>
-          {/* <TopBar /> */}
+          <TopBar />
+          {/* < GuestLecture /> */}
           {routes}
         </Router>
         {/* <Queries /> */}

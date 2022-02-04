@@ -6,6 +6,7 @@ import { format } from "date-fns";
 import axios from "axios";
 import Keys from "../../config.keys";
 import SignUp from "./SignUp.js";
+
 import { Carousel, Card, Container, Row, Col } from "react-bootstrap";
 
 
@@ -68,7 +69,9 @@ const UserProfilePage = () => {
                         <p style={{fontSize:"2rem"}}><b>{userData.user.name}</b></p>
                         <p><b>Email:</b> {userData.user.email}</p>
                         {(() => {
-                          if (!userData.user.college) {
+                          if(!userData)
+                            console.log("helloeelele");
+                          if (!userData.user.onBoard) {
                             return (
                               <div stlye={{backgroundColor:"red"}}><SignUp /></div>
                               
