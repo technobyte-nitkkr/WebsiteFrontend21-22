@@ -1,39 +1,125 @@
 import React from 'react'
 import axios from 'axios';
-import  { useEffect , useState} from 'react'
-import { useParams, Link } from 'react-router-dom';
-import { Row,Col, Card, Image, Button } from 'react-bootstrap';
+import  { useEffect , useState, useContext} from 'react'
+import { useParams} from 'react-router-dom';
+import { Row,Col, Image, Button } from 'react-bootstrap';
 import './EventDescription.css';
-import Events from '../events/Events';
+import Store from "../../Store/Store.js";
 
 const EventDescription = () => {
+
     const { category , event} = useParams();
 
     const [Event, setEvent] = useState([]);
+    const [isRegistered, setIsRegistered] = useState(false);
     const [isLoading, setLoading] = useState(false);
-     
-    const getData = async () => {
+
+    const [{ isAuth, user,token }] = useContext(Store);
+    
+    
+    const getInfo = async () => {
       try {
+
+        //fetching this event info
         const res = await axios.get(
           `https://us-central1-techspardha-87928.cloudfunctions.net/api2/events/description?eventCategory=${category}&eventName=${event}`
         );
-        console.log(res.data);
-        setEvent(res.data.data)
-        setLoading(false);
-      } catch (err) {
+        setEvent(res.data.data);
+        
+        //fetching user registered events
+        const res2 = await axios.get(
+          "https://us-central1-techspardha-87928.cloudfunctions.net/api2/user/event" , {
+            headers :  {
+              authorization: token
+            }
+          }
+        );
+
+        await res2.data.data.events.map((e) => 
+        {
+          if(e.eventName == event) {   
+            setIsRegistered(true);
+         }
+        })
+      } 
+      catch (err) {
         console.log(err);
       }
     };
- 
-    useEffect(()=>{
-      getData();
-    },[isLoading])
-    useEffect(() => {
-      setLoading(true);
-    }, []);
-    
 
+    const registerEvent = async () => {
+
+      try {
+        const object = {
+          "eventName" : event,
+          "eventCategory" : category
+        }
+        const res = await axios.put(
+          `https://us-central1-techspardha-87928.cloudfunctions.net/api2/user/event`, object, {
+            headers : {
+              authorization : token
+            }
+          }
+        );
+        alert(res.data.status);
+        console.log(res.data.success);
+        if(res.data.success) {
+          setIsRegistered(true);
+        }
+      }
+      catch(err) {
+        console.log(err);
+        alert(err);
+      }
+    }
+       
+        
+
+    const unregisterEvent = async () => {
+      try {
+        const object = {
+          "eventName" : event,
+          "eventCategory" : category
+        }
+        const res = await axios.put(
+          `https://us-central1-techspardha-87928.cloudfunctions.net/api2/user/event/unregister`, object, {
+            headers : {
+              authorization : token
+            }
+          }
+        );
+        alert(res.data.status);
+        if(res.data.success) {
+          setIsRegistered(false); 
+        }
+      }
+      catch(err) {
+        console.log(err);
+        alert(err);
+      }
+    }
+
+    function handleClick() {
+       if(isRegistered) {
+          unregisterEvent()
+       }
+       else {
+          registerEvent()
+       }  
+     }
+   
+     
+    useEffect(async ()=>{
+      setLoading(true);
+      await getInfo();
+      setLoading(false);
+    },[]);
+   
+   
+    
+    
     return (
+      ! isLoading ? <> 
         
         <div style={{textAlign: 'center', color: 'white', fontSize: '70px'}}>
            {Event.eventName}
@@ -56,7 +142,20 @@ const EventDescription = () => {
                    End Time : {new Date(Event.endTime).toLocaleString("en-US", {year: "numeric", month: "short", day: "2-digit", hour: "numeric" })}
                </h4>
                </div>
-               <Button > Register</Button>
+
+               { !isAuth ? <>
+
+                <Button disabled style={{color: "white", background: "transparent"}}>
+                   Login to Register  
+                </Button>
+               </> : <>
+               <Button onClick={handleClick} style = {{color: "white", background: "transparent", fontSize: "25px"}}>
+                 {
+                   isRegistered ? <>Unregister</> : <>Register</> 
+                 } 
+               </Button>
+               </>}
+               
             </Col>
             <Col lg={1}>
             <div class="vl"></div>
@@ -91,11 +190,16 @@ const EventDescription = () => {
               }
              
               </div>
-            </Col>
-            
+            </Col>   
         </Row>
         </div>
         </div>
+        </> : 
+        <>
+           <h1 style = {{textAlign: 'center', color: 'white', fontSize: '70px'}}>
+             Loading ...
+           </h1>
+        </>
     )
 }
 

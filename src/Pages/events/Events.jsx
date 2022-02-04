@@ -16,7 +16,8 @@ const Events = () => {
        const res = await axios.get(
          `https://us-central1-techspardha-87928.cloudfunctions.net/api2/events/description?eventCategory=${category}`
        );
-       setEvents(res.data.data.events)
+       setEvents(res.data.data.events);
+       console.log(res.data.data.events);
        setLoading(false);
      } catch (err) {
        console.log(err);
