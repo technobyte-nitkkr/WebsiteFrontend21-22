@@ -21,10 +21,11 @@ const LoginButton = () => {
       });
 
       console.log("HERE");
-
+      console.log(response.data.token);
+      console.log("HERE");
       dispatch({
         type: LOGIN,
-        payload: response.data.token,
+        payload: response.data,
       });
 
       dispatch({
