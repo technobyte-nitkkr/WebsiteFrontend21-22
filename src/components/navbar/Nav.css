@@ -1,0 +1,12 @@
+.nav{
+    z-index: 2;
+    display: flex;
+  }
+  .nav-comp{
+    text-align: center;
+    color: #ffff;
+    font-family: Poppins;
+  font-weight: 500;
+  font-size: 4vh;
+  margin: 8vh;
+  }

@@ -1,0 +1,100 @@
+.main img{
+    position: absolute;
+  }
+  .gear1{
+    /* border: 1px solid white; */
+    bottom: 55%;
+    right: 30%;
+    height: 35vh;
+  }
+  .gear2{
+    /* border: 1px solid red; */
+    bottom: 5%;
+    height: 50vh;
+  }
+  .gear3{
+    /* border: 1px solid greenyellow; */
+    height: 30vh;
+    bottom: 50%;
+    left: 30%;
+  }
+  
+  @keyframes myAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  .gear1, .gear2, .gear3{
+    animation: myAnimation 5s linear infinite;
+  }
+  
+  .top-circle{
+    background-color: #8B28AE;
+    position: absolute;
+    border-radius: 50%;
+    height: 100vh;
+    width: 100vh;
+    filter: blur(250px);
+    top: -50vh;
+    right: -50vh;
+    animation: circle1 20s linear infinite;
+  }
+  @keyframes circle1 {
+    0%{
+      top: -50vh;
+      right: -50vh;
+    }
+    25%{
+      top: -50vh;
+      right: 150vh;
+    }
+    50%{
+      top: 50vh;
+      right: 150vh;
+    }
+    75%{
+      top: 50vh;
+      right: -50vh;
+    }
+    100%{
+      top: -50vh;
+      right: -50vh;
+    }
+  }
+  .bottom-circle{
+    background-color: #4D26BA;
+    position: absolute;
+    border-radius: 50%;
+    height: 100vh;
+    width: 100vh;
+    filter: blur(250px);
+    top: 50vh;
+    right: 150vh;
+    animation: circle2 20s linear infinite;
+  }
+  @keyframes circle2 {
+    0%{
+      top: 50vh;
+      right: 150vh;
+    }
+    25%{
+      top: 50vh;
+      right: -50vh;
+    }
+    50%{
+      top: -50vh;
+      right: -50vh;
+    }
+    75%{
+      top: -50vh;
+      right: 150vh;
+    }
+    100%{
+      top: 50vh;
+      right: 150vh;
+    }
+  }
+  
