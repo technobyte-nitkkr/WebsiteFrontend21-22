@@ -9,7 +9,6 @@ import SignUp from "./SignUp.js";
 
 import { Carousel, Card, Container, Row, Col } from "react-bootstrap";
 
-
 const UserProfilePage = () => {
     const [userData, setUserData] = useContext(Store);
     const [userEvents, setUserEvents] = useState(null);
@@ -36,6 +35,10 @@ const UserProfilePage = () => {
       getUserDetails();
     }, []);
     useEffect(() => {
+       if(!userData.isAuth) {
+         window.location.href = "/";
+       }
+
         const getCategories = async () => {
           try {
             const url = Keys.BASE_API + "/events/categories";
@@ -74,7 +77,6 @@ const UserProfilePage = () => {
                           if (!userData.user.onBoard) {
                             return (
                               <div stlye={{backgroundColor:"red"}}><SignUp /></div>
-                              
                             )
                           } else{
                             return (
@@ -106,7 +108,6 @@ const UserProfilePage = () => {
                                   <div className="regEventImage"><img src={catgr.icon}></img>
                                   <p>{format(new Date(e.startTime), "PPp")}</p>
                                   </div>
-                                  
                               }
                               </div>
                           ))}
