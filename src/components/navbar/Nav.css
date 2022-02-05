@@ -16,7 +16,10 @@ margin: 8vh;
   display:none;
 }
 
-
+.closetext
+{
+  display:none;
+}
 
 @media screen and (max-width: 1000px) and (orientation: portrait) {
 
