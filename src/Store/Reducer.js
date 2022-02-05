@@ -42,8 +42,7 @@ const Reducer = (state, action) => {
             console.log(payload);
             return{
                 ...state,
-                onBoard:true,
-                user
+                onBoard:user.onBoard,
             }
 
         default:

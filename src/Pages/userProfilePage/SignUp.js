@@ -1,13 +1,14 @@
 import { React, useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Keys from "../../config.keys";
 import Store from "../../Store/Store";
-import { LOGIN } from "../../Store/Types";
+import { ONBOARD } from "../../Store/Types";
 
 const SignUp = () => {
   const [open, setOpen] = useState(false);
   const [state, dispatch] = useContext(Store);
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     college: "",
     year: "",
@@ -54,10 +55,10 @@ const SignUp = () => {
       const response = await axios.put(`${Keys.BASE_API}/user`, body, config).then (async(data)=>{
         console.log(data.data);
         await dispatch({
-          type: LOGIN,
-          payload: data.data
+          type: ONBOARD,
+          payload: data.data.user
         });
-        window.location.reload();
+        navigate("/user");
 
       })
       

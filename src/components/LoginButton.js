@@ -4,7 +4,7 @@ import useFetch from "use-http";
 
 import Keys from "../config.keys";
 import Store from "../Store/Store";
-import { AUTH, LOGIN } from "../Store/Types";
+import { AUTH, LOGIN, ONBOARD } from "../Store/Types";
 
 const LoginButton = () => {
   const [_, dispatch] = useContext(Store);
@@ -27,6 +27,10 @@ const LoginButton = () => {
         type: LOGIN,
         payload: response.data,
       });
+      dispatch({
+        type: ONBOARD,
+        payload: response.data.user
+      })
 
       dispatch({
         type: AUTH,

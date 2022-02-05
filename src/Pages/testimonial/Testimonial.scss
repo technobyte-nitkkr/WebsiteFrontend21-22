@@ -31,7 +31,8 @@
 
 .cards{
 
-  background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("https://image.freepik.com/free-vector/gradient-dark-dynamic-lines-background_23-2148995950.jpg");
+  // background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("https://image.freepik.com/free-vector/gradient-dark-dynamic-lines-background_23-2148995950.jpg");
+  background-image: linear-gradient(to bottom right,rgb(75, 3, 57),rgb(60, 8, 83));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

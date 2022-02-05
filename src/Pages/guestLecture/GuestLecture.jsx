@@ -28,19 +28,19 @@ const Lecture = ()=>{
     return (
         
         <div className="demo">
-        <div className='GuestLecture'>
+        <div className='headingGL'>
                 GUEST LECTURE
             </div>
-    <div className="container">
-        <div className="row">
-            <div>
-                <Carousel autoPlay={true} interval={3000} infiniteLoop={true}>
+    <div className="mainContentGL">
+        <div className="carouselGL">
+            <div style={{paddingBottom:"100px"}}>
+                <Carousel autoPlay={true} interval={4000} infiniteLoop={true}>
                 
                         
                 {
                 guestList.map(item => {
                     return (<>
-                        <div className="testimonial">
+                        <div className="guestLecture">
                         <div className="picture">
                             <img src={item.imageUrl} />
                         </div>
