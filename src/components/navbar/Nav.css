@@ -1,5 +1,14 @@
+
+.logo{
+  top: 3rem;
+  left: 2rem;
+  position: absolute;
+}
+.logo img{
+  height: 5rem;
+}
 .nav{
-  z-index: 2;
+  z-index: 99;
   display: flex;
 }
 .nav-comp{
@@ -8,7 +17,10 @@
   font-family: Poppins;
 font-weight: 500;
 font-size: 4vh;
-margin: 8vh;
+margin: 6vh 2vh;
+padding: 2vh 6vh;
+text-decoration: none;
+/* border: 2px solid black; */
 }
 
 #check
@@ -22,6 +34,15 @@ margin: 8vh;
 }
 
 @media screen and (max-width: 1000px) and (orientation: portrait) {
+
+  .logo{
+    top: 2.5rem;
+    left: 1rem;
+    position: absolute;
+  }
+  .logo img{
+    height: 3rem;
+  }
 
 .menubutton
 {
@@ -92,19 +113,6 @@ margin: 8vh;
   width:170px;
 }
 
-.iconCircle
-{
-  position: absolute;
-  width: 54px;
-  height: 54px;
-  left: 32px;
-  top: 39px;
-  border:2px solid white;
-  border-radius: 50%;
-  background: #C559EB;
-
-}
-
 .sidebar
 {
   position: absolute;
@@ -112,7 +120,7 @@ margin: 8vh;
   height: 100vh;
   right: -20px;
   top: 0px;
-  border:2px solid white;
+  border:2px solid rgb(109, 108, 108);
   border-radius: 20px;
   box-shadow: 0 0 5px 0 ;
   background: rgba(255,255,255,0.25);
@@ -157,5 +165,15 @@ margin: 8vh;
 
 }
 
+
+}
+@media screen and (max-width: 1000px) and (orientation: landscape)  {
+  
+  .logo{
+    top: 1rem;
+  }
+  .logo img{
+    height: 3rem;
+  }
 
 }
