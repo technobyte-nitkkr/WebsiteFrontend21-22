@@ -1,36 +1,4 @@
-.main img{
-    position: absolute;
-  }
-  .gear1{
-    /* border: 1px solid white; */
-    bottom: 55%;
-    right: 30%;
-    height: 35vh;
-  }
-  .gear2{
-    /* border: 1px solid red; */
-    bottom: 5%;
-    height: 50vh;
-  }
-  .gear3{
-    /* border: 1px solid greenyellow; */
-    height: 30vh;
-    bottom: 50%;
-    left: 30%;
-  }
-  
-  @keyframes myAnimation {
-    0% {
-      transform: rotate(0deg);
-    }
-    100%{
-      transform: rotate(360deg);
-    }
-  }
-  .gear1, .gear2, .gear3{
-    animation: myAnimation 5s linear infinite;
-  }
-  
+
   .top-circle{
     background-color: #8B28AE;
     position: absolute;
@@ -40,7 +8,7 @@
     filter: blur(250px);
     top: -50vh;
     right: -50vh;
-    animation: circle1 20s linear infinite;
+    animation: circle1 15s linear infinite;
   }
   @keyframes circle1 {
     0%{
@@ -73,7 +41,7 @@
     filter: blur(250px);
     top: 50vh;
     right: 150vh;
-    animation: circle2 20s linear infinite;
+    animation: circle2 15s linear infinite;
   }
   @keyframes circle2 {
     0%{
@@ -97,4 +65,119 @@
       right: 150vh;
     }
   }
-  
+  @media screen and (max-width: 1000px) and (orientation: portrait) {
+    .top-circle{
+      height: 70vh;
+      width: 70vh;
+      top: -40vh;
+      right: -40vh;
+    }
+    .bottom-circle{
+      height: 70vh;
+      width: 70vh;
+      top: 60vh;
+      right: 35vh;
+    }
+    @keyframes circle1 {
+      0%{
+        top: -40vh;
+        right: -40vh;
+      }
+      25%{
+        top: -40vh;
+        right: 35vh;
+      }
+      50%{
+        top: 60vh;
+        right: 35vh;
+      }
+      75%{
+        top: 60vh;
+        right: -40vh;
+      }
+      100%{
+        top: -40vh;
+        right: -40vh;
+      }
+    }
+    @keyframes circle2 {
+      0%{
+        top: 60vh;
+        right: 35vh;
+      }
+      25%{
+        top: 60vh;
+        right: -40vh;
+      }
+      50%{
+        top: -40vh;
+        right: -40vh;
+      }
+      75%{
+        top: -40vh;
+        right: 35vh;
+      }
+      100%{
+        top: 60vh;
+        right: 35vh;
+      }
+    }
+  }
+  @media screen and (max-width: 500px) and (orientation: portrait) {
+    .top-circle{
+      height: 70vh;
+      width: 70vh;
+      top: -40vh;
+      right: -40vh;
+    }
+    .bottom-circle{
+      height: 70vh;
+      width: 70vh;
+      top: 60vh;
+      right: 20vh;
+    }
+    @keyframes circle1 {
+      0%{
+        top: -40vh;
+        right: -40vh;
+      }
+      25%{
+        top: -40vh;
+        right: 20vh;
+      }
+      50%{
+        top: 60vh;
+        right: 20vh;
+      }
+      75%{
+        top: 60vh;
+        right: -40vh;
+      }
+      100%{
+        top: -40vh;
+        right: -40vh;
+      }
+    }
+    @keyframes circle2 {
+      0%{
+        top: 60vh;
+        right: 20vh;
+      }
+      25%{
+        top: 60vh;
+        right: -40vh;
+      }
+      50%{
+        top: -40vh;
+        right: -40vh;
+      }
+      75%{
+        top: -40vh;
+        right: 20vh;
+      }
+      100%{
+        top: 60vh;
+        right: 20vh;
+      }
+    }
+  }
