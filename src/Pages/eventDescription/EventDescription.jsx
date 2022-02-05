@@ -26,22 +26,24 @@ const EventDescription = () => {
           `https://us-central1-techspardha-87928.cloudfunctions.net/api2/events/description?eventCategory=${category}&eventName=${event}`
         );
         setEvent(res.data.data);
-        
-        //fetching user registered events
-        const res2 = await axios.get(
-          "https://us-central1-techspardha-87928.cloudfunctions.net/api2/user/event" , {
-            headers :  {
-              authorization: token
-            }
-          }
-        );
 
-        await res2.data.data.events.map((e) => 
-        {
-          if(e.eventName == event) {   
-            setIsRegistered(true);
-         }
-        })
+        if(isAuth) {
+            //fetching user registered events
+            const res2 = await axios.get(
+              "https://us-central1-techspardha-87928.cloudfunctions.net/api2/user/event" , {
+                headers :  {
+                  authorization: token
+                }
+              }
+            );
+
+            await res2.data.data.events.map((e) => 
+            {
+              if(e.eventName == event) {   
+                setIsRegistered(true);
+            }
+            })
+        }
       } 
       catch (err) {
         console.log(err);
@@ -117,7 +119,6 @@ const EventDescription = () => {
    
      
     useEffect(async ()=>{
-      console.log(user.onBoard);
       setLoading(true);
       await getInfo();
       setLoading(false);
@@ -165,7 +166,7 @@ const EventDescription = () => {
                </>}
                
             </Col>
-            <Col lg={1}>
+            <Col lg={1} >
             <div class="vl"></div>
             </Col>
             <Col >
@@ -176,12 +177,12 @@ const EventDescription = () => {
               </>  : 
               <>
               <h4>Rules: </h4>
-              <ul style={{fontSize: '15px'}}>
+              <div style={{fontSize: '15px'}}>
               
                   {Event.rules.map((rule) => (
-                      <li>{rule}</li>
+                      <p>{rule}</p>
                   ))}
-              </ul>
+              </div>
               </> }
               
               <h4>Venue: </h4>
