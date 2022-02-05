@@ -30,8 +30,7 @@
 }
 .gear1, .gear2, .gear3{
   opacity: 0;
-  animation: myAnimation 5s 3.5s linear infinite, titleAnimation 0.5s ease-in 2.5s 1 forwards;;
-  z-index: 0;
+  animation: myAnimation 5s 3.5s linear infinite, titleAnimation 0.5s ease-in 2.5s 1 forwards;
 }
 .head-main{
     z-index: 2;
@@ -197,7 +196,7 @@
 
     .gear1{
       /* border: 1px solid white; */
-      bottom: 75%;
+      bottom: 65%;
       right: -5%;
       height: 25vh;
     }
