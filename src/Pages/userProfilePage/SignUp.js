@@ -53,10 +53,7 @@ const SignUp = () => {
       const body = JSON.stringify(formData);
       const response = await axios.put(`${Keys.BASE_API}/user`, body, config);
 
-      console.log(response.data);
-      
-      console.log("this it check" + response.data.toString());
-     
+      console.log(response.data); 
       setOpen(false);
 
       dispatch({
@@ -65,9 +62,9 @@ const SignUp = () => {
       });
       dispatch({
         type: "ADD_ERROR",
-        payload: { msg: "query added." },
+        payload: { msg: "signUp added." },
       });
-      handleFeedback("Query submitted");
+      handleFeedback("signUp submitted");
       setTimeout(() => {
         dispatch({
           type: "REMOVE_ERRORS",
@@ -101,11 +98,11 @@ const SignUp = () => {
       )}
       <div>
         {open ? (
-          <div className="query-box">
+          <div className="signUp-box">
             <center>
-              <h1 className="guestheading">Signup for Techspardha'22</h1>
+              <h6 className="guestheading">Signup for Techspardha'22</h6>
             </center>
-            <div className="query-feedback-box"> {feedback.feedback} </div>
+            <div className="signUp-feedback-box"> {feedback.feedback} </div>
             <div className="form-container">
               <form onSubmit={handleSubmit} method="POST">
                 <div className="form-ele">
@@ -135,8 +132,8 @@ const SignUp = () => {
                     onChange={handleChange}
                   />{" "}
                 </div>{" "}
-                <div className="query-send">
-                  <button type="submit" className="query-send-btn">
+                <div className="signUp-send">
+                  <button type="submit" className="signUp-send-btn">
                     Submit{" "}
                   </button>{" "}
                 </div>{" "}
@@ -153,7 +150,7 @@ const SignUp = () => {
               if (state.isAuth) {
                 setOpen(true);
               } else {
-                setMessage("Please login to ask query.");
+                setMessage("Please login to sign up");
                 setTimeout(() => {
                   setMessage(null);
                 }, 2000);
@@ -167,7 +164,6 @@ const SignUp = () => {
         ) : (
           <div className="floating" onClick={() => setOpen(false)}>
             <div>
-                hehehehheeeeeeeeeeeee
               <i className="fas fa-times"></i>
             </div>
           </div>
