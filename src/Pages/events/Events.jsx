@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect , useState} from 'react'
 import { Row,Col, Card } from 'react-bootstrap';
 import { useParams, Link } from 'react-router-dom';
+import EventCard from '../../components/EventCard';
 
 //import "./events.css"
 
@@ -43,31 +44,9 @@ const Events = () => {
               <div>
                 <Row> 
                 {   
-                 events.map((event) => (  
-                  <Col xs lg={4} >
-                     <Link to = {`/eventdetails/${category}/${event.eventName}`}>
-                  <div  className='event-card' style={{margin: 20}}>
-                 
-                    <Card style={{padding: 20,  backgroundColor: "white" }}>
-                      <Card.Img height={200} width={400} 
-                      src={event.poster}  onError={(e) => {
-                                e.target.onerror = null;
-                                e.target.src =
-                                  "https://res.cloudinary.com/dvhrzmkwd/image/upload/v1643788204/Unknown39825/eesglbsknedo9vvnclkx.jpg";
-                              }}
-                             ></Card.Img>
-                    <Card.Title style={{color: "black" , textAlign: "center"}}>{event.eventName}</Card.Title>
-                    <Card.Text style={{fontSize: "20px" , color: 'black',textAlign: "center" }}>
-                      {event.description.slice(0,100)+'...'}
-                    </Card.Text>
-                    <Card.Body style={{fontSize: "20px" , color: 'black'}}>
-                      Know More
-                    </Card.Body>
-                  </Card>
-                 
-                  </div>
-                  </Link>
-                  </Col>
+                  events.map((event) => 
+                 ( 
+                  <EventCard category = {event.eventCategory} poster={event.poster} eventName={event.eventName} startTime = {event.startTime} desc = {event.description} /> 
                  ))}
                 </Row>
               </div>

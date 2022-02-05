@@ -5,6 +5,7 @@ import { useParams} from 'react-router-dom';
 import { Row,Col, Image, Button } from 'react-bootstrap';
 import './EventDescription.css';
 import Store from "../../Store/Store.js";
+import SignUpModal from '../SignUpModal';
 
 const EventDescription = () => {
 
@@ -62,7 +63,7 @@ const EventDescription = () => {
           }
         );
         alert(res.data.status);
-        console.log(res.data.success);
+        console.log(res.data);
         if(res.data.success) {
           setIsRegistered(true);
         }
@@ -100,16 +101,23 @@ const EventDescription = () => {
     }
 
     function handleClick() {
-       if(isRegistered) {
+      if(user.onBoard) {
+        if(isRegistered) {
           unregisterEvent()
        }
        else {
           registerEvent()
-       }  
+       } 
+      }
+      else {
+        alert("User not OnBoard !!");
+      }
+       
      }
    
      
     useEffect(async ()=>{
+      console.log(user.onBoard);
       setLoading(true);
       await getInfo();
       setLoading(false);
@@ -119,8 +127,8 @@ const EventDescription = () => {
     
     
     return (
-      ! isLoading ? <> 
-        
+      ! isLoading ? 
+      <>
         <div style={{textAlign: 'center', color: 'white', fontSize: '70px'}}>
            {Event.eventName}
         <div style={{padding: '20px'}}>
@@ -136,10 +144,10 @@ const EventDescription = () => {
              <div style={{  paddingTop : '20px'}} >
                <h4>
                    {}
-                Start Time : {new Date(Event.startTime).toLocaleString("en-US", {year: "numeric", month: "short", day: "2-digit", hour: "numeric" })}
+                Start Time : {new Date(Event.startTime).toLocaleString("en-US", {year: "numeric", month: "short", day: "2-digit", hour: "numeric" , minute: "2-digit"})}
                </h4>
                <h4>
-                   End Time : {new Date(Event.endTime).toLocaleString("en-US", {year: "numeric", month: "short", day: "2-digit", hour: "numeric" })}
+                   End Time : {new Date(Event.endTime).toLocaleString("en-US", {year: "numeric", month: "short", day: "2-digit", hour: "numeric", minute: "2-digit" })}
                </h4>
                </div>
 

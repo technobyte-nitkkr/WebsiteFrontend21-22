@@ -7,6 +7,7 @@ import HomeButtons from "../../components/bottomNav";
 import "../../components/button.scss";
 import LoginButton from "../../components/LoginButton";
 import TopBar from "../../components/TopBar";
+import TimelineHome from "../../components/TimeLineHome";
 
 function Home() {
   useEffect(() => {
@@ -35,6 +36,7 @@ function Home() {
 
   return (
     <div className="home">
+      
       <div className="home-content">
         <div className="home-text" data-aos="flip-left">
           <div className="home-text-div">
@@ -62,6 +64,7 @@ function Home() {
       {/* <div className="footer">
         <p></p>
       </div> */}
+    <TimelineHome />
     </div>
   );
 }

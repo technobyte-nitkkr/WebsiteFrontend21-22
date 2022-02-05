@@ -2,17 +2,18 @@ import { React, useContext, useEffect, useState } from "react";
 import './UserProfilePage.css'
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import Store from "../../Store/Store";
-import { format } from "date-fns";
 import axios from "axios";
 import Keys from "../../config.keys";
 import SignUp from "./SignUp.js";
+import {Container, Row, Col } from "react-bootstrap";
+import EventCard from "../../components/EventCard";
+import { Link } from "react-router-dom";
 
-import { Carousel, Card, Container, Row, Col } from "react-bootstrap";
 
 const UserProfilePage = () => {
     const [userData, setUserData] = useContext(Store);
     const [userEvents, setUserEvents] = useState(null);
-    const [categories, setCategories] = useState(null);
+   
 
     useEffect(() => {
       const getUserDetails = async () => {
@@ -25,7 +26,8 @@ const UserProfilePage = () => {
               authorization: userData.token,
             },
           });
-  
+          
+          console.log("my events");
           console.log(res);
           setUserEvents([...res.data.data.events]);
         } catch (e) {
@@ -34,24 +36,7 @@ const UserProfilePage = () => {
       };
       getUserDetails();
     }, []);
-    useEffect(() => {
-       if(!userData.isAuth) {
-         window.location.href = "/";
-       }
-
-        const getCategories = async () => {
-          try {
-            const url = Keys.BASE_API + "/events/categories";
-            var res = await axios.get(url);
     
-            console.log(res.data.data.categories);
-            setCategories([...res.data.data.categories]);
-          } catch (e) {
-            console.log(e);
-          }
-        };
-        getCategories();
-    }, []);
 
     return (
       <div>
@@ -62,6 +47,7 @@ const UserProfilePage = () => {
           </div>
         ) : (
           <Container className='container'>
+            <h1 style={{textAlign: "center", color: "white"}}>Your Profile</h1> 
           <Row className='mainContent'>
               <Col xl={12}>
                   <Col>
@@ -77,6 +63,7 @@ const UserProfilePage = () => {
                           if (!userData.user.onBoard) {
                             return (
                               <div stlye={{backgroundColor:"red"}}><SignUp /></div>
+                              
                             )
                           } else{
                             return (
@@ -97,23 +84,11 @@ const UserProfilePage = () => {
                   <div className='regEvents'>
                   <Row>
                     {userEvents &&
-                    userEvents.map((e, i) => 
-                      <Col xl={4} md={5} sm={5} xs={8} className='mx-auto my-3'>
-                        <Row>
-                          <Col xl={10} md={10} className='event mx-auto'>
-                          <p className="regEventName"><h3>{e.eventName}</h3></p>
-                          {categories.map(catgr => (
-                              <div>
-                              {catgr.categoryName == e.eventCategory &&
-                                  <div className="regEventImage"><img src={catgr.icon}></img>
-                                  <p>{format(new Date(e.startTime), "PPp")}</p>
-                                  </div>
-                              }
-                              </div>
-                          ))}
-                          </Col>
-                        </Row>
-                    </Col>)}
+                    userEvents.map((e, i) =>
+                    
+                    <EventCard category = {e.eventCategory} poster={e.poster} eventName={e.eventName} startTime = {e.startTime} /> 
+                    
+                      )}
                   </Row>
                   </div>
               </Col>

@@ -164,6 +164,7 @@ const SignUp = () => {
         ) : (
           <div className="floating" onClick={() => setOpen(false)}>
             <div>
+               
               <i className="fas fa-times"></i>
             </div>
           </div>
