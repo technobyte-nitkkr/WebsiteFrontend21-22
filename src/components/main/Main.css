@@ -1,3 +1,36 @@
+.header-main img{
+  position: absolute;
+}
+.gear1{
+  /* border: 1px solid white; */
+  bottom: 55%;
+  right: 30%;
+  height: 35vh;
+}
+.gear2{
+  /* border: 1px solid red; */
+  bottom: 5%;
+  left: 40%;
+  height: 50vh;
+}
+.gear3{
+  /* border: 1px solid greenyellow;s */
+  height: 30vh;
+  bottom: 50%;
+  left: 30%;
+}
+
+@keyframes myAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.gear1, .gear2, .gear3{
+  animation: myAnimation 5s linear infinite;
+}
 .head-main{
     z-index: 2;
   color: transparent;
