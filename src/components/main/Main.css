@@ -1,4 +1,3 @@
-
 .header-main img{
   position: absolute;
 }
@@ -30,7 +29,8 @@
   }
 }
 .gear1, .gear2, .gear3{
-  animation: myAnimation 5s linear infinite;
+  opacity: 0;
+  animation: myAnimation 5s 3.5s linear infinite, titleAnimation 0.5s ease-in 2.5s 1 forwards;;
   z-index: 0;
 }
 .head-main{
@@ -44,6 +44,16 @@
   -webkit-text-stroke-width: 4px;
   -webkit-text-stroke-color: white;
   margin-top: 12vh;
+  opacity: 0;
+  animation: titleAnimation 0.5s ease-in 2s 1 forwards;
+  }
+  @keyframes titleAnimation {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
   }
   .time{
     justify-content: center;
@@ -57,7 +67,8 @@
   align-items: center;
   text-align: center;
   color: #FFFFFF;
-
+  opacity: 0;
+  animation: titleAnimation 0.5s ease-in 3s 1 forwards;
   }
   .desc{
     margin-left: 11vw;
@@ -71,12 +82,16 @@
   align-items: center;
   text-align: center;
   color: #C8C8C9;
+  opacity: 0;
+  animation: titleAnimation 0.5s ease-in 3s 1 forwards;
   }
   .buttons{
     justify-content: center;
     z-index: 2;
     display: flex;
     margin-top: 4vh;
+    opacity: 0;
+    animation: titleAnimation 0.5s ease-in 3s 1 forwards;
   }
   .regs{
     z-index: 2;

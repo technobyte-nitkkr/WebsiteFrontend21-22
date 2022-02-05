@@ -1,8 +1,44 @@
-
+.navCont{
+  opacity: 0;
+  animation: navAnimation 0.5s ease-in 3s 1 forwards;
+}
+@keyframes navAnimation {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 .logo{
   top: 3rem;
   left: 2rem;
   position: absolute;
+  opacity: 0;
+  animation: logoFlash 1s 0.5s ease-in 1 forwards;
+}
+@keyframes logoFlash {
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  20%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  40%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 .logo img{
   height: 5rem;

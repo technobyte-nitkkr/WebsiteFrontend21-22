@@ -8,7 +8,8 @@
     filter: blur(250px);
     top: -50vh;
     right: -50vh;
-    animation: circle1 15s linear infinite;
+    opacity: 0;
+    animation: circleFlash 1s 1.5s ease-out 1 forwards, circle1 15s 3s linear infinite;
   }
   @keyframes circle1 {
     0%{
@@ -41,7 +42,8 @@
     filter: blur(250px);
     top: 50vh;
     right: 150vh;
-    animation: circle2 15s linear infinite;
+    opacity: 0;
+    animation: circleFlash 1s 1.5s ease-out 1 forwards, circle2 15s 3s linear infinite;
   }
   @keyframes circle2 {
     0%{
@@ -63,6 +65,14 @@
     100%{
       top: 50vh;
       right: 150vh;
+    }
+  }
+  @keyframes circleFlash {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
     }
   }
   @media screen and (max-width: 1000px) and (orientation: portrait) {
