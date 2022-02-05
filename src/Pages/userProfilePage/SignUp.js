@@ -1,5 +1,5 @@
 import { React, useState, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 import Keys from "../../config.keys";
 import Store from "../../Store/Store";
@@ -52,19 +52,18 @@ const SignUp = () => {
         },
       };
       const body = JSON.stringify(formData);
-      const response = await axios.put(`${Keys.BASE_API}/user`, body, config).then (async(data)=>{
-        console.log(data.data);
-        await dispatch({
-          type: ONBOARD,
-          payload: data.data.user
-        });
-        navigate("/user");
+      const response = await axios.put(`${Keys.BASE_API}/user`, body, config);
 
-      })
+      console.log(response.data);
       
       console.log("this it check" + response.data.toString());
      
-      setOpen = false;
+      setOpen(false);
+
+      dispatch({
+        type: LOGIN,
+        payload: response.data.data,
+      });
       dispatch({
         type: "ADD_ERROR",
         payload: { msg: "query added." },

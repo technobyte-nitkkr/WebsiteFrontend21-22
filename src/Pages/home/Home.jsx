@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { interaction } from "../../components/button";
+// import { interaction } from "../../components/button";
 import HomeButtons from "../../components/bottomNav";
 import "../../components/button.scss";
 import LoginButton from "../../components/LoginButton";
@@ -10,7 +10,7 @@ import TopBar from "../../components/TopBar";
 
 function Home() {
   useEffect(() => {
-    interaction();
+    // interaction();
     AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function

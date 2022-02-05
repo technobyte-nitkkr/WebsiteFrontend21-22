@@ -7,7 +7,6 @@ const Store = createContext({
     isAuth: false,
     token,
     authLoading: true,
-    onBoard: false
 })
 
 export default Store
