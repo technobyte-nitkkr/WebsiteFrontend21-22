@@ -101,5 +101,99 @@
     font-size: 3.2vh;
   border: 4px solid #FFFFFF;
   box-sizing: border-box;
-  color: white;
+  color: #ffffff;
+  }
+
+  @media screen and (max-width: 1000px) and (orientation: portrait)
+  {
+    .header-main
+    {
+      position:absolute;
+      display:flex;
+      flex-direction: column;
+      top:25%;
+      align-items: center;
+
+    }
+
+    .head-main
+    {
+      /* border:2px solid white; */
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 45px;
+      line-height: 81px;
+      text-align: center;
+    }
+
+    .time
+    {
+        /* border:2px solid white; */
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+        text-align: center
+    }
+    .desc
+    {
+      /* border:2px solid white; */
+      margin-left: 0px;
+      margin-top:5px;
+    }
+
+    .buttons
+    {
+      display:flex;
+      flex-direction: column;
+    }
+
+    .regs
+    {
+      text-align: center;
+      margin:5px;
+      width: 225px;
+      height: 62px;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    .learn
+    {
+      text-align: center;
+      margin:5px;
+      width: 225px;
+      height: 62px;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    .gear1{
+      /* border: 1px solid white; */
+      bottom: 60%;
+      right: 45%;
+      height: 35vh;
+    }
+    .gear2{
+      /* border: 1px solid red; */
+      bottom: 1%;
+      left: 10%;
+      height: 50vh;
+    }
+    .gear3{
+      /* border: 1px solid greenyellow;s */
+      height: 30vh;
+      bottom: 70%;
+      left: 30%;
+    }
   }
