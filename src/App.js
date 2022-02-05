@@ -4,8 +4,8 @@ import Store from "./Store/Store";
 import {
   BrowserRouter as Router,
   Route,
+  Routes,
   useHistory,
-  Switch,
 } from "react-router-dom";
 import  Sponsors  from "./Pages/sponsors/Sponsors";
 
@@ -29,35 +29,31 @@ import TopBar from "./components/TopBar";
 function App() {
   const initialState = useContext(Store);
   const [state, dispatch] = useReducer(Reducer, initialState);
-  const [splash, setSplash] = useState(true);
+  // const [splash, setSplash] = useState(true);
   let routes = (
-    <Switch>
-      <Route path="/" exact component={Home} />
+    <Routes>
+      <Route path="/"  element={<Home/>} />
 
-      <Route path="/about" exact component={About} />
+      <Route path="/about"  element={<About/>} />
 
-      <Route path="/team" exact component={Team} />
+      <Route path="/Team"  element={<Team/>} />
 
-      <Route path="/devs" exact component={Developers} />
+      <Route path="/devs"  element={<Developers/>} />
 
-      <Route path="/lectures" exact component={GuestLecture} />
+      <Route path="/lectures"  element={<GuestLecture/>} />
 
-      <Route path="/categories" exact component={Category} />
+      <Route path="/categories"  element={<Category/>} />
 
-      <Route path="/sponsers" exact component={Sponsors} />
+      <Route path="/sponsers"  element={<Sponsors/>} />
 
-      <Route path="/events/:category" exact component={Events} />
+      <Route path="/events/:category"  element={<Events/>} />
 
-      <Route
-        path="/eventdetails/:category/:event"
-        exact
-        component={EventDescription}
-      />
-      <Route path="/user" exact component={UserProfilePage} />
-      <Route path="/sponsors" exact component={Sponsors} />
-      {/* <Route path="/testimonial" exact component={Testimonial} /> */}
-      <Route path="*" component={ErrorPage} />
-    </Switch>
+      <Route path="/eventdetails/:category/:event" element={<EventDescription/>} />
+      <Route path="/user"  element={<UserProfilePage/>} />
+      <Route path="/sponsors"  element={<Sponsors/>} />
+      <Route path="/testimonial"  element={<Testimonial/>} />
+      <Route path="*" element={<ErrorPage/>} />
+    </Routes>
   );
 
   // setTimeout(() => {
@@ -70,15 +66,9 @@ function App() {
      <Store.Provider value={[state, dispatch]}>
       <div className="App">
         <Router>
-<<<<<<< HEAD
-          <Sponsors />
-          <Testimonial />
-          < GuestLecture />
-=======
-          <TopBar />
+          
           {/* < GuestLecture /> */}
->>>>>>> 143befd5b135d1ec7d803d224f907587a25b9616
-          {/* <TopBar />  */}
+          <TopBar /> 
           {routes}
         </Router>
         {/* <Queries /> */}

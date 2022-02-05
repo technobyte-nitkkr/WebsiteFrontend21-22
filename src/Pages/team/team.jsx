@@ -10,8 +10,8 @@ export default function Team() {
         Meet the People who worked countless hours behind the scenes to bring
         you the Spectacle, that is Altius, the tech-fest of NIT kurukshetra.
       </div>
-      {/* <TeamAnimation /> */}
-      {/* <TeamDetails /> */}
+      <TeamAnimation /> 
+      <TeamDetails />
     </div>
   );
 }

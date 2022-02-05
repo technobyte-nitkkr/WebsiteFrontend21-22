@@ -3,12 +3,11 @@ import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 import Keys from "../../config.keys";
 import Store from "../../Store/Store";
-import { ONBOARD } from "../../Store/Types";
+import { LOGIN } from "../../Store/Types";
 
 const SignUp = () => {
   const [open, setOpen] = useState(false);
   const [state, dispatch] = useContext(Store);
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     college: "",
     year: "",

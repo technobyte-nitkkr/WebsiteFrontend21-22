@@ -73,8 +73,8 @@ const UserProfilePage = () => {
                         <p><b>Email:</b> {userData.user.email}</p>
                         {(() => {
                           if(!userData)
-                            console.log("hfgh");
-                          if (!userData.onBoard) {
+                            console.log("helloeelele");
+                          if (!userData.user.onBoard) {
                             return (
                               <div stlye={{backgroundColor:"red"}}><SignUp /></div>
                             )
