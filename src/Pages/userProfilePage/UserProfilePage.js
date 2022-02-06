@@ -4,19 +4,24 @@ import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import Store from "../../Store/Store";
 import axios from "axios";
 import Keys from "../../config.keys";
-import SignUp from "./SignUp.js";
-import {Container, Row, Col } from "react-bootstrap";
+import {Container, Row, Col, Button } from "react-bootstrap";
 import EventCard from "../../components/EventCard";
-import { Link } from "react-router-dom";
+import SignUpModal from "../SignUpModal";
 
 
 const UserProfilePage = () => {
     const [userData, setUserData] = useContext(Store);
     const [userEvents, setUserEvents] = useState(null);
+
+    const [modalShow, setModalShow] = useState(false);
+
+    const handleClose = () => setModalShow(false);
+    const handleShow = () => setModalShow(true);
    
 
     useEffect(() => {
       const getUserDetails = async () => {
+        console.log("hello");
         console.log(userData);
   
         try {
@@ -62,8 +67,16 @@ const UserProfilePage = () => {
                             console.log("helloeelele");
                           if (!userData.user.onBoard) {
                             return (
-                              <div stlye={{backgroundColor:"red"}}><SignUp /></div>
-                              
+                              <div stlye={{backgroundColor:"red"}}>
+                                <Button onClick={handleShow}>
+                                  SignUp for Techspardha
+                                </Button>
+                                <SignUpModal
+                                  show={modalShow}
+                                  onHide={handleClose}
+                                  user = {userData.user}
+                                />
+                              </div>
                             )
                           } else{
                             return (
@@ -85,9 +98,7 @@ const UserProfilePage = () => {
                   <Row>
                     {userEvents &&
                     userEvents.map((e, i) =>
-                    
-                    <EventCard category = {e.eventCategory} poster={e.poster} eventName={e.eventName} startTime = {e.startTime} /> 
-                    
+                    <EventCard category = {e.eventCategory} poster={e.poster} eventName={e.eventName} startTime = {e.startTime} />             
                       )}
                   </Row>
                   </div>

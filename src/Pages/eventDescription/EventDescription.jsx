@@ -16,6 +16,11 @@ const EventDescription = () => {
     const [isLoading, setLoading] = useState(false);
 
     const [{ isAuth, user,token }] = useContext(Store);
+
+    const [modalShow, setModalShow] = React.useState(false);
+
+    const handleClose = () => setModalShow(false);
+    const handleShow = () => setModalShow(true);
     
     
     const getInfo = async () => {
@@ -112,7 +117,7 @@ const EventDescription = () => {
        } 
       }
       else {
-        alert("User not OnBoard !!");
+        handleShow();
       }
        
      }
@@ -158,11 +163,17 @@ const EventDescription = () => {
                    Login to Register  
                 </Button>
                </> : <>
+                 
                <Button onClick={handleClick} style = {{color: "white", background: "transparent", fontSize: "25px"}}>
                  {
                    isRegistered ? <>Unregister</> : <>Register</> 
                  } 
                </Button>
+               <SignUpModal
+                  show={modalShow}
+                  onHide={handleClose}
+                  user = {user}
+                />
                </>}
                
             </Col>
