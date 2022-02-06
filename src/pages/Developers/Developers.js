@@ -5,8 +5,9 @@ import "./developers.css"
 
 const Developers = () => {
   return(
-      <div class ="container">
+      <div style={{position: "absolute", zIndex: "99"}}>
           <Background />
+      <div class ="container">
           <div class = "top" style={{zIndex: "2"}}>
               MEET OUR DEVELOPERS
           </div>
@@ -31,6 +32,7 @@ const Developers = () => {
               <Card />
               <Card /> */}
           </div>
+      </div>
       </div>
   );
 };
