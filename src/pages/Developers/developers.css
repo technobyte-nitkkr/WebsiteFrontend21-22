@@ -12,6 +12,10 @@
     padding: 0;
     z-index: 0;
 }
+.container::-webkit-scrollbar{
+    display: none;
+}
+
 .top{
     color: #fff;
     font-family: Poppins;

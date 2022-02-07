@@ -1,8 +1,8 @@
 
 .cardContainer {
     background: transparent;
-    width: 20vw;
-    height: 40vh;
+    width: 25vw;
+    height: 50vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -12,16 +12,18 @@
     font-size: larger;
     z-index: 2;
     padding: 0;
-    flex: 1 1 400px;
+    flex: 1 1 300px;
+    overflow: hidden;
 }
 
+
 .cardContainer:hover > .devPhoto {
-   
     transition-delay: 50ms;
     transform: scale(1.5);
 }
 
 .details{
+    height: 30%;
     margin-top: 0;
     color: #fff;
     padding: 0;
@@ -34,9 +36,10 @@
 }
 
 .devPhoto{
-    height: 100%;
-    margin-top:15px;
-    bottom: 0;
+    height: 65%;
+    /* width: 50%; */
+    /* margin-top:15px; */
+    top: 0;
     padding: 0;
     border-radius: 50%;
 }
