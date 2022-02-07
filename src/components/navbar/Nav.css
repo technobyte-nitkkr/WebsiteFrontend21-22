@@ -2,6 +2,7 @@
   opacity: 0;
   animation: navAnimation 0.5s ease-in 3s 1 forwards;
   z-index: 97;
+  height: 21vh;
 }
 @keyframes navAnimation {
   0%{

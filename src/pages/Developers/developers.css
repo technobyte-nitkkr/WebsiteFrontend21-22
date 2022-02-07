@@ -1,6 +1,6 @@
 .container {
     background-color: transparent;
-    height: 100vh;
+    height: 79vh;
     width: 100vw;
     margin: 0;
     overflow-y: auto;
@@ -17,7 +17,7 @@
     font-family: Poppins;
     font-size: 4vh;
     font-weight: 500;
-    margin: 8vh;
+    /*margin: 8vh;*/
     text-align: center;
     
 }
