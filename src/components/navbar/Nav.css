@@ -72,8 +72,17 @@
   padding: 2vh 3vh;
   text-decoration: none;
   z-index: 99;
+}
 
-  /* border: 2px solid black; */
+.profile {
+  color: #ffff;
+  font-family: Poppins;
+  font-weight: 200;
+  font-size: 4vh;
+  margin: 5vh 0.5vh;
+  padding: 2vh 3vh;
+  text-decoration: none;
+  z-index: 99;
 }
 
 #check {
