@@ -7,74 +7,63 @@ import {
   Routes,
   useHistory,
 } from "react-router-dom";
-import  Sponsors  from "./Pages/sponsors/Sponsors";
+
+import "./App.css";
+import Background from "./components/Background/Background";
+import Main from "./components/main/Main";
+import Nav from "./components/navbar/Nav";
+import Developers from "./Pages/developers/Developers";
+
+import Sponsors from "./Pages/sponsors/Sponsors";
 import Reducer from "./Store/Reducer";
-import  Home  from "./Pages/home/Home";
-import  About  from "./Pages/about/About";
-import  Team  from "./Pages/team/team";
-import  Developers  from "./Pages/developers/Developers";
-import  EventDescription  from "./Pages/eventDescription/EventDescription";
-import  Events  from "./Pages/events/Events";
-import  Queries  from "./Pages/queries/Queries";
-import  Category  from "./Pages/category/Category";
-import  GuestLecture  from "./Pages/guestLecture/GuestLecture";
-import  ErrorPage  from "./Pages/errorPage/ErrorPage";
-import  UserProfilePage  from "./Pages/userProfilePage/UserProfilePage";
-import  Testimonial  from "./Pages/testimonial/Testimonial";
-// import SplashScreen from "./Components/SplashScreen";
+import Home from "./Pages/home/Home";
+import About from "./Pages/about/About";
+import Team from "./Pages/team/team";
+import EventDescription from "./Pages/eventDescription/EventDescription";
+import Events from "./Pages/events/Events";
+import Queries from "./Pages/queries/Queries";
+import Category from "./Pages/category/Category";
+import GuestLecture from "./Pages/guestLecture/GuestLecture";
+import ErrorPage from "./Pages/errorPage/ErrorPage";
+import UserProfilePage from "./Pages/userProfilePage/UserProfilePage";
+import Testimonial from "./Pages/testimonial/Testimonial";
 import TopBar from "./components/TopBar";
 import TimelineHome from "./components/TimeLineHome";
-// import Footer from "./Components/Footer";
 
 function App() {
   const initialState = useContext(Store);
   const [state, dispatch] = useReducer(Reducer, initialState);
-  // const [splash, setSplash] = useState(true);
   let routes = (
     <Routes>
-      <Route path="/"  element={<Home/>} />
-
-      <Route path="/about"  element={<About/>} />
-
-      <Route path="/Team"  element={<Team/>} />
-
-      <Route path="/devs"  element={<Developers/>} />
-
-      <Route path="/lectures"  element={<GuestLecture/>} />
-
-      <Route path="/categories"  element={<Category/>} />
-
-      <Route path="/sponsers"  element={<Sponsors/>} />
-
-      <Route path="/events/:category"  element={<Events/>} />
-
-      <Route path="/eventdetails/:category/:event" element={<EventDescription/>} />
-      <Route path="/user"  element={<UserProfilePage/>} />
-      <Route path="/sponsors"  element={<Sponsors/>} />
-      <Route path="/testimonial"  element={<Testimonial/>} />
-      <Route path="*" element={<ErrorPage/>} />
+      <Route path="/" element={<Main />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/Team" element={<Team />} />
+      <Route path="/lectures" element={<GuestLecture />} />
+      <Route path="/categories" element={<Category />} />
+      <Route path="/sponsers" element={<Sponsors />} />
+      <Route path="/events/:category" element={<Events />} />
+      <Route path="/devs" element={<Developers />} />
+      <Route
+        path="/eventdetails/:category/:event"
+        element={<EventDescription />}
+      />
+      <Route path="/user" element={<UserProfilePage />} />
+      <Route path="/sponsors" element={<Sponsors />} />
+      <Route path="/testimonial" element={<Testimonial />} />
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 
-  // setTimeout(() => {
-  //   setSplash(false);
-  // }, 2000);
-
-  // if (splash) return <SplashScreen />;
-
   return (
-     <Store.Provider value={[state, dispatch]}>
-      <div className="App">
+    <Store.Provider value={[state, dispatch]}>
+      <div className="main">
+        <Background />
         <Router>
-          
-          {/* < GuestLecture /> */}
-          <TopBar /> 
-          {routes}
+          <Nav />
+          <div className="routes">{routes}</div>
         </Router>
-        {/* <Queries /> */}
-        {/* <Footer /> */}
       </div>
-     </Store.Provider>
+    </Store.Provider>
   );
 }
 
