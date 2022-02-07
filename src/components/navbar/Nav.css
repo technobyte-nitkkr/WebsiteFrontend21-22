@@ -190,6 +190,7 @@ z-index: 99;
 }
 .nav-comp
 {
+  position: relative;
   width: 150px;
   height: 36px;
   font-family: Poppins;
@@ -200,6 +201,7 @@ z-index: 99;
   /* border:2px solid red; */
   margin:20px;
   text-align: end;
+  right: 20px;
 }
 
 .nav-comp:hover

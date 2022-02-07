@@ -168,13 +168,15 @@
     {
       display:flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .regs
     {
       text-align: center;
       margin:5px;
-      width: 150px;
+      width: 200px;
       height: 50px;
       font-family: Poppins;
       font-style: normal;
@@ -186,7 +188,7 @@
     {
       text-align: center;
       margin:5px;
-      width: 150px;
+      width: 200px;
       height: 50px;
       font-family: Poppins;
       font-style: normal;
