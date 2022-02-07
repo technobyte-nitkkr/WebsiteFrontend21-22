@@ -20,7 +20,7 @@ body {
     text-align: center;
     font-size: 60px;
     margin-bottom: 55px;
-
+    color: white;
   }
   
   .sponsi-container {
@@ -41,7 +41,7 @@ body {
     margin-right:5px;
     transition: 0.3s;
     border-radius: 10px;
-    background-color: rgba(51, 51, 51, 0.25);
+    background-color: rgba(204, 204, 204, 0.125);
   }
   .sponsi-card-image {
     display: flex;
@@ -65,7 +65,7 @@ body {
     font-weight: 2000;
     font-size: 22px;
     text-decoration: none;
-    color: black;
+    color: white;
   }
   
   .sponsi-card-top .sponsi-card-text {
