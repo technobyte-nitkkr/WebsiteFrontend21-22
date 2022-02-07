@@ -1,5 +1,6 @@
   body{
-    background-image: url("https://image.freepik.com/free-vector/gradient-dark-dynamic-lines-background_23-2148995950.jpg");
+    /* background-image: url("https://image.freepik.com/free-vector/gradient-dark-dynamic-lines-background_23-2148995950.jpg"); */
+    background-image: linear-gradient(to bottom right,rgb(75, 3, 57),rgb(60, 8, 83));
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

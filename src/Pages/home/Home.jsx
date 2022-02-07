@@ -2,15 +2,16 @@ import React, { useEffect } from "react";
 import "./Home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { interaction } from "../../components/button";
+// import { interaction } from "../../components/button";
 import HomeButtons from "../../components/bottomNav";
 import "../../components/button.scss";
 import LoginButton from "../../components/LoginButton";
 import TopBar from "../../components/TopBar";
+import TimelineHome from "../../components/TimeLineHome";
 
 function Home() {
   useEffect(() => {
-    interaction();
+    // interaction();
     AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -35,6 +36,7 @@ function Home() {
 
   return (
     <div className="home">
+      
       <div className="home-content">
         <div className="home-text" data-aos="flip-left">
           <div className="home-text-div">
@@ -51,17 +53,18 @@ function Home() {
           <HomeButtons></HomeButtons>
         </div>
       </div>
-      <div className="login">
+    { /* <div className="login">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         LOGIN
         
-      </div>
+       </div> */} 
       {/* <div className="footer">
         <p></p>
       </div> */}
+    <TimelineHome />
     </div>
   );
 }

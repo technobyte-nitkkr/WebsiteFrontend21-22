@@ -8,7 +8,6 @@ import {
   useHistory,
 } from "react-router-dom";
 import  Sponsors  from "./Pages/sponsors/Sponsors";
-
 import Reducer from "./Store/Reducer";
 import  Home  from "./Pages/home/Home";
 import  About  from "./Pages/about/About";
@@ -24,6 +23,7 @@ import  UserProfilePage  from "./Pages/userProfilePage/UserProfilePage";
 import  Testimonial  from "./Pages/testimonial/Testimonial";
 // import SplashScreen from "./Components/SplashScreen";
 import TopBar from "./components/TopBar";
+import TimelineHome from "./components/TimeLineHome";
 // import Footer from "./Components/Footer";
 
 function App() {
@@ -66,7 +66,9 @@ function App() {
      <Store.Provider value={[state, dispatch]}>
       <div className="App">
         <Router>
-          {/* <TopBar /> */}
+          
+          {/* < GuestLecture /> */}
+          <TopBar /> 
           {routes}
         </Router>
         {/* <Queries /> */}

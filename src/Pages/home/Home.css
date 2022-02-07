@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap");
 .home {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   background: url(../../images/b8.jpg);
   background-attachment: fixed;

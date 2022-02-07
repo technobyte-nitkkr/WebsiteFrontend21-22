@@ -5,12 +5,14 @@
     display: flex;
     background: #203354;
     margin: 2%;
-    border-radius: 20px;
+    border-radius: 25px;
+   
   }
   .team-links {
     height: 100%;
     margin-top: 10px;
     margin-left: 15px;
+    margin-right: 10px;
   }
   .teams {
     color: white;

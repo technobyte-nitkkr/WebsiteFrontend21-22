@@ -6,7 +6,7 @@ const Store = createContext({
     user: null,
     isAuth: false,
     token,
-    authLoading: true
+    authLoading: true,
 })
 
 export default Store

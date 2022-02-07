@@ -100,6 +100,7 @@ const interaction = () => {
         closeNav();
       }
     }
+
     function openNav() {
       open = true;
       button.innerHTML = "-";
@@ -110,6 +111,7 @@ const interaction = () => {
         outerText[i].style.animationPlayState = "paused";
       }
     }
+
     function closeNav() {
       open = false;
       button.innerHTML = "+";
@@ -119,6 +121,7 @@ const interaction = () => {
         outerText[i].style.animationPlayState = "running";
       }
     }
+
     document.addEventListener("click", closeNav);
   })(window);
 

@@ -7,7 +7,7 @@ import Store from "../Store/Store";
 import { AUTH, LOGIN } from "../Store/Types";
 
 const LoginButton = () => {
-  const [_, dispatch] = useContext(Store);
+  const [store, dispatch] = useContext(Store);
   const request = useFetch(Keys.BASE_API);
   const [localState, setLocalState] = useState({
     error: "",
@@ -15,16 +15,31 @@ const LoginButton = () => {
 
   const success = async (e) => {
     const TOKEN = e.tokenId;
+
+    if (localStorage.getItem("ts20token")) {
+      const data = JSON.parse(localStorage.getItem("userdata"));
+      const token = localStorage.getItem("ts20token");
+      dispatch({
+        type: LOGIN,
+        payload: {
+          user: data,
+          token
+        },
+      });
+      return;
+    }
+
     try {
       const response = await request.post("/login", {
         idToken: TOKEN,
       });
 
       console.log("HERE");
-
+      console.log(response.data.token);
+      console.log("HERE");
       dispatch({
         type: LOGIN,
-        payload: response.data.token,
+        payload: response.data,
       });
 
       dispatch({
@@ -58,6 +73,7 @@ const LoginButton = () => {
         <GoogleLogin
           render={(renderProps) => (
             <button
+              style={{ background: "transparent", color: "white", fontSize: "25px" }}
               className="login-button"
               onClick={renderProps.onClick}
               disabled={renderProps.disabled}
