@@ -1,149 +1,98 @@
-  body{
-    /* background-image: url("https://image.freepik.com/free-vector/gradient-dark-dynamic-lines-background_23-2148995950.jpg"); */
-    background-image: linear-gradient(to bottom right,rgb(75, 3, 57),rgb(60, 8, 83));
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  }
+body {
+  background: #fefefe;
+  font-family: sans-serif;
+}
+
   .sponsor-wrapper {
-    display: flex;
-    justify-content: center;
-    background:transparent;
-    margin-bottom:3rem;
+    width: 90%;
+    margin: 50px auto;
     
   }
+  
+  
   .sponsor-headline {
-      background-color: white;
-      font-weight: 800; 
-
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin: 4.5%;
-      font-size: 4rem
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 55px;
 
   }
   
   .sponsi-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
-    grid-auto-rows: 250px;
-    grid-auto-flow: row dense;
-    grid-gap: 40px;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
     
   }
   
-  .sponsi-card-top {
-    display: flex;
-    /* flex-wrap: nowrap; */
-    /* background-color:#121B20; */
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(182, 186, 194, 0.25);
-    border-radius: 12px;
-    border: 2px solid rgba(255, 255, 255, 0.175);
-    height: 20vw;
-    width: 100%;
-    /* background-color: black; */
-    /* box-shadow: solid 1px black; */
-    /* box-shadow: 0px 3px 9px 1px rgba(0, 10, 20, 0.2); */
+  .sponsi-card-top{
+    width: 20%;
+    height: 300px;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 50px;
+    margin-right:5px;
+    transition: 0.3s;
+    border-radius: 10px;
+    background-color: rgba(51, 51, 51, 0.25);
   }
-  
-  .sponsi-card-top {
-    flex-direction: column;
-    margin: 2vw 0 !important;
-    /*grid-column: auto / span 1;
-    grid-row: auto / span 2; */
-  }
-  
   .sponsi-card-image {
     display: flex;
     overflow: hidden;
-    margin-top: 50px;
+    margin-top: 25px;
     justify-content: center;
-  }
-  
-  .sponsi-card-top .sponsi-card-image, .sponsi-card-bottom .sponsi-card-image {
+    /* align-items: center; */
     height: 50%;
     width: 100%;
   }
   
-  .sponsi-card-left .sponsi-card-image, .sponsi-card-right .sponsi-card-image {
-    height: 100%;
-    width: 50%;
-  }
-  
   .sponsi-card-image img {
     width: 80%;
+    justify-content: center;
     object-fit: contain;
   }
-  
   .sponsi-card-text {
-    align-self: center;
-    padding: 23px;
+    padding-top: 30px;
+    /* padding-bottom: -20px; */
+    text-align: center;
+    font-weight: 2000;
+    font-size: 22px;
     text-decoration: none;
+    color: black;
   }
   
   .sponsi-card-top .sponsi-card-text {
     height: auto;
     width: auto;
   }
-  
   .sponsi-card-top:hover{
-    transform: scale3d(1.08,1.08,1);
-    transition: all 500ms ease;
-    /* box-shadow: solid 50px black; */
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
   }
-  .sponsi-card-text p {
-    margin: 0;
-    line-height: 1.35em;
-    color:white;
-    font-size:1.2rem;
-    text-decoration: none;
-  }
-  .sponsi-card-text h4 {
-    margin: 0;
-    line-height: 2rem;
-    font-weight: 2.4rem;
-    text-decoration: none;
-  }
-  
-  @media (max-width:960px){
-    .sponsor-headline{
-      font-size:3.4rem;
+  @media screen and (max-width: 1000px) {
+    .sponsi-card-top {
+      width: 40%;
     }
   }
-  @media (max-width: 541px) {
-    .sponsor-headline{
-      font-size:2.5rem;
-      margin: 10% !important;
-      background-color: blue;
-    }
-    .sponsi-card-top .sponsi-card-image{
-      height: 100%;
+  @media screen and (max-width: 620px) {
+    .sponsor-wrapper {
       width: 100%;
     }
   
-  
-    .sponsi-card-top .sponsi-card-text {
-      /* height: auto; */
-      /* width: 50%; */
-      /* padding-right: 36.8px; */
-      /* text-align: center;*/
-      
-    }
-  }
-  @media (max-width: 400px) {
-    .sponsi-card-image {
-      width: 100% !important;
+    .sponsor-headline {
+      padding: 20px;
+      font-size: 40px;
     }
   
-    .sponsi-card-text {
-      /* width: 62% !important; */
+    .sponsi-card-top {
+      width: 80%;
     }
   }
   

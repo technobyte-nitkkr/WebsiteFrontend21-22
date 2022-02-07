@@ -65,7 +65,7 @@ const Sponsors = () => {
               
                   <h4>
                     <a href={item.targetUrl} style={{
-                      color:'#FFFFFF',
+                      color:'#000000',
                       textAlign:'center',
                       textDecoration:'none'
                     }}>{item.name}</a>
