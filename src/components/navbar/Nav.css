@@ -2,6 +2,7 @@
   opacity: 0;
   animation: navAnimation 0.5s ease-in 3s 1 forwards;
   z-index: 97;
+  height: 21vh;
 }
 @keyframes navAnimation {
   0%{
@@ -190,16 +191,19 @@ z-index: 99;
 }
 .nav-comp
 {
+  position: relative;
   width: 150px;
   height: 36px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
+  /* font-size: 18px; */
   line-height: 36px;
   /* border:2px solid red; */
   margin:20px;
   text-align: end;
+  right: 20px;
 }
 
 .nav-comp:hover

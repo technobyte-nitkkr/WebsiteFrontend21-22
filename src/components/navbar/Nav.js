@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Nav() {
   return (
     <>
-    <div className="logo">
+    <div className="logo" style ={{zIndex: "2"}}>
         <img src={logo} alt="" />
     </div>
     <div className='navCont'>
@@ -26,6 +26,10 @@ function Nav() {
           <Link to="/" className='nav-comp'>About Us</Link>
           <Link to="/" className='nav-comp'>Events</Link>
           <Link to="/" className='nav-comp'>Register</Link>
+          {/* <Link to="/" className='nav-comp'>Categories</Link>
+          <Link to="/" className='nav-comp'>Sponsers</Link>
+          <Link to="/" className='nav-comp'>Guest Lectures</Link> */}
+          {/* <Link to="/" className='nav-comp'>Team</Link> */}
         </div>
       </div>
     </div>

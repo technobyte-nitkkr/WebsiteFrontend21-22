@@ -2,19 +2,21 @@ import './App.css';
 import Background from './components/Background/Background';
 import Main from './components/main/Main';
 import Nav from './components/navbar/Nav';
-import {BrowserRouter as Router} from "react-router-dom"; 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Developers from './pages/Developers/Developers';
 
 function App() {
   return (
-    <div className="main">
-      <Router>
+    <BrowserRouter>
+      <div className="main">
         <Background />
-        {/* <Nav />
-        <Main /> */}
-        <Developers />
-      </Router>
-    </div>
+        <Nav />
+        <Routes>
+          <Route path='/techno-land' element={<Main />} />
+          <Route path='/techno-land/dev' element={<Developers />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
