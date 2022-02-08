@@ -1,12 +1,3 @@
-.demo{  
-    font-family: "Roboto Slab", serif;min-width: 100vw;min-height: 100vh;   
-    /* background-image: linear-gradient(to bottom right,rgb(75, 3, 57),rgb(60, 8, 83)); */
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    /* border: 2px solid rgba(255, 255, 255, 0.175); */
-}
 
 .mainContentGL{
     position: relative;
@@ -19,12 +10,12 @@
 
 .carouselGL{
     margin:auto;
-    width: 94%;
+    width: 80%;
 }
 
 .guestLecture{
     padding: 15px 50px;
-    margin: auto;
+    margin: 70px auto;
     border-radius: 0 70px 0 70px;
     border: 5px solid white;
     border-left: none;

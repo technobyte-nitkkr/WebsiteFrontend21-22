@@ -56,8 +56,8 @@ function Nav() {
             <Link to="/devs" className="nav-comp">
               Developers
             </Link>
-            <Link to="/about" className="nav-comp">
-              About Us
+            <Link to="/testimonial" className="nav-comp">
+              Testimonial
             </Link>
 
             {isAuth ? (

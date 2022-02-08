@@ -14,6 +14,7 @@
 //   font-family: myFirstFont;
   letter-spacing: 10px;
 }
+
 .sub-heading {
     color: #fff;
     font-size: 20px;
@@ -21,6 +22,7 @@
     margin-left: 9%;
     margin-bottom: 50px;
   }
+
 // .heading{
 //   color:#ffffff;
 //   font-size: 3rem;
@@ -30,18 +32,19 @@
 // }
 
 .cards{
-
   // background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("https://image.freepik.com/free-vector/gradient-dark-dynamic-lines-background_23-2148995950.jpg");
-  background-image: linear-gradient(to bottom right,rgb(75, 3, 57),rgb(60, 8, 83));
+  // background-image: linear-gradient(to bottom right,rgb(75, 3, 57),rgb(60, 8, 83));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   padding-bottom:20px;
 }
+
 .cardBox{
   min-height:400px;
 }
+
 .testimonial:before{
   content: "";
   height:70%;
@@ -56,6 +59,7 @@
   //box-shadow: 0 0 10px #03bcf4, 0 0 40px #03bcf4, 0 0 80px #03bcf4;
   //box-shadow: 0px 0px 5px 2px #03bcf4;
 }
+
 .testimonial{
     min-height: 400px;
     padding: 20px 20px 20px 90px;
@@ -64,6 +68,7 @@
     // box-shadow: 0px 0px 5px 2px #03bcf4;
     position: relative;
 }
+
 .testimonial:after{
     content: "";
     height:70%;
@@ -76,6 +81,7 @@
     // box-shadow: 0px 0px 5px 2px #03bcf4;
     // box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
 }
+
 .testimonial .pic{
     width: 100px;
     height: 100px;
@@ -87,10 +93,12 @@
     top: 0;
     left: -50px;
 }
+
 .testimonial .pic img{
     width: 100%;
     height: auto;
 }
+
 .testimonial .title{
     font-size: 22px;
     font-weight: 600;
@@ -100,6 +108,7 @@
     letter-spacing: 1px;
     margin: 0 0 7px 0;
 }
+
 .testimonial .post{
     display: block;
     font-size: 15px;
@@ -107,11 +116,13 @@
     // text-shadow: 0 0 2px #03bcf4, 0 0 5px #03bcf4, 0 0 10px #03bcf4;
     text-transform: capitalize;
 }
+
 .testimonial .description{
     font-size: 15px;
     color: #ffffff;
     line-height: 28px;
 }
+
 @media only screen and (max-width: 665px){
     .heading {
         font-size: 4rem;
@@ -121,11 +132,13 @@
         letter-spacing: 10px;
       }
 }
+
 @media only screen and (max-width: 479px){
     .testimonial{
         padding: 20px 0 20px 60px;
         margin: 10px 20px 50px 50px;
     }
+
     .testimonial .title{ font-size: 20px; }
     .heading {
         font-size: 2rem;
@@ -135,4 +148,3 @@
         letter-spacing: 10px;
       }
 }
-

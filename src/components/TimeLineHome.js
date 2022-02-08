@@ -38,16 +38,19 @@ const TimelineHome = () => {
     // });
     return x;
   }
+
   function time(timestamp) {
     var myDate = new Date(timestamp);
     var x = dateFormat(myDate, "hh:MM TT");
     return x;
   }
+
   function date(timestamp) {
     var myDate = new Date(timestamp);
     var x = dateFormat(myDate, "dd/mm/yy");
     return x;
   }
+
   istate.timeline.sort((x, y) => {
     var a = new Date(x.startTime);
     var b = new Date(y.startTime);

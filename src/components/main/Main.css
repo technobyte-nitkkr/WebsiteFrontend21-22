@@ -47,10 +47,9 @@
   font-family: Poppins;
   font-style: normal;
   font-weight: 900;
-  font-size: 18vh;
+  font-size: 16vh;
   text-align: center;
 
-  margin-top: 12vh;
   opacity: 0;
   animation: titleAnimation 0.5s ease-in 2s 1 forwards;
 }

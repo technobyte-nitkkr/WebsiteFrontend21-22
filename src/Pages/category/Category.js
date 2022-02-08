@@ -5,7 +5,6 @@ import CardsCat from "./CardsCat";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-
 import "./Category.css";
 // import Heading from "./heading.js";
 function Category() {
@@ -60,7 +59,7 @@ function Category() {
         <Heading />
       </div> */}
       {console.log(data)}
-      <div className="category-heading">Categories</div>
+      {/* <div className="category-heading">Categories</div> */}
       <div class="container-fluid">
         {load? <OwlCarousel
           className="slider-items owl-carousel owl-theme"
@@ -69,7 +68,6 @@ function Category() {
           {...options}
         >
           {data.map((x, index) => {
-            
             return (
               <div key={index}>
                 <CardsCat name={x.categoryName} img={x.imgUrl} icon={x.icon} />
