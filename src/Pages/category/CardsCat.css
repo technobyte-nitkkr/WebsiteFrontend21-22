@@ -1,7 +1,6 @@
 .bodycard {
     text-align: center;
     font-family: Arial;
-    
   }
   
   .a-box {
@@ -18,14 +17,10 @@
       border-radius: 0px 0px 20px 20px;
       display: inline-block;
       z-index:  99;
-      
   }
   
   .img-container .img {
-      transform: skew(0deg, -13deg);
       height: 250px;
-      margin: -35px 0px 0px -70px;
-      
   }
   
   .inner-skew {
@@ -33,7 +28,6 @@
       border-radius: 20px;
       overflow: hidden;
       padding: 0px;
-      transform: skew(0deg, 13deg);
       font-size: 0px;
       margin: 30px 0px 0px 0px;
       background: #c8c2c2;

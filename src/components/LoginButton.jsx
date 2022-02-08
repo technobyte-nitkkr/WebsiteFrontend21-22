@@ -73,8 +73,8 @@ const LoginButton = () => {
         <GoogleLogin
           render={(renderProps) => (
             <button
-              style={{ background: "transparent", color: "white", fontSize: "25px" }}
-              className="login-button"
+              style={{ background: "transparent",color: "white", border: "none" }}
+              
               onClick={renderProps.onClick}
               disabled={renderProps.disabled}
             >

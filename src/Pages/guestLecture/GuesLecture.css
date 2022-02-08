@@ -1,14 +1,4 @@
-.demo{  background: #000;
-    font-family: "Roboto Slab", serif;min-width: 100vw;min-height: 100vh;   
-    background-image: linear-gradient(to bottom right,rgb(75, 3, 57),rgb(60, 8, 83));
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    border: 2px solid rgba(255, 255, 255, 0.175);
 
-
-}
 .mainContentGL{
     position: relative;
     min-width: 100%;
@@ -17,13 +7,15 @@
     /* max-height: 400vh; */ 
     padding-bottom: 100px;
 }
+
 .carouselGL{
     margin:auto;
-    width: 94%;
+    width: 80%;
 }
+
 .guestLecture{
     padding: 15px 50px;
-    margin: auto;
+    margin: 70px auto;
     border-radius: 0 70px 0 70px;
     border: 5px solid white;
     border-left: none;
@@ -34,10 +26,12 @@
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(182, 186, 194, 0.25); */
 }
+
 .col-md-8{
     width: 100%;
     /* overflow: hidden; */
 }
+
 .guestLecture .picture{
     display: inline-block;
     width: 100px;
@@ -45,10 +39,12 @@
     border-radius: 50%;
     margin-bottom: 20px;
 }
+
 .guestLecture .picture img{
     width: 100%;
     height: auto;
 }
+
 .guestLecture .title{
     display: block;
     margin: 0 0 7px 0;
@@ -58,6 +54,7 @@
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+
 .guestLecture .post{
     display: block;
     font-size: 15px;
@@ -65,6 +62,7 @@
     text-transform: capitalize;
     margin-bottom: 20px;
 }
+
 .guestLecture .description{
     font-size: 16px;
     color: #fff;

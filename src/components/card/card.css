@@ -1,0 +1,47 @@
+
+.cardContainer {
+    background: transparent;
+    width: 25vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px;
+    cursor: pointer;
+    font-size: larger;
+    z-index: 2;
+    padding: 0;
+    flex: 1 1 300px;
+    overflow: hidden;
+}
+
+
+.cardContainer:hover > .devPhoto {
+    transition-delay: 50ms;
+    transform: scale(1.5);
+}
+
+.details{
+    height: 30%;
+    margin-top: 0;
+    color: #fff;
+    padding: 0;
+    font-family: Poppins;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.devPhoto{
+    height: 65%;
+    /* width: 50%; */
+    /* margin-top:15px; */
+    top: 0;
+    padding: 0;
+    border-radius: 50%;
+}
+
+
