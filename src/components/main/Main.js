@@ -9,14 +9,14 @@ import { Link } from 'react-router-dom';
 function Main() {
   return (
     <div id="header-main" className="header-main">
-      {/* <img src={gear1} className="gear1" alt="" /> */}
-      {/* <img src={gear2} className="gear2" alt="" /> */}
-      {/* <img src={gear3} className="gear3" alt="" /> */}
+      <img src={gear1} className="gear1" alt="" />
+      <img src={gear2} className="gear2" alt="" />
+      <img src={gear3} className="gear3" alt="" />
       <div className="head-main">TECHSPARDHA</div>
-      <div className="time">24th - 28th February</div>
-      <div className="desc">
+      <div className="time">"Spectrum of Innovation"</div>
+      {/* <div className="desc">
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint
-      </div>
+      </div> */}
       <div className="buttons">
         {/* <div className='regs'>Register</div> */}
         <div className="learn">
