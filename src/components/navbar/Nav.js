@@ -62,14 +62,12 @@ function Nav() {
 
             {isAuth ? (
               <>
-              <div className="nav-comp profile" style={{ float: "right" }}>
-                <Link to="/user">
-                  <div className="mr-2 hover">
-                    <i className="fa fa-user icon" aria-hidden="true"></i>
-                  </div>
-                </Link>
-              </div>
-                <div className="nav-comp profile">
+                <div className="nav-comp profile" style={{ float: "right" }}>
+                  <Link to="/user">
+                    <div className="mr-2 hover">
+                      <i className="fa fa-user icon" aria-hidden="true"></i>
+                    </div>
+                  </Link>
                   <GoogleLogout
                     clientId={Keys.OAUTH_CLIENT_ID}
                     render={(renderProps) => (
@@ -90,9 +88,10 @@ function Nav() {
                     cookiePolicy={"single_host_origin"}
                   />
                 </div>
+                
               </>
             ) : (
-              <div className="nav-comp profile">
+              <div className="nav-comp">
                 <LoginButton />
               </div>
             )}

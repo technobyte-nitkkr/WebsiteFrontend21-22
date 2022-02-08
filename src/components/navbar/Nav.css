@@ -2,7 +2,7 @@
   opacity: 0;
   animation: navAnimation 0.5s ease-in 3s 1 forwards;
   z-index: 97;
-  height: 21vh;
+  /* height: 21vh; */
 }
 
 @keyframes navAnimation {
@@ -67,20 +67,16 @@
   color: #ffff;
   font-family: Poppins;
   font-weight: 500;
-  font-size: 4vh;
-  margin: 5vh 0.5vh;
+  font-size: 3.5vh;
+  margin: 4vh 0.5vh;
   padding: 2vh 3vh;
   text-decoration: none;
   z-index: 99;
 }
 
 .profile {
-  color: #ffff;
-  font-family: Poppins;
-  font-weight: 200;
-  font-size: 4vh;
-  margin: 5vh 0.5vh;
-  padding: 2vh 3vh;
+  margin: 2vh 0.5vh;
+  padding: 1vh 2vh;
   text-decoration: none;
   z-index: 99;
 }
@@ -94,6 +90,12 @@
 }
 
 @media screen and (max-width: 1000px) and (orientation: portrait) {
+  .navCont {
+   position: fixed;
+   right: 10px;
+  height: 21vh;
+}
+
   .logo {
     top: 2.5rem;
     left: 1rem;
@@ -105,14 +107,14 @@
   }
 
   .menubutton {
-    position: absolute;
-    width: 39px;
+    position: relative;
+    /* width: 39px; */
     height: 24px;
-    right: 32px;
+    right: 10px;  
     top: 50px;
     /* border:2px solid white; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     z-index: 99;
   }
@@ -170,10 +172,10 @@
   }
 
   .sidebar {
-    position: absolute;
+    position: relative;
     width: 243px;
     height: 100vh;
-    right: -20px;
+    right: -30px;
     top: 0px;
     border: 2px solid rgb(163, 162, 162);
     border-radius: 20px;
