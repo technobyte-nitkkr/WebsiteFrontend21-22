@@ -54,7 +54,7 @@ function Category() {
   }, []);
 
   return (
-    <div>
+    <div className="myCustomContainer">
       {/* <div class="container-fluid">
         <Heading />
       </div> */}

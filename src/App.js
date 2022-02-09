@@ -34,7 +34,7 @@ import SplashScreen from "./components/Splash";
 function App() {
   const initialState = useContext(Store);
   const [state, dispatch] = useReducer(Reducer, initialState);
-  const [splash, setSplash] = useState(false);
+  const [splash, setSplash] = useState(true);
   let routes = (
     <Routes>
       <Route path="/" element={<Main />} />
@@ -55,9 +55,9 @@ function App() {
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
-  // setTimeout(() => {
-  //   setSplash(false);
-  // }, 2000);
+  setTimeout(() => {
+    setSplash(false);
+  }, 2000);
 
   return (
     <Store.Provider value={[state, dispatch]}>
@@ -68,9 +68,10 @@ function App() {
             <SplashScreen />
           ) : (
             <>
-              {" "}
               <Nav />
-              <div className="routes">{routes}</div>
+              {/* <div className="myCustomContainer"> */}
+                <div className="routes">{routes}</div>
+              {/* </div> */}
             </>
           )}
         </Router>

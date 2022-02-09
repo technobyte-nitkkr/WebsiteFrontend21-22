@@ -1,38 +1,30 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.main{
-  background-color: #180A30;
+.main {
+  background-color: #180a30;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 100vh;
-  width: 100vw;
-  overflow:hidden;
-  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.routes {
-  /* background-color: #180A30; */
-  overflow: hidden;
-  margin: 0;
-  overflow-y: scroll;
-  height: 150vh;
-  width: 100%;
-  position: relative;
+.routes::-webkit-scrollbar {
+  display: none;
 }
 
 /* media query */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .routes {
-    margin-top: 80px;
-    height: 100vh;
+    margin-top: 50px;
+    height: 90%;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    align-items: center;
+    justify-items: center;
   }
 }

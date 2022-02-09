@@ -17,18 +17,22 @@
 
 .team {
   width: 100%;
-  
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* background-size: cover; */
+  /* background-attachment: fixed; */
 }
 
 .sub-team-heading {
   color: #fff;
   font-size: 20px;
-  width: 50%;
-  margin-left: 8%;
+  width: 80%;
+  margin: 0 auto;
+  /* width: 50%; */
+  /* margin-left: 8%; */
 }
 
 ::-webkit-scrollbar {

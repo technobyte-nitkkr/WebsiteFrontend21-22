@@ -50,7 +50,6 @@ const Sponsors = () => {
 
           // var s = arr[Math.floor(Math.random() * arr.length)];
            
-
             return (
               <div key={index} className="sponsi-card-top">
                 <div className="sponsi-card-image">
@@ -76,7 +75,6 @@ const Sponsors = () => {
                 </div>
                 </div>
             );
-
         })}
       </div>
     </div> 

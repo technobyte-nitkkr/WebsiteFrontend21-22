@@ -1,8 +1,9 @@
 .navCont {
   opacity: 0;
-  animation: navAnimation 0.5s ease-in 3s 1 forwards;
+  animation: navAnimation 0.5s ease-in 1s 1 forwards;
   z-index: 97;
-  /* height: 21vh; */
+
+  height: 10%;
 }
 
 @keyframes navAnimation {
@@ -16,18 +17,19 @@
 }
 
 .logo {
-  top: 2rem;
+  top: 2.6rem;
   left: 2rem;
   position: absolute;
-  opacity: 0;
+
+  /* opacity: 0; */
   animation: logoFlash 1s 0.5s ease-in 1 forwards;
 }
 
 .logo2 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+
   opacity: 0;
   display: flex;
   align-items: center;
@@ -35,7 +37,8 @@
 }
 
 .logo2 img {
-  width: 80%;
+  height: 70%;
+  margin: 0 auto;
 }
 
 @keyframes logoFlash {
@@ -75,6 +78,7 @@
 .nav {
   z-index: 99;
   display: flex;
+  /* background-color: red; */
 }
 
 .nav-comp {
@@ -116,6 +120,12 @@
     left: 1rem;
     position: absolute;
   }
+
+  .logo2 img {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
 
   .logo img {
     height: 3rem;
@@ -251,11 +261,13 @@
     height: 3rem;
   }
 }
+
 @media screen and (max-width: 1400px) and (orientation: landscape){
   .nav{
     /* border: 1px solid white; */
     padding: 0;
   }
+
   .nav-comp{
     /* border: 1px solid greenyellow; */
     font-size: 1.5vw;

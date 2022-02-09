@@ -26,7 +26,8 @@
     text-align: center;
 }
 
-.team {
+.team2 {
+    margin: 50px auto;
     width: 100%;
     display: flex;
     justify-content: center;
