@@ -64,9 +64,9 @@ export default function SignUpModal(props) {
            });
           dispatch({
             type: "ADD_ERROR",
-            payload: { msg: "signUp added." },
+            payload: { msg: "signUp done." },
           });
-          handleFeedback("signUp submitted");
+          handleFeedback("signUp done");
           setTimeout(() => {
             dispatch({
               type: "REMOVE_ERRORS",
@@ -124,13 +124,15 @@ export default function SignUpModal(props) {
                   />
                 </div>
                 <div style ={{padding : "10px"}}>
-                    <input
-                    name="year"
-                    required="required"
-                    type="string"
-                    placeholder="Year"
-                    onChange={handleChange}
-                  />
+
+                <label for="year" style={{marginRight:"10px"}}>Year:</label>
+
+                    <select name="year" required="required" type="string">
+                      <option value="Fresher">Fresher</option>
+                      <option value="Sophomore">Sophomore</option>
+                      <option value="Prefinal Year">Prefinal Year</option>
+                      <option value="Final Year">Final Year</option>
+                    </select>
                 </div>
                 <div style ={{padding : "10px"}}>
                   <button type="submit" onClick={handleSubmit} >

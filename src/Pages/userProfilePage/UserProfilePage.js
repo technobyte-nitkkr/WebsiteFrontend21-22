@@ -94,14 +94,22 @@ const UserProfilePage = () => {
               </Col>
               <Col>
                   <div className='regEvents-heading'><h1>Your Registered Events</h1></div>
-                  <div className='regEvents'>
-                  <Row>
-                    {userEvents &&
-                    userEvents.map((e, i) =>
-                    <EventCard category = {e.eventCategory} poster={e.poster} eventName={e.eventName} startTime = {e.startTime} />             
-                      )}
-                  </Row>
-                  </div>
+                  {(() => {
+                    if(!userEvents){
+                      return (<p style={{color:"white",textAlign:"center",marginBottom:"100px"}}>You have not registered in any event.</p>)
+                    }else{
+                      return(
+                      <div className='regEvents'>
+                      <Row>
+                        {userEvents &&
+                        userEvents.map((e, i) =>
+                        <EventCard category = {e.eventCategory} poster={e.poster} eventName={e.eventName} startTime = {e.startTime} />             
+                          )}
+                      </Row>
+                      </div>
+                      )
+                    }
+                  })()}
               </Col>
           </Row>
       </Container>
