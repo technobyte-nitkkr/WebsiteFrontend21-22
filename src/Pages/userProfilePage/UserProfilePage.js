@@ -58,7 +58,7 @@ const UserProfilePage = () => {
                   <Col>
                   <div className='userInfo'>
                       <div className='userImage'><img src = {userData.user.picture}></img></div>
-                      <div className='userDesc'>
+                      <div className="userDesc">
                         
                         <p style={{fontSize:"2rem"}}><b>{userData.user.name}</b></p>
                         <p><b>Email:</b> {userData.user.email}</p>

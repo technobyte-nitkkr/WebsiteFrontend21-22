@@ -45,9 +45,12 @@ body{
     width: 30vh;
 }
 
-.userDesc{
+.userInfo{
     color:white;
-    min-height:63vh;
+    margin-top: 100px;
+    margin-left:20px;
+    margin-right:20px;
+    min-height: 70vh;
     padding-top: 20vh;
     text-align:center;
     backdrop-filter: blur(16px) saturate(180%);
@@ -55,6 +58,9 @@ body{
     background-color: rgba(182, 186, 194, 0.25);
     border-radius: 12px;
     border: 2px solid rgba(255, 255, 255, 0.175);
+}
+.userDesc{
+    margin-top:50px;
 }
 
 .regEvents-heading{
