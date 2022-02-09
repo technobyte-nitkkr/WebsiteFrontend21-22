@@ -1,4 +1,12 @@
 
+:root {
+  --color-primary: #e2d8ff;
+  --color-secondary: #ad9fd3;
+  --color-tertiary: #7b64b9;
+  --color-quaternary: #594297;
+  --color-quinary: #3d277a;
+}
+
 .routes{
   height: 90%;
   display: flex;
@@ -61,6 +69,7 @@
     titleAnimation 0.5s ease-in 1s 1 forwards;
 }
 
+/* 
 .head-main {
   z-index: 10;
   color: white;
@@ -71,7 +80,7 @@
   text-align: center;
   opacity: 0;
   animation: titleAnimation 0.5s ease-in 1s 1 forwards;
-}
+} */
 
 @keyframes titleAnimation {
   0% {
@@ -83,7 +92,7 @@
   }
 }
 
-/* .text_shadow {
+.text_shadow {
   text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
     9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
   font-family: Poppins;
@@ -175,7 +184,7 @@
   100% {
     transform: translate(0px, 0px);
   }
-} */
+}
 
 .time {
   justify-content: center;
