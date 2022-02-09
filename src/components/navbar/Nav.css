@@ -184,6 +184,7 @@
     /* border:2px solid red; */
     width: 170px;
     z-index: 99;
+    text-align: right;
   }
 
   .sidebar {
@@ -214,13 +215,14 @@
     right:-60px;
     top: 70px;
     overflow-y: scroll;
-    
+    align-items: flex-end;
+    overflow: hidden;
     /* margin-top: 20px; */
   }
 
   .nav-comp {
     position: relative;
-    width: 150px;
+    width: fit-content;
     height: 36px;
     font-family: Poppins;
     font-style: normal;
@@ -230,7 +232,7 @@
     line-height: 36px;
     /* border:2px solid red; */
     margin: 10px;
-    
+    margin-right: 3.5rem;
     text-align: end;
     right: 20px;
   }
@@ -247,5 +249,16 @@
 
   .logo img {
     height: 3rem;
+  }
+}
+@media screen and (max-width: 1400px) and (orientation: landscape){
+  .nav{
+    /* border: 1px solid white; */
+    padding: 0;
+  }
+  .nav-comp{
+    /* border: 1px solid greenyellow; */
+    font-size: 1.5vw;
+    margin: 2rem 0rem 1rem 0rem;
   }
 }

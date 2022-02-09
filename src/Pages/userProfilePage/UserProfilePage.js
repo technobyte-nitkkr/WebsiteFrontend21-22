@@ -67,7 +67,7 @@ const UserProfilePage = () => {
                   <Col>
                   <div className='userInfo'>
                       <div className='userImage'><img src = {userData.user.picture}></img></div>
-                      <div className='userDesc'>
+                      <div className="userDesc">
                         
                         <p style={{fontSize:"2rem"}}><b>{userData.user.name}</b></p>
                         <p><b>Email:</b> {userData.user.email}</p>
@@ -103,14 +103,22 @@ const UserProfilePage = () => {
               </Col>
               <Col>
                   <div className='regEvents-heading'><h1>Your Registered Events</h1></div>
-                  <div className='regEvents'>
-                  <Row>
-                    {userEvents &&
-                    userEvents.map((e, i) =>
-                    <EventCard category = {e.eventCategory} poster={e.poster} eventName={e.eventName} startTime = {e.startTime} />             
-                      )}
-                  </Row>
-                  </div>
+                  {(() => {
+                    if(!userEvents){
+                      return (<p style={{color:"white",textAlign:"center",marginBottom:"100px"}}>You have not registered in any event.</p>)
+                    }else{
+                      return(
+                      <div className='regEvents'>
+                      <Row>
+                        {userEvents &&
+                        userEvents.map((e, i) =>
+                        <EventCard category = {e.eventCategory} poster={e.poster} eventName={e.eventName} startTime = {e.startTime} />             
+                          )}
+                      </Row>
+                      </div>
+                      )
+                    }
+                  })()}
               </Col>
           </Row>
       </Container>

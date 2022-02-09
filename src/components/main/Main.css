@@ -1,3 +1,11 @@
+/* :root {
+  --color-primary: #e2d8ff;
+  --color-secondary: #ad9fd3;
+  --color-tertiary: #7b64b9;
+  --color-quaternary: #a169b6;
+  --color-quinary: #884d9e;
+} */
+
 .header-main{
   /* background-color: red; */
   height: 90%;
@@ -42,7 +50,7 @@
 .gear2,
 .gear3 {
   opacity: 0;
-  animation: myAnimation 5s 3.5s linear infinite,
+  animation: myAnimation 10s 3.5s linear infinite,
     titleAnimation 0.5s ease-in 2.5s 1 forwards;
 }
 
@@ -68,6 +76,88 @@
     opacity: 1;
   }
 }
+
+/* .text_shadow {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: Poppins;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 16vh;
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  animation: shadows 1.2s 3s ease-in infinite, move 1.2s 3s ease-in infinite, titleAnimation 0.5s ease-in 2s 1 forwards;
+  letter-spacing: 0.4rem;
+
+  opacity: 0;
+
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+} */
+
 
 .time {
   justify-content: center;
@@ -233,10 +323,79 @@
   }
 }
 
-@media screen and (max-width: 1000px) and (orientation: landscape) {
-  .head-main {
-    -webkit-text-stroke-width: 2px;
+@media screen and (max-width: 1000px) and (min-width: 500px) and (orientation: portrait) {
+  .gear1 {
+    /* border: 1px solid white; */
+    bottom: 75%;
+    right: 10%;
+    height: 25vh;
   }
+
+  .gear2 {
+    /* border: 1px solid red; */
+    bottom: 40%;
+    left: 20%;
+    height: 40vh;
+  }
+
+  .gear3 {
+    /* border: 1px solid greenyellow; */
+    height: 20vh;
+    bottom: 75%;
+    left: 15%;
+  }
+  .head-main{
+    font-size: 4rem;
+  }
+  .time{
+    font-size: 2rem;
+  }
+  .learn{
+    /* border: 2px solid beige; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .header-main{
+    top: 20vh;
+  }
+}
+
+@media screen and (max-width: 1400px) and (orientation: landscape) {
+  .header-main{
+    position: relative;
+    top: 10vh;
+  }
+  .head-main {
+    -webkit-text-stroke-width: 0px;
+    font-size: 7vw;
+  }
+  .time{
+    font-size: 2.5vw;
+  }
+  .gear1 {
+    /* border: 1px solid white; */
+    bottom: 80%;
+    right: 25%;
+    height: 25vh;
+  }
+
+  .gear2 {
+    /* border: 1px solid red; */
+    bottom: 30%;
+    left: 40%;
+    height: 40vh;
+  }
+
+  .gear3 {
+    /* border: 1px solid greenyellow; */
+    height: 20vh;
+    bottom: 75%;
+    left: 25%;
+  }
+
 }
 
 /* @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap"); */
@@ -249,6 +408,8 @@
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
+  /* border: 2px solid black; */
+  width: max-content;
 }
 
 @keyframes FooterAnimation {
