@@ -135,12 +135,12 @@ const EventDescription = () => {
     return (
       ! isLoading ? 
       <>
-        <div style={{textAlign: 'center', color: 'white', fontSize: '70px'}}>
+        <div style={{textAlign: 'center', color: 'white', fontSize: '50px'}}>
            {Event.eventName}
         <div style={{padding: '20px'}}>
         <Row>
-            <Col xs lg={5}>
-            <Image src={Event.poster} height={300} width={500}   
+            <Col xs sm = {12} lg={4} md = {4}>
+            <Image src={Event.poster} height="250vw" width="320vw"   
             onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = "https://res.cloudinary.com/dvhrzmkwd/image/upload/v1643788204/Unknown39825/eesglbsknedo9vvnclkx.jpg";
@@ -148,13 +148,12 @@ const EventDescription = () => {
             >
             </Image>
              <div style={{  paddingTop : '20px'}} >
-               <h4>
-                   {}
+               <h5>
                 Start Time : {new Date(Event.startTime).toLocaleString("en-US", {year: "numeric", month: "short", day: "2-digit", hour: "numeric" , minute: "2-digit"})}
-               </h4>
-               <h4>
+               </h5>
+               <h5>
                    End Time : {new Date(Event.endTime).toLocaleString("en-US", {year: "numeric", month: "short", day: "2-digit", hour: "numeric", minute: "2-digit" })}
-               </h4>
+               </h5>
                </div>
 
                { !isAuth ? <>
@@ -164,7 +163,13 @@ const EventDescription = () => {
                 </Button>
                </> : <>
                  
-               <Button onClick={handleClick} style = {{color: "white", background: "transparent", fontSize: "25px"}}>
+               <Button onClick={handleClick} 
+               style = {{
+                    color: "whitesmoke", 
+                    backgroundColor: (isRegistered) ? "#e84338" : "#3864e8", 
+                    fontSize: "20px", 
+                    borderColor: "transparent"
+                 }}>
                  {
                    isRegistered ? <>Unregister</> : <>Register</> 
                  } 
@@ -177,9 +182,6 @@ const EventDescription = () => {
                </>}
                
             </Col>
-            <Col lg={1} >
-            <div class="vl"></div>
-            </Col>
             <Col >
             <div style={{textAlign: 'left', color: 'white', fontSize: '30px'}}>
               <h4>Description: </h4>
@@ -189,7 +191,6 @@ const EventDescription = () => {
               <>
               <h4>Rules: </h4>
               <div style={{fontSize: '15px'}}>
-              
                   {Event.rules.map((rule) => (
                       <p>{rule}</p>
                   ))}

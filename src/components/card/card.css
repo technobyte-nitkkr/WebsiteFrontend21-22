@@ -7,7 +7,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin: 5px 10px;
+    margin: 15px 10px;
     cursor: pointer;
     font-size: larger;
     z-index: 2;
@@ -18,14 +18,14 @@
 
 .cardContainer:hover > .devPhoto {
     transition-delay: 50ms;
-    transform: scale(1.5);
+    transform: scale(1.15);
 }
 
 .details{
     height: 30%;
     margin-top: 0;
     color: #fff;
-    padding: 0;
+    padding: 15;
     font-family: Poppins;
     text-align: center;
     font-style: normal;

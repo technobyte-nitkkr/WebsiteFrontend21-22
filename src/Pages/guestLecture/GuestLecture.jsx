@@ -29,7 +29,7 @@ const Lecture = () => {
 
         <div className="demo">
             <div className='headingGL'>
-                GUEST LECTURE
+                GUEST LECTURES
             </div>
             <div className="mainContentGL">
                 <div className="carouselGL">
@@ -44,8 +44,7 @@ const Lecture = () => {
                                             <img src={item.imageUrl} />
                                         </div>
                                         <h3 className="title">{item.name}</h3>
-                                        <span className="post">{item.date}</span>
-                                        <span className="post">{item.time}</span>
+                                        <span className="post">{item.date} at {item.time}</span>
                                         <p className="description">{item.desc} </p>
                                     </div>
                                 </>

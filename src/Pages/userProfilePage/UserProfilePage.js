@@ -7,6 +7,8 @@ import Keys from "../../config.keys";
 import {Container, Row, Col, Button } from "react-bootstrap";
 import EventCard from "../../components/EventCard";
 import SignUpModal from "../SignUpModal";
+import { useNavigate } from "react-router-dom";
+
 
 
 const UserProfilePage = () => {
@@ -17,9 +19,17 @@ const UserProfilePage = () => {
 
     const handleClose = () => setModalShow(false);
     const handleShow = () => setModalShow(true);
+    let navigate = useNavigate();
+
+    useEffect(() => {
+      if (!userData.isAuth){
+         return navigate("/");
+      }
+   },[userData.isAuth]);
    
 
     useEffect(() => {
+     
       const getUserDetails = async () => {
         console.log("hello");
         console.log(userData);
@@ -39,18 +49,17 @@ const UserProfilePage = () => {
           console.log(e);
         }
       };
-      getUserDetails();
+      if(userData.isAuth) {
+        getUserDetails();
+      }
     }, []);
     
 
-    return (
+    return (    
       <div>
-        {!userData.isAuth ? (
-          <div className="center">
-            {" "}
-            <div>Fetching data..</div>
-          </div>
-        ) : (
+        {!userData.isAuth ? 
+           <></>
+         : (
           <Container className='container'>
             <h1 style={{textAlign: "center", color: "white"}}>Your Profile</h1> 
           <Row className='mainContent'>
