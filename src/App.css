@@ -28,3 +28,11 @@
   width: 100%;
   position: relative;
 }
+
+/* media query */
+@media screen and (max-width: 768px) {
+  .routes {
+    margin-top: 80px;
+    height: 100vh;
+  }
+}
