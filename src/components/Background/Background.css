@@ -3,7 +3,7 @@
 }
 
   .top-circle{
-    background-color: #8B28AE;
+    background-color: #651d80;
     position: absolute;
     border-radius: 50%;
     height: 100vh;
@@ -12,7 +12,7 @@
     top: -50vh;
     right: -50vh;
     opacity: 0;
-    animation: circleFlash 1s 1.5s ease-out 1 forwards, circle1 15s 3s linear infinite;
+    animation: circleFlash 1s 1.5s ease-out 1 forwards, circle1 30s 3s linear infinite;
   }
 
   @keyframes circle1 {
@@ -43,7 +43,7 @@
   }
 
   .bottom-circle{
-    background-color: #4D26BA;
+    background-color: #361a83;
     position: absolute;
     border-radius: 50%;
     height: 100vh;
@@ -52,7 +52,7 @@
     top: 50vh;
     right: 150vh;
     opacity: 0;
-    animation: circleFlash 1s 1.5s ease-out 1 forwards, circle2 15s 3s linear infinite;
+    animation: circleFlash 1s 1.5s ease-out 1 forwards, circle2 30s 3s linear infinite;
   }
 
   @keyframes circle2 {
