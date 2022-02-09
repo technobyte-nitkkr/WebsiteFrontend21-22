@@ -339,6 +339,8 @@
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
+  /* border: 2px solid black; */
+  width: max-content;
 }
 
 @keyframes FooterAnimation {
