@@ -24,7 +24,7 @@ function Nav() {
   };
 
   return (
-    <>
+    <div className="navOuter">
       <div className="logo" style={{ zIndex: "2" }}>
         <img src={logo} alt="" />
       </div>
@@ -98,7 +98,7 @@ function Nav() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

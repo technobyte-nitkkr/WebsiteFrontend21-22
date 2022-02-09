@@ -1,9 +1,16 @@
+.navOuter{
+  /* background-color: red; */
+  display: flex;
+
+  margin-top: 20px;
+}
+
 .navCont {
   opacity: 0;
   animation: navAnimation 0.5s ease-in 1s 1 forwards;
   z-index: 97;
-
-  height: 10%;
+  /* background-color: red; */
+  height: 15%;
 }
 
 @keyframes navAnimation {
@@ -19,10 +26,10 @@
 .logo {
   top: 2.6rem;
   left: 2rem;
-  position: absolute;
+  /* position: absolute; */
 
   /* opacity: 0; */
-  animation: logoFlash 1s 0.5s ease-in 1 forwards;
+  /* animation: logoFlash 1s 0.5s ease-in 1 forwards; */
 }
 
 .logo2 {
@@ -39,6 +46,10 @@
 .logo2 img {
   height: 70%;
   margin: 0 auto;
+}
+
+.nav{
+  height: 0;
 }
 
 @keyframes logoFlash {
@@ -87,8 +98,8 @@
   font-family: Poppins;
   font-weight: 500;
   font-size: 3.5vh;
-  margin: 4vh 0.5vh;
-  padding: 2vh 3vh;
+  margin: 0vh 0vh;
+  padding: 0vh 3vh;
   text-decoration: none;
   z-index: 99;
 }
@@ -108,12 +119,16 @@
   display: none;
 }
 
-@media screen and (max-width: 1000px) and (orientation: portrait) {
+@media screen and (max-width: 720px) and (orientation: portrait) {
   .navCont {
    position: fixed;
    right: 10px;
   height: 21vh;
 }
+
+ .nav{
+    height: 100vh !important;
+ }
 
   .logo {
     top: 2.5rem;
@@ -202,7 +217,7 @@
     position: relative;
     width: 243px;
     height: 100vh;
-    right: -30px;
+    right: -40px;
     top: 0px;
     border: 2px solid rgb(163, 162, 162);
     border-radius: 20px;
@@ -222,8 +237,8 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    right:-60px;
-    top: 70px;
+    right: 0px;
+    top: 90px;
     overflow-y: scroll;
     align-items: flex-end;
     overflow: hidden;
@@ -237,7 +252,7 @@
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 20px !important;
     /* font-size: 18px; */
     line-height: 36px;
     /* border:2px solid red; */
@@ -252,25 +267,10 @@
   }
 }
 
-@media screen and (max-width: 1000px) and (orientation: landscape) {
-  .logo {
-    top: 1rem;
-  }
-
-  .logo img {
-    height: 3rem;
-  }
-}
-
-@media screen and (max-width: 1400px) and (orientation: landscape){
-  .nav{
-    /* border: 1px solid white; */
-    padding: 0;
-  }
-
+@media screen and (max-width: 1400px) {
   .nav-comp{
     /* border: 1px solid greenyellow; */
-    font-size: 1.5vw;
-    margin: 2rem 0rem 1rem 0rem;
+    font-size: 1.7vw;
+    margin: 0rem 0rem 1rem 1rem;
   }
 }
