@@ -6,6 +6,7 @@ import gear3 from "../assets/gear3.png";
 import { useEffect } from 'react/cjs/react.production.min';
 import TimelineHome from '../TimeLineHome';
 import { Link } from 'react-router-dom';
+import Footer from '../Footer';
 function Main() {
   return (
     <div id="header-main" className="header-main">
@@ -14,16 +15,14 @@ function Main() {
       <img src={gear3} className="gear3" alt="" />
       <div className="head-main">TECHSPARDHA</div>
       <div className="time">"Spectrum of Innovation"</div>
-      {/* <div className="desc">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint
-      </div> */}
+     
       <div className="buttons">
-        {/* <div className='regs'>Register</div> */}
         <div className="learn">
           <Link to="/about  ">Learn More</Link>
         </div>
       </div>
       <TimelineHome />
+      <Footer/>
     </div>
   );
 }

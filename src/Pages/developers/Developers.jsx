@@ -5,7 +5,7 @@ import "./developers.css"
 
 const Developers = () => {
   return(
-      <div style={{position: "relative"}}>
+    //   <div style={{position: "relative"}}>
       <div class ="container">
           <div class = "top" style={{zIndex: "2"}}>
               MEET OUR DEVELOPERS
@@ -28,7 +28,7 @@ const Developers = () => {
               <Card name = "Rahul Rathore" role = "Web Deeloper" />
           </div>
       </div>
-      </div>
+    //   </div>
   );
 };
 

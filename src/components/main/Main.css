@@ -1,3 +1,8 @@
+.header-main{
+  /* background-color: red; */
+  height: 90%;
+}
+
 .header-main img {
   position: absolute;
 }
@@ -11,7 +16,7 @@
 
 .gear2 {
   /* border: 1px solid red; */
-  bottom: 5%;
+  bottom: 0%;
   left: 40%;
   height: 50vh;
 }
@@ -231,5 +236,27 @@
 @media screen and (max-width: 1000px) and (orientation: landscape) {
   .head-main {
     -webkit-text-stroke-width: 2px;
+  }
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap"); */
+
+.footer {
+  position: fixed;
+  bottom: -10px;
+  opacity: 0;
+  animation: FooterAnimation 0.5s ease-in 3s 1 forwards;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+@keyframes FooterAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

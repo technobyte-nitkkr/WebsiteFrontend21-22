@@ -105,7 +105,7 @@ function Nav() {
 let check = 0;
 function renderSidebar() {
   if (check == 0) {
-    document.getElementsByClassName("sidebar")[0].style.right = "-20px";
+    document.getElementsByClassName("sidebar")[0].style.right = "-30px";
     document.getElementsByClassName("closetext")[0].style.display = "block";
     document.getElementsByClassName("menubuttonBurger")[0].style.display =
       "none";

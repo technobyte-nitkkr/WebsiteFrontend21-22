@@ -1,21 +1,20 @@
 
 .cardContainer {
-    background: transparent;
+    /* background: red; */
     width: 25vw;
-    height: 50vh;
+    /* height: 50vh; */
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin: 15px;
+    margin: 5px 10px;
     cursor: pointer;
     font-size: larger;
     z-index: 2;
     padding: 0;
     flex: 1 1 300px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
-
 
 .cardContainer:hover > .devPhoto {
     transition-delay: 50ms;
@@ -43,5 +42,3 @@
     padding: 0;
     border-radius: 50%;
 }
-
-

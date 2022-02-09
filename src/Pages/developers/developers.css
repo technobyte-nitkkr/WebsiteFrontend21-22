@@ -1,8 +1,8 @@
 .container {
-    background-color: transparent;
+    /* background-color: red; */
     height: 79vh;
-    width: 100vw;
-    margin: 0;
+    width: 100%;
+    margin: 0 auto;
     overflow-y: auto;
     overflow-x: hidden;
     display: flex;
@@ -12,6 +12,7 @@
     padding: 0;
     z-index: 0;
 }
+
 .container::-webkit-scrollbar{
     display: none;
 }
@@ -23,11 +24,10 @@
     font-weight: 500;
     /*margin: 8vh;*/
     text-align: center;
-    
 }
 
 .team {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

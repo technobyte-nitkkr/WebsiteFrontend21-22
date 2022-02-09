@@ -18,3 +18,13 @@
   flex-direction: column;
   align-items: center;
 }
+
+.routes {
+  /* background-color: #180A30; */
+  overflow: hidden;
+  margin: 0;
+  overflow-y: scroll;
+  height: 150vh;
+  width: 100%;
+  position: relative;
+}

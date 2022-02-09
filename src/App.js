@@ -12,11 +12,10 @@ import "./App.css";
 import Background from "./components/Background/Background";
 import Main from "./components/main/Main";
 import Nav from "./components/navbar/Nav";
-import Developers from "./Pages/developers/Developers";
 
 import Sponsors from "./Pages/sponsors/Sponsors";
 import Reducer from "./Store/Reducer";
-import Home from "./Pages/home/Home";
+
 import About from "./Pages/about/About";
 import Team from "./Pages/team/team";
 import EventDescription from "./Pages/eventDescription/EventDescription";
@@ -29,10 +28,13 @@ import UserProfilePage from "./Pages/userProfilePage/UserProfilePage";
 import Testimonial from "./Pages/testimonial/Testimonial";
 import TopBar from "./components/TopBar";
 import TimelineHome from "./components/TimeLineHome";
+import Developers from "./Pages/developers/Developers";
+import SplashScreen from "./components/Splash";
 
 function App() {
   const initialState = useContext(Store);
   const [state, dispatch] = useReducer(Reducer, initialState);
+  const [splash, setSplash] = useState(false);
   let routes = (
     <Routes>
       <Route path="/" element={<Main />} />
@@ -53,14 +55,24 @@ function App() {
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
+  // setTimeout(() => {
+  //   setSplash(false);
+  // }, 2000);
 
   return (
     <Store.Provider value={[state, dispatch]}>
       <div className="main">
         <Background />
         <Router>
-          <Nav />
-          <div className="routes">{routes}</div>
+          {splash ? (
+            <SplashScreen />
+          ) : (
+            <>
+              {" "}
+              <Nav />
+              <div className="routes">{routes}</div>
+            </>
+          )}
         </Router>
       </div>
     </Store.Provider>

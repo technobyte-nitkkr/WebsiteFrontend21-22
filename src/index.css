@@ -9,10 +9,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-.routes {
-  overflow: hidden;
-  overflow-y: scroll;
-
-  width: 100%;
-}

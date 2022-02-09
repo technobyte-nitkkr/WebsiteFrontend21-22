@@ -7,6 +7,7 @@ import dateFormat from "dateformat";
 import { Link } from "react-router-dom";
 // import HorizontalTimeline from "react-horizontal-timeline";
 import "./Timeline.css";
+import { Carousel } from "bootstrap";
 const TimelineHome = () => {
   const { state, dispatch } = useContext(Store);
   const [istate, setState] = useState({
@@ -68,45 +69,31 @@ const TimelineHome = () => {
       <ul className="timeline" id="timeline">
         {istate.timeline ? (
           istate.timeline.map((event, index) => {
-            // if (event.startTime >= timenow - 60 * 60 * 1000) {
-              return (
-                <li
-                  key={index}
-                  style={{
-                    display: "inline-block",
-                  }}
-                  className="li complete"
-                >
-                  <div className="timestamp">
-                    <Link
-                      className="primary"
-                      to={`/eventdetails/${event.eventCategory}/${event.eventName}`}
-                    >
-                      {" "}
-                      <span className="author">
-                        {/* <img
-                          className="timeline-image"
-                          style={{
-                            width: 70,
-                            height: 60,
-                          }}
-                          src={getImage(event.eventCategory)}
-                        ></img> */}
-                        {event.eventName.split(" ")[0]}
-                      </span>{" "}
-                    </Link>
-                    <span className="date" style={{ marginBottom: "1rem" }}>
-                      {date(event.startTime)}
+            return (
+              <li
+                key={index}
+                className="li complete"
+              >
+                <div className="timestamp">
+                  <Link
+                    className="primary"
+                    to={`/eventdetails/${event.eventCategory}/${event.eventName}`}
+                  >
+                    <span className="author">
+                      {event.eventName.split(" ")[0]}
                     </span>
-                  </div>
-                  <div className="status">
-                    <h6>
-                      {" "}
-                      {time(event.startTime)} - {time(event.endTime)}
-                    </h6>
-                  </div>
-                </li>
-              );
+                  </Link>
+                  <span className="date" style={{ marginBottom: "1rem" }}>
+                    {date(event.startTime)}
+                  </span>
+                </div>
+                <div className="status">
+                  <h6>
+                    {time(event.startTime)} - {time(event.endTime)}
+                  </h6>
+                </div>
+              </li>
+            );
             // }
           })
         ) : (

@@ -16,11 +16,26 @@
 }
 
 .logo {
-  top: 3rem;
+  top: 2rem;
   left: 2rem;
   position: absolute;
   opacity: 0;
   animation: logoFlash 1s 0.5s ease-in 1 forwards;
+}
+
+.logo2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  animation: logoFlash 1s 0.5s ease-in 1 forwards;
+}
+
+.logo2 img {
+  width: 80%;
 }
 
 @keyframes logoFlash {
@@ -172,6 +187,7 @@
   }
 
   .sidebar {
+    text-align: right;
     position: relative;
     width: 243px;
     height: 100vh;
@@ -195,9 +211,11 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    /* right:-25px; */
+    right:-60px;
     top: 70px;
-    margin-top: 20px;
+    overflow-y: scroll;
+    
+    /* margin-top: 20px; */
   }
 
   .nav-comp {
@@ -207,11 +225,12 @@
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     /* font-size: 18px; */
     line-height: 36px;
     /* border:2px solid red; */
-    margin: 20px;
+    margin: 10px;
+    
     text-align: end;
     right: 20px;
   }
