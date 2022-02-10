@@ -8,7 +8,7 @@ export default function EventCard(props)
 {
   return (
 
- <Col xl={4} md={5} sm={5} xs={8} className='mx-auto my-3'>
+ <Col xl={4} md={4} sm={6} xs={12} className='mx-auto my-3'>
      <Link to = {`/eventdetails/${props.category}/${props.eventName}`} style={{ textDecoration: 'none' }}>
         <Row>
             <Col xl={10} md={10} className='event mx-auto'>
