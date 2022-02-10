@@ -14,13 +14,10 @@ export default function TeamDetails() {
         const res = await axios.get(
           "https://us-central1-techspardha-87928.cloudfunctions.net/api2/contacts"
         );
-        setData(res.data.data.contacts);
+        setData(res.data.data.contacts.reverse());
         console.log(res.data.data.contacts);
         setPeople(res.data.data.contacts[0].people);
         setCurrent(res.data.data.contacts[0].section);
-        var x = document.getElementById(res.data.data.contacts[0].section);
-        x.style.background = "#0e101b";
-        window.scrollTo(".team-card-container");
       } catch (err) {
         console.log(err);
       }
@@ -30,8 +27,6 @@ export default function TeamDetails() {
 
   const changePeople = async (e) => {
     try {
-      var y = document.getElementById(current);
-      y.style.background = "#203354";
       console.log(e.target.id);
       setCurrent(e.target.id);
       for (var i = 0; i < data.length; i++) {
@@ -40,9 +35,6 @@ export default function TeamDetails() {
           console.log(data[i].people);
         }
       }
-      var x = document.getElementById(e.target.id);
-      x.style.background = "#0e101b";
-      Ref.current.scrollIntoView();
     } catch (err) {
       console.log(err);
     }

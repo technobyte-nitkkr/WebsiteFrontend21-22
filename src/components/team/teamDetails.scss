@@ -40,11 +40,13 @@
         width: 100%;
         height: 80%;
       }
+
       .person-post {
         margin: 0.5rem 0;
         color: #a89ec9;
       }
     }
+
     ::before {
       position: fixed;
       content: "";
@@ -55,6 +57,7 @@
       height: 60rem;
       transition: 0.7s all;
     }
+
     &:hover {
       border: 1px solid #ffffff44;
       box-shadow: 0 7px 50px 10px #000000aa;
