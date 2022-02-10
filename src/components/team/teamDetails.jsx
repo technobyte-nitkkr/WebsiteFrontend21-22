@@ -14,7 +14,7 @@ export default function TeamDetails() {
         const res = await axios.get(
           "https://us-central1-techspardha-87928.cloudfunctions.net/api2/contacts"
         );
-        setData(res.data.data.contacts.reverse());
+        setData(await res.data.data.contacts.reverse());
         console.log(res.data.data.contacts);
         setPeople(res.data.data.contacts[0].people);
         setCurrent(res.data.data.contacts[0].section);
@@ -27,12 +27,12 @@ export default function TeamDetails() {
 
   const changePeople = async (e) => {
     try {
-      console.log(e.target.id);
+      // console.log(e.target.id);
       setCurrent(e.target.id);
       for (var i = 0; i < data.length; i++) {
         if (data[i].section === e.target.id) {
           setPeople(data[i].people);
-          console.log(data[i].people);
+          // console.log(data[i].people);
         }
       }
     } catch (err) {
@@ -43,7 +43,7 @@ export default function TeamDetails() {
     <div className="team-details">
       <div className="team-links">
         {data
-          ? data.reverse().map((x) => {
+          ? data.map((x) => {
               return (
                 <button
                   id={x.section}
