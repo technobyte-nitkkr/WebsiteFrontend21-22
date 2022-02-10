@@ -14,21 +14,20 @@ import "./sponsors.css";
 import axios from "axios";
 import Keys from "../../config.keys";
 // import { is } from "date-fns/esm/locale";
-import SponsorList from '../../sponsorJsonData';
 const Sponsors = () => {
   var arr = ["left", "right", "top", "bottom"];
   var isInWait = false;
-  var [sponsorList, setSponsorList] = useState([]);
+  var [SponsorList, setSponsorList] = useState([]);
   useEffect(() => {
     console.log(SponsorList);
     const getSponsors = async () => {
       try {
-        var url = Keys.BASE_API + "/Sponsors";
+        var url = Keys.BASE_API + "/foodsponsors";
 
         var response = await axios.get(url);
-        console.log(response.data.data.paisa);
+        console.log(response.data.data.foodSponsors);
 
-        setSponsorList(response.data.data.paisa);
+        setSponsorList(response.data.data.foodSponsors);
       } catch (error) {
         console.log(error);
       }
