@@ -43,6 +43,7 @@
     padding: 0;
     width: 50%;
     border-radius: 50%;
-    box-shadow: 0px 0px 20px 0px rgba(220, 212, 221, 0.9);
+    box-shadow: 0px 0px 10px 0px rgba(220, 212, 221, 0.9);
     margin-bottom: 10px;
+    border:1px solid #fff;
 }
