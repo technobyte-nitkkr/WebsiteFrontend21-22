@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react";
 import { GoogleLogin } from "react-google-login";
 import useFetch from "use-http";
+import Keys from "../../config.keys";
 
-import Keys from "../config.keys";
-import Store from "../Store/Store";
-import { AUTH, LOGIN } from "../Store/Types";
+import Store from "../../Store/Store";
+import { AUTH, LOGIN } from "../../Store/Types";
 
 const LoginButton = () => {
   const [store, dispatch] = useContext(Store);

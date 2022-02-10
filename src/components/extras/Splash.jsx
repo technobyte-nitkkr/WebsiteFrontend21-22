@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./assets/logo.png";
+import logo from "../assets/logo.png";
 function SplashScreen() {
     return (
         <div className="logo2" style={{ zIndex: "5" }} >

@@ -8,8 +8,9 @@ import { useNavigate } from "react-router-dom";
 import Keys from "../../config.keys";
 
 import { LOGOUT } from "../../Store/Types";
-import LoginButton from "../LoginButton";
+
 import Store from "../../Store/Store";
+import LoginButton from "../extras/LoginButton";
 
 function Nav() {
   const [{ isAuth, authLoading, user }, dispatch] = useContext(Store);
@@ -26,7 +27,9 @@ function Nav() {
   return (
     <div className="navOuter">
       <div className="logo" style={{ zIndex: "2" }}>
-        <img src={logo} alt="" />
+        <Link to="/">
+          <img src={logo} alt="" />
+        </Link>
       </div>
       <div className="navCont">
         <div className="menubutton">
@@ -88,7 +91,6 @@ function Nav() {
                     cookiePolicy={"single_host_origin"}
                   />
                 </div>
-                
               </>
             ) : (
               <div className="nav-comp">

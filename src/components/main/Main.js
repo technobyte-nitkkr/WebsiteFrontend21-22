@@ -3,10 +3,9 @@ import '../main/Main.css'
 import gear1 from "../assets/gear1.png";
 import gear2 from "../assets/gear2.png";
 import gear3 from "../assets/gear3.png";
-import { useEffect } from 'react/cjs/react.production.min';
 import TimelineHome from '../TimeLineHome';
 import { Link } from 'react-router-dom';
-import Footer from '../Footer';
+import Footer from '../extras/Footer';
 function Main() {
   return (
     <div id="header-main" className="header-main">
@@ -22,7 +21,7 @@ function Main() {
         </div>
       </div>
       <TimelineHome />
-      <Footer/>
+      
     </div>
   );
 }

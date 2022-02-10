@@ -1,9 +1,9 @@
 .routes {
-  height: 90%;
+  height: 80vh;
   display: flex;
-
+  overflow: hidden;
   position: relative;
-  margin-top: 40px;
+  margin-top: 2vh;
   overflow-y: scroll;
   flex-direction: column;
   width: 100%;
@@ -254,7 +254,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    top: 25%;
+    top: 15% !important;
     align-items: center;
     /* border: 2px solid black; */
     top: 0vh;
@@ -392,9 +392,8 @@
     top: 10vh;
   }
 
-  .routes
-  {
-    margin-top: 40px !important;
+  .routes {
+    margin-top: 0px !important;
   }
 
   .head-main {
@@ -428,18 +427,23 @@
   }
 }
 
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap"); */
-
 .footer {
-  position: fixed;
-  bottom: -10px;
+  position:absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
   opacity: 0;
+
   animation: FooterAnimation 0.5s ease-in 3s 1 forwards;
-  left: 50%;
-  transform: translateX(-50%);
+  text-align: center;
   color: #fff;
-  /* border: 2px solid black; */
-  width: max-content;
+  height: 3vh;
+
+  /* margin-top: 2vh; */
+  background-color: transparent;
+  width: 100%;
 }
 
 @keyframes FooterAnimation {

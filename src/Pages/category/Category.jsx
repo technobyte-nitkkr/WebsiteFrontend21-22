@@ -27,7 +27,7 @@ function Category() {
         items: 3,
       },
       1000: {
-          items: 4,
+        items: 4,
       }
     },
   };
@@ -46,22 +46,17 @@ function Category() {
       console.log(err);
     }
   };
-  useEffect(()=>{
+  useEffect(() => {
     getData();
-  },[load])
+  }, [load])
   useEffect(() => {
     setLoad(true);
   }, []);
 
   return (
-    <div className="myCustomContainer">
-      {/* <div class="container-fluid">
-        <Heading />
-      </div> */}
-      {console.log(data)}
-      {/* <div className="category-heading">Categories</div> */}
+    <>
       <div class="container-fluid">
-        {load? <OwlCarousel
+        {load ? <OwlCarousel
           className="slider-items owl-carousel owl-theme"
           loop
           nav
@@ -76,7 +71,7 @@ function Category() {
           })}
         </OwlCarousel> : <></>}
       </div>
-    </div>
+    </>
   );
 }
 

@@ -2,9 +2,9 @@ import axios from 'axios';
 import React, { useEffect , useState} from 'react'
 import { Row,Col, Card } from 'react-bootstrap';
 import { useParams, Link } from 'react-router-dom';
-import EventCard from '../../components/EventCard';
+import EventCard from '../../components/EventCard/EventCard';
 
-//import "./events.css"
+import "./events.css"
 
 const Events = () => {
    const { category } = useParams();

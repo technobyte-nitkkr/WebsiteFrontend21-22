@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./team.css";
-import TeamAnimation from "../../components/teamAnimation";
-import TeamDetails from "../../components/teamDetails";
+import TeamAnimation from "../../components/team/teamAnimation";
+import TeamDetails from "../../components/team/teamDetails";
 export default function Team() {
   return (
     <div className="team">

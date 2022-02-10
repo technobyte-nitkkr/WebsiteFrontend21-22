@@ -5,11 +5,10 @@ import Store from "../../Store/Store";
 import axios from "axios";
 import Keys from "../../config.keys";
 import {Container, Row, Col, Button } from "react-bootstrap";
-import EventCard from "../../components/EventCard";
+
 import SignUpModal from "../SignUpModal";
 import { useNavigate } from "react-router-dom";
-
-
+import EventCard from "../../components/EventCard/EventCard";
 
 const UserProfilePage = () => {
     const [userData, setUserData] = useContext(Store);
@@ -27,9 +26,7 @@ const UserProfilePage = () => {
       }
    },[userData.isAuth]);
    
-
     useEffect(() => {
-     
       const getUserDetails = async () => {
         console.log("hello");
         console.log(userData);
@@ -54,7 +51,6 @@ const UserProfilePage = () => {
       }
     }, []);
     
-
     return (    
       <div>
         {!userData.isAuth ? 

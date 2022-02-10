@@ -1,16 +1,35 @@
-.navOuter{
+.navOuter {
   /* background-color: red; */
   display: flex;
-
-  margin-top: 20px;
+  justify-content: space-evenly;
+  flex-direction: row;
+  justify-items: center;
+  width: 95%;
+  height: 10vh;
+  margin-top: 2vh;
 }
 
 .navCont {
   opacity: 0;
   animation: navAnimation 0.5s ease-in 1s 1 forwards;
   z-index: 97;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+}
+
+.logo {
+  position: relative;
+  /* left: -80px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
   /* background-color: red; */
-  height: 15%;
 }
 
 @keyframes navAnimation {
@@ -21,15 +40,6 @@
   100% {
     opacity: 1;
   }
-}
-
-.logo {
-  top: 2.6rem;
-  left: 2rem;
-  /* position: absolute; */
-
-  /* opacity: 0; */
-  /* animation: logoFlash 1s 0.5s ease-in 1 forwards; */
 }
 
 .logo2 {
@@ -48,8 +58,13 @@
   margin: 0 auto;
 }
 
-.nav{
-  height: 0;
+.nav {
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  display: flex;
 }
 
 @keyframes logoFlash {
@@ -86,12 +101,6 @@
   height: 5rem;
 }
 
-.nav {
-  z-index: 99;
-  display: flex;
-  /* background-color: red; */
-}
-
 .nav-comp {
   text-align: center;
   color: #ffff;
@@ -99,7 +108,7 @@
   font-weight: 500;
   font-size: 3.5vh;
   margin: 0vh 0vh;
-  padding: 0vh 3vh;
+  padding: 0vh 2vh;
   text-decoration: none;
   z-index: 99;
 }
@@ -120,39 +129,38 @@
 }
 
 @media screen and (max-width: 720px) and (orientation: portrait) {
-  .navCont {
-   position: fixed;
-   right: 10px;
-  height: 21vh;
-}
-
- .nav{
-    height: 100vh !important;
- }
-
-  .logo {
-    top: 2.5rem;
-    left: 1rem;
-    position: absolute;
+  .logo2 img {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
   }
 
-  .logo2 img {
-  width: 50%;
-  height: auto;
-  margin: 0 auto;
-}
+  .logo{
+    position: relative;
+    left: 0 !important;
+  }
+
+  .navOuter {
+    justify-content: space-between !important;
+  }
+
+  .sidebar {
+    position: absolute !important;
+    /* justify-content: flex-start !important; */
+    display: flex;
+    flex-direction: row !important;
+  }
 
   .logo img {
-    height: 3rem;
+    height: 5rem;
   }
 
   .menubutton {
     position: relative;
-    /* width: 39px; */
-    height: 24px;
-    right: 10px;  
-    top: 50px;
-    /* border:2px solid white; */
+
+    right: 10px;
+    top: 0px;
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -203,8 +211,8 @@
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
-    font-size: 28px;
-    line-height: 42px;
+    font-size: 20px;
+    /* line-height: 42px; */
     color: white;
     /* border:2px solid red; */
     width: 170px;
@@ -218,6 +226,8 @@
     width: 243px;
     height: 100vh;
     right: -40px;
+    padding-top: 50px;
+    overflow-y: scroll;
     top: 0px;
     border: 2px solid rgb(163, 162, 162);
     border-radius: 20px;
@@ -231,33 +241,18 @@
     /* background-color: rgba(58, 58, 58, 0.9); */
   }
 
-  .nav {
-    /* border: 2px solid black; */
-    z-index: 99;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    right: 0px;
-    top: 90px;
-    overflow-y: scroll;
-    align-items: flex-end;
-    overflow: hidden;
-    /* margin-top: 20px; */
-  }
-
   .nav-comp {
     position: relative;
-    width: fit-content;
-    height: 36px;
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
     font-size: 20px !important;
     /* font-size: 18px; */
+    margin-top: 50px !important;
     line-height: 36px;
-    /* border:2px solid red; */
-    margin: 10px;
-    margin-right: 3.5rem;
+    width: 100%;
+    text-align: center;
+    margin-right: 2.5rem !important; 
     text-align: end;
     right: 20px;
   }
@@ -268,7 +263,12 @@
 }
 
 @media screen and (max-width: 1400px) {
-  .nav-comp{
+  .nav{
+    margin-top: 30px !important;
+    /* background-color: red; */
+  }
+
+  .nav-comp {
     /* border: 1px solid greenyellow; */
     font-size: 1.7vw;
     margin: 0rem 0rem 1rem 1rem;

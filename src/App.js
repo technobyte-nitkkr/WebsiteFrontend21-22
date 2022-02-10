@@ -20,16 +20,14 @@ import About from "./Pages/about/About";
 import Team from "./Pages/team/team";
 import EventDescription from "./Pages/eventDescription/EventDescription";
 import Events from "./Pages/events/Events";
-import Queries from "./Pages/queries/Queries";
 import Category from "./Pages/category/Category";
 import GuestLecture from "./Pages/guestLecture/GuestLecture";
 import ErrorPage from "./Pages/errorPage/ErrorPage";
 import UserProfilePage from "./Pages/userProfilePage/UserProfilePage";
 import Testimonial from "./Pages/testimonial/Testimonial";
-import TopBar from "./components/TopBar";
-import TimelineHome from "./components/TimeLineHome";
 import Developers from "./Pages/developers/Developers";
-import SplashScreen from "./components/Splash";
+import SplashScreen from "./components/extras/Splash";
+import Footer from "./components/extras/Footer";
 
 function App() {
   const initialState = useContext(Store);
@@ -69,9 +67,8 @@ function App() {
           ) : (
             <>
               <Nav />
-              {/* <div className="myCustomContainer"> */}
-                <div className="routes">{routes}</div>
-              {/* </div> */}
+              <div className="routes">{routes}</div>
+              <Footer/>
             </>
           )}
         </Router>

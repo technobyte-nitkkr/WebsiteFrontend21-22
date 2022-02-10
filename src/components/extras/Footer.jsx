@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
     return (
         <div className="footer">
-            <p>developed with <i className="fa"></i> by technobyte</p>
+            <p>developed with <i class="fas fa-heart"></i> by technobyte</p>
         </div>
     );
 };

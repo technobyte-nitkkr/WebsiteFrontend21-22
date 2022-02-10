@@ -1,8 +1,6 @@
 import React from 'react';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import "./card.css"
-import devPhoto from "../assets/dev.png"
-
 
 const Card = ({name, year, img, git,insta,linkedin}) => {
   return (
@@ -17,7 +15,6 @@ const Card = ({name, year, img, git,insta,linkedin}) => {
             <a href={insta}><span style = {{fontSize: "35px"}}> <FaInstagram /> </span></a>  <br /></div>
         </div>
     </div>
-
   );
 };
 

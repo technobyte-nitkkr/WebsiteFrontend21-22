@@ -4,7 +4,6 @@ import { format } from 'date-fns';
 import './EventCard.css';
 import { Link } from 'react-router-dom';
 
-
 export default function EventCard(props) 
 {
   return (
@@ -25,6 +24,5 @@ export default function EventCard(props)
         </Row>
         </Link>
     </Col>      
-    
   );
 }
