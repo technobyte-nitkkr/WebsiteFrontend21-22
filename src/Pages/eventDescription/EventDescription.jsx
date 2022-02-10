@@ -135,12 +135,16 @@ const EventDescription = () => {
     return (
       ! isLoading ? 
       <>
-        <div style={{textAlign: 'center', color: 'white', fontSize: '50px'}}>
-           {Event.eventName}
+        <div style={{textAlign: 'center', color: 'white', width: "100%"}}>
+          <div style={{ fontSize: '6vh'}}>
+          {Event.eventName}
+          </div>
+           
         <div style={{padding: '20px'}}>
         <Row>
-            <Col xs sm = {12} lg={4} md = {4}>
-            <Image src={Event.poster} height="250vw" width="320vw"   
+            <Col xs sm = {12} lg={4} md = {4} style={{paddingBottom: "20px"}}>
+            <Image src={Event.poster} height="250vw" width="320vw"  
+            style={{border: '2px solid white'}} 
             onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = "https://res.cloudinary.com/dvhrzmkwd/image/upload/v1643788204/Unknown39825/eesglbsknedo9vvnclkx.jpg";
@@ -148,12 +152,12 @@ const EventDescription = () => {
             >
             </Image>
              <div style={{  paddingTop : '20px'}} >
-               <h5>
+               <h6>
                 Start Time : {new Date(Event.startTime).toLocaleString("en-US", {year: "numeric", month: "short", day: "2-digit", hour: "numeric" , minute: "2-digit"})}
-               </h5>
-               <h5>
+               </h6>
+               <h6>
                    End Time : {new Date(Event.endTime).toLocaleString("en-US", {year: "numeric", month: "short", day: "2-digit", hour: "numeric", minute: "2-digit" })}
-               </h5>
+               </h6>
                </div>
 
                { !isAuth ? <>

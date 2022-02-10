@@ -6,13 +6,11 @@
 } */
 
 .team-heading {
-  font-size: 3em;
+  font-size: 6vh;
   color: white;
   text-align: center;
-  font-family: "Concert One", cursive;
-  font-family: "Roboto Slab", serif;
-  /* font-family: myFirstFont; */
-  letter-spacing: 10px;
+  font-family: "Poppins", cursive !important;
+  margin: 5vh;
 }
 
 .team {

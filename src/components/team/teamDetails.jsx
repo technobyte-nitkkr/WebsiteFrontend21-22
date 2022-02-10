@@ -29,6 +29,7 @@ export default function TeamDetails() {
     try {
       // console.log(e.target.id);
       setCurrent(e.target.id);
+      console.log(current);
       for (var i = 0; i < data.length; i++) {
         if (data[i].section === e.target.id) {
           setPeople(data[i].people);
@@ -51,6 +52,7 @@ export default function TeamDetails() {
                     changePeople(e);
                   }}
                   className="teams"
+                  style={{color : (current == x.section) ? "#C559EB" : "white"}}
                 >
                   {x.section}
                 </button>
@@ -62,8 +64,8 @@ export default function TeamDetails() {
         {people
           ? people.map((x) => {
               return (
-                <div class="nft">
-                  <div class="team-card-main">
+                <div class="nft" style={{padding: "5px", margin:"20px"}}>
+                  <div class="team-card-main" >
                     <img
                       class="tokenImage"
                       src={x.imageUrl}

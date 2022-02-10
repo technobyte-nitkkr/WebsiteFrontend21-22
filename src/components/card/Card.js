@@ -5,7 +5,7 @@ import "./card.css"
 const Card = ({name, year, img, git,insta,linkedin}) => {
   return (
     <div class="cardContainer">
-        <img class="devPhoto" src={img} height="150px" width="170px"/> 
+        <img class="devPhoto" src={img} /> 
         <div class = "details">
             <span style= {{color: "#C559EB"}}> {name} </span> <br />
             <span style={{marginTop: "5px"}}> {year} </span>  <br />

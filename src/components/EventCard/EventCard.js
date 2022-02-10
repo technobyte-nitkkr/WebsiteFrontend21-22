@@ -8,7 +8,7 @@ export default function EventCard(props)
 {
   return (
 
- <Col xl={4} md={4} sm={6} xs={12} className='mx-auto my-3'>
+ <Col style={{paddingLeft: "40px", paddingRight: "40px"}} xl={4} md={4} sm={6} xs={12} className='mx-auto my-3'>
      <Link to = {`/eventdetails/${props.category}/${props.eventName}`} style={{ textDecoration: 'none' }}>
         <Row>
             <Col xl={10} md={10} className='event mx-auto'>
@@ -18,7 +18,7 @@ export default function EventCard(props)
             }} ></img>
             <p className="regEventName"><h3>{props.eventName}</h3></p>
             <p>{format(new Date(props.startTime), "PPp")}</p>
-            <p style={{color: "Highlight"}}>Know More</p>
+            <p style={{color: "CaptionText", fontSize: "18px"}}>Know More</p>
             </div>
             </Col>
         </Row>

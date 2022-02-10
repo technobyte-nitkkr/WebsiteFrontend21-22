@@ -71,7 +71,8 @@
 
 .headingGL{
     /* position: absolute; */
-    font-size: 350%;
+    font-size: 7vh;
+    margin: 5vh;
     padding: 20;
     min-width:100% ;
     max-width: 100%;

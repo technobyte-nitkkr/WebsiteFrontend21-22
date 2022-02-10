@@ -35,7 +35,7 @@ const Events = () => {
     return (
         
         <div style={{width: "100%"}}>
-            <h1 style={{textAlign: "center", color: "white", fontSize: "60px"}}> {category}</h1>
+            <h1 style={{margin: "4vh",textAlign: "center", color: "white", fontSize: "7vh"}}> {category}</h1>
            { isLoading ? 
               <div>
                 Loading ... 

@@ -29,7 +29,7 @@ const Lecture = () => {
 
         <div className="demo">
             <div className='headingGL'>
-                GUEST LECTURES
+                Guest Lectures
             </div>
             <div className="mainContentGL">
                 <div className="carouselGL">
