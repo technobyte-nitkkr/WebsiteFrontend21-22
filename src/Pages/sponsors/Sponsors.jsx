@@ -1,32 +1,19 @@
-// import React from 'react'
 
-// const Sponsors = () => {
-//     return (
-//         <div>
-//             sponsi
-//         </div>
-//     )
-// }
-
-// export default Sponsors
 import React, { useEffect, useState } from "react";
 import "./sponsors.css";
 import axios from "axios";
 import Keys from "../../config.keys";
-// import { is } from "date-fns/esm/locale";
+
 const Sponsors = () => {
   var arr = ["left", "right", "top", "bottom"];
-  var isInWait = false;
   var [SponsorList, setSponsorList] = useState([]);
+
   useEffect(() => {
     console.log(SponsorList);
     const getSponsors = async () => {
       try {
         var url = Keys.BASE_API + "/foodsponsors";
-
         var response = await axios.get(url);
-        console.log(response.data.data.foodSponsors);
-
         setSponsorList(response.data.data.foodSponsors);
       } catch (error) {
         console.log(error);
@@ -34,6 +21,7 @@ const Sponsors = () => {
     };
     getSponsors();
   }, []);
+  
   return (
     //   <div className="container">
     <div style={{ marginBottom: '6rem' }}>
