@@ -36,14 +36,13 @@
 }
 
 .devPhoto{
-    height: 65%;
-    /* width: 50%; */
+    height: 200px;
+    width: 200px;
     /* margin-top:15px; */
     top: 0;
     padding: 0;
-    width: 50%;
+    object-fit: fill;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px 0px rgba(220, 212, 221, 0.9);
+    box-shadow: 0px 4px 80px rgba(111, 75, 255, 0.6);
     margin-bottom: 10px;
-    border:1px solid #fff;
 }
