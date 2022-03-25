@@ -148,6 +148,7 @@
     position: absolute !important;
     /* justify-content: flex-start !important; */
     display: flex;
+    
     flex-direction: row !important;
   }
 

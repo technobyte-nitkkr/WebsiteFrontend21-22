@@ -231,3 +231,9 @@
       }
     }
   } */
+.backgroundsetting{
+  background-image: url("./images/bg1.gif") !important;
+  background-size: cover;
+  /* background-blend-mode: lighten; */
+  filter: blur(1px);
+}

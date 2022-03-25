@@ -59,8 +59,12 @@ function App() {
 
   return (
     <Store.Provider value={[state, dispatch]}>
+     
       <div className="main">
-        <Background />
+        {/* <video autoplay muted loop id="myVideo">
+          <source src="test.mp4" id="myVideo" type="video/mp4" />
+        </video> */}
+
         <Router>
           {splash ? (
             <SplashScreen />
@@ -68,7 +72,7 @@ function App() {
             <>
               <Nav />
               <div className="routes">{routes}</div>
-              <Footer/>
+              <Footer />
             </>
           )}
         </Router>
