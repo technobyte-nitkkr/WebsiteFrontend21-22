@@ -57,14 +57,10 @@ function App() {
     setSplash(false);
   }, 2000);
 
-  return (
+  return (<>
+        <div class="backgroundsetting"></div>
     <Store.Provider value={[state, dispatch]}>
-     
       <div className="main">
-        {/* <video autoplay muted loop id="myVideo">
-          <source src="test.mp4" id="myVideo" type="video/mp4" />
-        </video> */}
-
         <Router>
           {splash ? (
             <SplashScreen />
@@ -78,6 +74,7 @@ function App() {
         </Router>
       </div>
     </Store.Provider>
+    </>
   );
 }
 
