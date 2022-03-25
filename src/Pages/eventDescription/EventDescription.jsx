@@ -6,6 +6,7 @@ import { Row,Col, Image, Button } from 'react-bootstrap';
 import './EventDescription.css';
 import Store from "../../Store/Store.js";
 import SignUpModal from '../SignUpModal';
+import Background from '../../components/Background/Background';
 
 const EventDescription = () => {
     const { category , event} = useParams();
@@ -121,6 +122,7 @@ const EventDescription = () => {
     return (
       ! isLoading ? 
       <>
+          <Background />
         <div style={{textAlign: 'center', color: 'white', width: "100%"}}>
           <div style={{ fontSize: '6vh'}}>
           {Event.eventName}

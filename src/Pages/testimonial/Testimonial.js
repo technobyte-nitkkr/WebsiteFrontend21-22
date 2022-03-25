@@ -3,10 +3,12 @@ import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import reviews from "./Testimonial.json";
 import { Carousel, Card, Container, Row, Col } from "react-bootstrap";
 import "./Testimonial.scss";
+import Background from "../../components/Background/Background";
 
 const Testimonial = () => {
   return (
     <Container style={{ width: "95%" }}>
+      <Background />
       <div className="heading">TESTIMONIALS</div>
       <div className="sub-heading">
         Let's read what students are saying about this fest...

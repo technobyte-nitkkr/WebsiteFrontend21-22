@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './GuesLecture.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import Background from '../../components/Background/Background';
 
 const Lecture = () => {
     const [guestList, SetGuestList] = useState([])
@@ -28,6 +29,7 @@ const Lecture = () => {
     return (
 
         <div className="demo">
+            <Background />
             <div className='headingGL'>
                 Guest Lectures
             </div>

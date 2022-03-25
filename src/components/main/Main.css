@@ -19,6 +19,19 @@
   flex-direction: column;
 }
 
+.earth{
+   background-image: url("../assets/video.gif") !important;
+  background-size: cover;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  height: 100vh;
+}
+
 .header-main img {
   position: absolute;
 }

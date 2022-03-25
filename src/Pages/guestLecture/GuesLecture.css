@@ -59,10 +59,10 @@
 		border-radius: 30px;
 		overflow: hidden;
 		box-shadow: 0px 4px 80px #00ffff2f;
+        background-color: rgba(204, 204, 204, 0.225);
 		/* position: relative; */
 		margin: auto;
 		margin-top: 30px;
-        background-color: rgba(204, 204, 204, 0.225);
 		/* background: rgba(255,255,255,1); */
 		/* top: 50%; */
 		/* transform: translateY(-50%); */

@@ -6,6 +6,7 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./Category.css";
 import { Row } from "react-bootstrap";
+import Background from "../../components/Background/Background";
 
 function Category() {
   const [data, setData] = useState([]);
@@ -32,6 +33,7 @@ function Category() {
 
   return (
     <>
+      <Background />
       <div style={{margin: "20px", width:"90%"}} >
         {load ? 
           (

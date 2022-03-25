@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./sponsors.css";
 import axios from "axios";
 import Keys from "../../config.keys";
+import Background from "../../components/Background/Background";
 
 const Sponsors = () => {
   var arr = ["left", "right", "top", "bottom"];
@@ -25,6 +26,7 @@ const Sponsors = () => {
   return (
     //   <div className="container">
     <div style={{ marginBottom: '6rem' }}>
+      <Background />
 
       <div className="sponsor-wrapper">
         <h2 className="sponsor-headline typography-sponsor-headline">

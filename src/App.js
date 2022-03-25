@@ -55,12 +55,13 @@ function App() {
   );
   setTimeout(() => {
     setSplash(false);
-  }, 2000);
+  }, 5000);
 
   return (<>
         <div class="backgroundsetting"></div>
     <Store.Provider value={[state, dispatch]}>
       <div className="main">
+        
         <Router>
           {splash ? (
             <SplashScreen />

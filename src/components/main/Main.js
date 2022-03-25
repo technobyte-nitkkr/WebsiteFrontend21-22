@@ -8,7 +8,10 @@ import { Link } from 'react-router-dom';
 import Footer from '../extras/Footer';
 function Main() {
   return (
+    <>
+    <div className="earth"></div>
     <div id="header-main" className="header-main">
+      
       {/* <img src={gear1} className="gear1" alt="" />
       <img src={gear2} className="gear2" alt="" />
       <img src={gear3} className="gear3" alt="" /> */}
@@ -23,6 +26,7 @@ function Main() {
       <TimelineHome />
       
     </div>
+    </>
   );
 }
 
