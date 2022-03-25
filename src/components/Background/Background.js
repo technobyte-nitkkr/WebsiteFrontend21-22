@@ -14,7 +14,7 @@ function Background() {
       params={{
         particles: {
           number: {
-            value: 200  ,
+            value: 100  ,
           },
           color: {
             value: "#00FFFF",
@@ -34,7 +34,7 @@ function Background() {
           },
           links: {
             enable: true,
-            distance: 110 ,
+            distance: 100 ,
             color: "random",
             opacity: 0.4,
             width: 1,

@@ -13,6 +13,8 @@
   
   .sponsi-container {
     display: flex;
+    width: 95%;
+    margin: auto;
     flex-direction: row;
     justify-content: space-around;
     flex-flow: wrap;
