@@ -3,14 +3,19 @@
     position: relative;
     min-width: 100%;
     /* top: 250px; */
-     min-height: 150vh; 
+     
     /* max-height: 400vh; */ 
     padding-bottom: 100px;
 }
 
 .carouselGL{
     margin:auto;
-    width: 80%;
+    display: grid;
+    width: 90%;
+    
+    grid-template-columns:  1fr  1fr 1fr; 
+    
+    grid-column-gap: 30px;
 }
 
 .guestLecture{
@@ -32,43 +37,6 @@
     /* overflow: hidden; */
 }
 
-.guestLecture .picture{
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.guestLecture .picture img{
-    width: 100%;
-    height: 100%;
-}
-
-.guestLecture .title{
-    display: block;
-    margin: 0 0 0 0;
-    font-size: 20px;
-    font-weight: 600;
-    color: white;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.guestLecture .post{
-    display: block;
-    font-size: 15px;
-    color: #fff;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-}
-
-.guestLecture .description{
-    font-size: 16px;
-    color: #fff;
-    line-height: 30px;
-}
-
 .headingGL{
     /* position: absolute; */
     font-size: 7vh;
@@ -84,3 +52,128 @@
     z-index: 3;
     top:  5%;
 }
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+
+	.profile-card{
+		border-radius: 30px;
+		overflow: hidden;
+		  box-shadow: 0px 4px 80px #00ffff2f;
+		/* position: relative; */
+		margin: auto;
+        background-color: rgba(204, 204, 204, 0.225);
+		/* background: rgba(255,255,255,1); */
+		/* top: 50%; */
+		/* transform: translateY(-50%); */
+	}
+
+	.profile-card header{
+		display: block;
+		position: relative;
+		/* background: rgba(255,255,255,1); */
+		text-align: center;
+		padding: 30px 0 20px;
+		z-index: 1;
+		overflow: hidden;
+	}
+
+	.profile-card header:before{
+		content: "";
+		position: absolute;
+		background: url('http://ali.shahab.pk/blur.php?img=http://ali.shahab.pk/ali-shahab.jpg&x=60') no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: -1;
+	}
+
+	.profile-card header:after{
+		content: "";
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	.profile-card header img{
+		border-radius: 100%;
+        border: 3px solid cyan;
+		overflow: hidden;
+		width: 150px;
+        height: 150px;
+		/*border: 1px solid rgba(255,255,255,.5);*/
+		box-shadow: 0 1px 0 rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.1);
+	}
+
+	.profile-card header h1{
+		font-weight: 200;
+		font-size: 42px;
+		color: cyan;
+		letter-spacing: -3px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.profile-card header h2{
+		font-weight: 400;
+		font-size: 14px;
+		color: cyan;
+		letter-spacing: .5px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.profile-card  p{
+		font-weight: 400;
+		font-size: 14px;
+		color: cyan;
+		letter-spacing: .5px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.profile-card .profile-bio{
+		padding: 0 30px;
+		text-align: center;
+		color: #888;
+	}
+
+	.profile-card .profile-social-links{
+		display: table;
+		width: 70%;
+		margin: 20px auto;
+	}
+
+	.profile-card .profile-social-links li{
+		display: table-cell;
+		width: 33.3333333333333333%
+	}
+
+	.profile-card .profile-social-links li a{
+		display: block;
+		text-align: center;
+		padding: 10px;
+		margin: 0 10px;
+		border-radius: 100%;
+		-webkit-transition: box-shadow 0.2s;
+		-moz-transition: box-shadow 0.2s;
+		-o-transition: box-shadow 0.2s;
+		transition: box-shadow 0.2s;
+	}
+
+	.profile-card .profile-social-links li a:hover{
+		box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
+	}
+
+	.profile-card .profile-social-links li a:active{
+		box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+	}
+
+	.profile-card .profile-social-links li a img{
+		width: 100%;
+		display: block;
+	}

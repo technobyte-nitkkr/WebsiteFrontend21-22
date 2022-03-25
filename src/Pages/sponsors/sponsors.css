@@ -28,17 +28,23 @@
     margin-right:5px;
     transition: 0.3s;
     border-radius: 10px;
-    background-color: rgba(204, 204, 204, 0.125);
+    box-shadow: 0px 4px 20px #00ffff2f;
+    background-color: rgba(204, 204, 204, 0.225);
   }
 
   .sponsi-card-image {
     display: flex;
     overflow: hidden;
+    border-radius: 20px;
     margin-top: 25px;
     justify-content: center;
     /* align-items: center; */
     height: 50%;
     width: 100%;
+  }
+
+  .sponsi-card-image >img {
+    border-radius: 20px !important;
   }
   
   .sponsi-card-image img {
@@ -54,7 +60,7 @@
     font-weight: 2000;
     font-size: 22px;
     text-decoration: none;
-    color: white;
+    color: cyan !important;
   }
   
   .sponsi-card-top .sponsi-card-text {

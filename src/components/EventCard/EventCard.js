@@ -17,8 +17,8 @@ export default function EventCard(props)
                 e.target.src = "https://res.cloudinary.com/dvhrzmkwd/image/upload/v1643788204/Unknown39825/eesglbsknedo9vvnclkx.jpg";
             }} ></img>
             <p className="regEventName"><h3>{props.eventName}</h3></p>
-            <p>{format(new Date(props.startTime), "PPp")}</p>
-            <p style={{color: "CaptionText", fontSize: "18px"}}>Know More</p>
+            <p className="Date">{format(new Date(props.startTime), "PPp")}</p>
+            <p style={{color: "grey", fontSize: "18px"}}>Know More</p>
             </div>
             </Col>
         </Row>

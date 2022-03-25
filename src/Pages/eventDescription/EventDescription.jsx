@@ -8,7 +8,6 @@ import Store from "../../Store/Store.js";
 import SignUpModal from '../SignUpModal';
 
 const EventDescription = () => {
-
     const { category , event} = useParams();
 
     const [Event, setEvent] = useState([]);
@@ -22,10 +21,8 @@ const EventDescription = () => {
     const handleClose = () => setModalShow(false);
     const handleShow = () => setModalShow(true);
     
-    
     const getInfo = async () => {
       try {
-
         //fetching this event info
         const res = await axios.get(
           `https://us-central1-techspardha-87928.cloudfunctions.net/api2/events/description?eventCategory=${category}&eventName=${event}`
@@ -49,19 +46,18 @@ const EventDescription = () => {
             }
             })
         }
-      } 
-      catch (err) {
+      }  catch (err) {
         console.log(err);
       }
     };
 
     const registerEvent = async () => {
-
       try {
         const object = {
           "eventName" : event,
           "eventCategory" : category
         }
+
         const res = await axios.put(
           `https://us-central1-techspardha-87928.cloudfunctions.net/api2/user/event`, object, {
             headers : {
@@ -74,21 +70,19 @@ const EventDescription = () => {
         if(res.data.success) {
           setIsRegistered(true);
         }
-      }
-      catch(err) {
+      } catch(err) {
         console.log(err);
         alert(err);
       }
     }
        
-        
-
     const unregisterEvent = async () => {
       try {
         const object = {
           "eventName" : event,
           "eventCategory" : category
         }
+
         const res = await axios.put(
           `https://us-central1-techspardha-87928.cloudfunctions.net/api2/user/event/unregister`, object, {
             headers : {
@@ -100,8 +94,7 @@ const EventDescription = () => {
         if(res.data.success) {
           setIsRegistered(false); 
         }
-      }
-      catch(err) {
+      } catch(err) {
         console.log(err);
         alert(err);
       }
@@ -111,27 +104,20 @@ const EventDescription = () => {
       if(user.onBoard) {
         if(isRegistered) {
           unregisterEvent()
-       }
-       else {
+       } else {
           registerEvent()
        } 
-      }
-      else {
+      } else {
         handleShow();
       }
-       
      }
    
-     
     useEffect(async ()=>{
       setLoading(true);
       await getInfo();
       setLoading(false);
     },[]);
    
-   
-    
-    
     return (
       ! isLoading ? 
       <>
@@ -144,7 +130,7 @@ const EventDescription = () => {
         <Row>
             <Col xs sm = {12} lg={4} md = {4} style={{paddingBottom: "20px"}}>
             <Image src={Event.poster} height="250vw" width="320vw"  
-            style={{border: '2px solid white'}} 
+                    style={{ borderRadius: '20px', boxShadow: '0px 4px 10px #00ffff2f'}}
             onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = "https://res.cloudinary.com/dvhrzmkwd/image/upload/v1643788204/Unknown39825/eesglbsknedo9vvnclkx.jpg";

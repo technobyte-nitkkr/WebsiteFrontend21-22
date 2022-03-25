@@ -42,7 +42,7 @@ const Sponsors = () => {
                 <div className="sponsi-card-image">
                   <img
                     style={{
-                      objectFit: "contain",
+                      background:"white"
                     }}
                     src={item.imageUrl}
                   />
@@ -51,7 +51,6 @@ const Sponsors = () => {
               
                   <h4>
                     <a href={item.targetUrl} style={{
-                      color:'#FFFFFF',
                       textAlign:'center',
                       textDecoration:'none'
                     }}>{item.name}</a>

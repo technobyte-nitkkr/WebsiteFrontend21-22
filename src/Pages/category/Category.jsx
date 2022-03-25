@@ -8,7 +8,6 @@ import "./Category.css";
 import { Row } from "react-bootstrap";
 
 function Category() {
-
   const [data, setData] = useState([]);
   const [load, setLoad] = useState(false);
 
@@ -33,7 +32,7 @@ function Category() {
 
   return (
     <>
-      <div style={{margin: "20px"}} >
+      <div style={{margin: "20px", width:"90%"}} >
         {load ? 
           (
             <Row>

@@ -33,8 +33,10 @@
     "react-responsive-carousel": "^3.2.22",
     "react-router-dom": "^6.2.1",
     "react-scripts": "^5.0.0",
+    "react-tsparticles": "^1.42.4",
     "sass": "^1.46.0",
     "three.js": "^0.77.1",
+    "tsparticles": "^1.42.4",
     "use-http": "^1.0.26",
     "web-vitals": "^2.1.2"
   },

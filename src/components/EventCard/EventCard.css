@@ -41,6 +41,7 @@ body{
 
 .userImage img{
     height:30vh;
+    
     border-radius: 50%;
     width: 30vh;
 }
@@ -59,6 +60,7 @@ body{
     border-radius: 12px;
     border: 2px solid rgba(255, 255, 255, 0.175);
 }
+
 .userDesc{
     margin-top:50px;
 }
@@ -74,7 +76,9 @@ body{
 
 .event{
     min-height: 300px;
-    margin-top: 20px;
+    margin-top: 20px;   
+      box-shadow: 0px 4px 10px #00ffff2f;
+
     padding-top: 20px;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -85,9 +89,14 @@ body{
     text-align: center;
 }
 
+.Date{
+    color: cyan;
+}
+
 .regEventImage img{
     height: 150px;
     width:150px;
+    border-radius: 10px;
     margin-bottom: 20px;
     overflow:hidden;
 }
