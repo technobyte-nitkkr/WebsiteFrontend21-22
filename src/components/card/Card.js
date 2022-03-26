@@ -7,7 +7,7 @@ const Card = ({name, year, img, git,insta,linkedin}) => {
     <div class="cardContainer">
       <img class="devPhoto" src={img} />
       <div class="details">
-        <span style={{ color: "#00FFFF" }}> {name} </span> <br />
+        <span style={{ color: "#4890ff" }}> {name} </span> <br />
         <span style={{ marginTop: "5px" }}> {year} </span> <br />
         <div>
           <a href={git}>

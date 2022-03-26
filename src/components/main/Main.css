@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'glitch';
+  src: url('../assets/glitch.otf');
+}
+
 .routes {
   height: 80vh;
   display: flex;
@@ -14,7 +19,8 @@
 .header-main {
   width: 100%;
   height: 80%;
-  margin-top: 0px;
+  margin-top: 30px;
+  background-color: red;
   display: flex;
   flex-direction: column;
 }
@@ -34,6 +40,36 @@
 
 .header-main img {
   position: absolute;
+}
+
+@keyframes themeFlash {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes myAnimation {
@@ -71,19 +107,19 @@
 .time {
   justify-content: center;
   z-index: 2;
-  color: cyan !important;
+  color: #4890ff !important;
   margin-top: 5px;
   text-align: center;
-  font-family: Poppins;
+  font-family:  'glitch';
   font-style: normal;
-  font-weight: 500;
-  font-size: 5vh;
+  font-weight: 100;
+  font-size: 6vh;
   display: flex;
   align-items: center;
   text-align: center;
 
   opacity: 0;
-  animation: titleAnimation 0.5s ease-in 1s 1 forwards;
+  animation: themeFlash 1s ease-in 1s 1 forwards;
 }
 
 .buttons {
@@ -92,7 +128,7 @@
   display: flex;
   margin-top: 2vh;
   opacity: 0;
-  animation: titleAnimation 0.5s ease-in 3s 1 forwards;
+  animation: titleAnimation 0.5s ease-in 1s 1 forwards;
 }
 
 .learn {
@@ -103,9 +139,9 @@
   padding-right: 4vw;
   border-radius: 1rem;
   font-size: 3.2vh;
-  border: 4px solid cyan;
+  border: 4px solid #4890ff;
   box-sizing: border-box;
-  color: cyan;
+  color: #4890ff;
 }
 
 @media screen and (max-width: 1000px) and (orientation: portrait) {

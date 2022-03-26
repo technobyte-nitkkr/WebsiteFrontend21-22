@@ -7,7 +7,7 @@ import Background from "../../components/Background/Background";
 
 const Testimonial = () => {
   return (
-    <Container style={{ width: "95%" }}>
+    <Container style={{ width: "90%" }}>
       <Background />
       <div className="heading">TESTIMONIALS</div>
       <div className="sub-heading">

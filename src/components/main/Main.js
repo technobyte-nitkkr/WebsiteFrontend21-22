@@ -12,11 +12,11 @@ function Main() {
     <div id="header-main" className="header-main">
       
       <div className="head-main text_shadow">TECHSPARDHA</div>
-      <div className="time">"Unravelling Dimensions"</div>
+      <div className="time">Unravelling Dimensions</div>
      
       <div className="buttons">
         <div className="learn">
-          <Link to="/about  "><span style={{color:"cyan"}}>Learn More</span></Link>
+          <Link to="/about  "><span style={{color:"#4890ff"}}>Learn More</span></Link>
         </div>
       </div>
       <TimelineHome />

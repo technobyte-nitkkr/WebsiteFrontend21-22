@@ -132,7 +132,7 @@ const EventDescription = () => {
         <Row>
             <Col xs sm = {12} lg={4} md = {4} style={{paddingBottom: "20px"}}>
             <Image src={Event.poster} height="250vw" width="320vw"  
-                    style={{ borderRadius: '20px', boxShadow: '0px 4px 10px #00ffff2f'}}
+                    style={{ borderRadius: '20px', boxShadow: '0px 4px 10px #4890ff2f'}}
             onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = "https://res.cloudinary.com/dvhrzmkwd/image/upload/v1643788204/Unknown39825/eesglbsknedo9vvnclkx.jpg";
