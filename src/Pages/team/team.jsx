@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./team.css";
 import TeamAnimation from "../../components/team/teamAnimation";
-// import TeamDetails from "../../components/team/teamDetails";
+import TeamDetails from "../../components/team/teamDetails";
 import Background from "../../components/Background/Background";
 export default function Team() {
   return (
@@ -15,7 +15,7 @@ export default function Team() {
         you the Spectacle, that is Altius, the tech-fest of NIT kurukshetra."
       </div>
       <TeamAnimation /> 
-      {/* <TeamDetails /> */}
+      <TeamDetails />
     </div>
   );
 }
