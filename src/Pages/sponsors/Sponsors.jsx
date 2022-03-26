@@ -25,9 +25,9 @@ const Sponsors = () => {
   
   return (
     //   <div className="container">
-    <div style={{ marginBottom: '6rem' }}>
+    <>
       <Background />
-
+    
       <div className="sponsor-wrapper">
         <h2 className="sponsor-headline typography-sponsor-headline">
           Our Amazing&nbsp;Sponsors
@@ -65,8 +65,8 @@ const Sponsors = () => {
             );
         })}
       </div>
-    </div> 
-    // </div>
+    
+    </>
   );
 };
 export default Sponsors;

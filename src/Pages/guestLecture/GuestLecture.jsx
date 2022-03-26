@@ -38,7 +38,7 @@ const Lecture = () => {
 
                     {
                         guestList.map(item => {
-                            return (<>
+                            return (
                                 <div class="profile-card">
                                     <header>
                                         
@@ -68,7 +68,6 @@ const Lecture = () => {
                                     </ul>
 
                                 </div>
-                            </>
                             )
                         })
                     }

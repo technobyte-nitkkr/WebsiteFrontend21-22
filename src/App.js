@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 import "./App.css";
-import Background from "./components/Background/Background";
+
 import Main from "./components/main/Main";
 import Nav from "./components/navbar/Nav";
 
@@ -28,6 +28,7 @@ import Testimonial from "./Pages/testimonial/Testimonial";
 import Developers from "./Pages/developers/Developers";
 import SplashScreen from "./components/extras/Splash";
 import Footer from "./components/extras/Footer";
+import KommunicateChat from "./chat";
 
 function App() {
   const initialState = useContext(Store);
@@ -74,6 +75,7 @@ function App() {
           )}
         </Router>
       </div>
+      
     </Store.Provider>
     </>
   );

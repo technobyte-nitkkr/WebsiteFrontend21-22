@@ -41,32 +41,36 @@ function Nav() {
         </div>
         <div className="sidebar">
           <div className="nav">
-            <Link to="/" className="nav-comp">
+            <Link to="/" onClick={renderSidebar} className="nav-comp">
               Home
             </Link>
-            <Link to="/categories" className="nav-comp">
+            <Link to="/categories" onClick={renderSidebar} className="nav-comp">
               Events
             </Link>
-            <Link to="/sponsors" className="nav-comp">
+            <Link to="/sponsors" onClick={renderSidebar} className="nav-comp">
               Sponsors
             </Link>
-            <Link to="/lectures" className="nav-comp">
+            <Link to="/lectures" onClick={renderSidebar} className="nav-comp">
               Lectures
             </Link>
-            <Link to="/Team" className="nav-comp">
+            <Link to="/Team" onClick={renderSidebar} className="nav-comp">
               Team Tech
             </Link>
-            <Link to="/devs" className="nav-comp">
+            <Link to="/devs" onClick={renderSidebar} className="nav-comp">
               Developers
             </Link>
-            <Link to="/testimonial" className="nav-comp">
+            <Link
+              to="/testimonial"
+              onClick={renderSidebar}
+              className="nav-comp"
+            >
               Testimonial
             </Link>
 
             {isAuth ? (
               <>
                 <div className="nav-comp profile" style={{ float: "right" }}>
-                  <Link to="/user">
+                  <Link to="/user" onClick={renderSidebar}>
                     <div className="mr-2 hover">
                       <i className="fa fa-user icon" aria-hidden="true"></i>
                     </div>
@@ -108,13 +112,13 @@ let check = 0;
 function renderSidebar() {
   if (check == 0) {
     document.getElementsByClassName("sidebar")[0].style.right = "-30px";
-    document.getElementsByClassName("closetext")[0].style.display = "block";
+    
     document.getElementsByClassName("menubuttonBurger")[0].style.display =
       "none";
     check = 1;
   } else {
     document.getElementsByClassName("sidebar")[0].style.right = "-415px";
-    document.getElementsByClassName("closetext")[0].style.display = "none";
+    
     document.getElementsByClassName("menubuttonBurger")[0].style.display =
       "block";
     check = 0;
