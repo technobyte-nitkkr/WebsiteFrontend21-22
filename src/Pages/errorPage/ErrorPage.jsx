@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import Background from '../../components/Background/Background';
 
 const ErrorPage = () => {
     let navigate = useNavigate();
@@ -13,7 +14,7 @@ const ErrorPage = () => {
 
     return (
         <div style={{alignItems : "center", margin: "80px", alignContent: "center",color: "white", textAlign: "center"}}>
-
+            <Background />
             <h1>404</h1>
             <h3>Looks like you're lost ☹ ☹</h3>
             <h4>The page you are looking for is not available !!</h4>

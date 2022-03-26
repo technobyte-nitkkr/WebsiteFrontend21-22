@@ -1,14 +1,14 @@
-import React from 'react';
-import './Background.css'
-
+import React from "react";
+// import './Background.css'
+import Particles from "react-tsparticles";
+import particlesConfig  from "./particles.json"
 function Background() {
   return (
-    <div className='bg'>
-      <div className='top-circle'>
-      </div>
-      <div className='bottom-circle'>
-      </div>
-    </div>
+    
+    <Particles
+      className="particles"
+      params={particlesConfig}
+    />
   );
 }
 

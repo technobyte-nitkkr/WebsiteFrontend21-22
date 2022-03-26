@@ -30,7 +30,7 @@ const Developers = () => {
 
   return (
     <div style={{ position: "relative" }}>
-
+      <Background />
       <div class="top" style={{ zIndex: "2" }}>
         MEET OUR DEVELOPERS
       </div>

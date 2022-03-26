@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './GuesLecture.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import Background from '../../components/Background/Background';
 
 const Lecture = () => {
     const [guestList, SetGuestList] = useState([])
@@ -28,32 +29,51 @@ const Lecture = () => {
     return (
 
         <div className="demo">
+            <Background />
             <div className='headingGL'>
                 Guest Lectures
             </div>
             <div className="mainContentGL">
                 <div className="carouselGL">
-                    <div style={{ paddingBottom: "100px" }}>
-                        {/* <Carousel autoPlay={true} interval={4000} infiniteLoop={true}> */}
 
-                        {
-                            guestList.map(item => {
-                                return (<>
-                                    <div className="guestLecture">
-                                        <div className="picture">
-                                            <img src={item.imageUrl} />
-                                        </div>
-                                        <h3 className="title">{item.name}</h3>
-                                        <span className="post">{item.date} at {item.time}</span>
-                                        <p className="description">{item.desc} </p>
+                    {
+                        guestList.map(item => {
+                            return (
+                                <div class="profile-card">
+                                    <header>
+                                        
+                                        <img src={item.imageUrl}  />
+                                        <h1>{item.name}</h1>
+                                        <h2>{item.date}</h2>
+                                    </header>
+                                    <div class="profile-bio">
+                                        <p>{item.desc.length> 300 ? item.desc.substring(0,200): item.desc}</p>
                                     </div>
-                                </>
-                                )
-                            })
-                        }
+                                    <ul class="profile-social-links">
+                                        <li>
+                                            <a href="">
+                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-twitter.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-envato.svg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-codepen.svg" />
+                                            </a>
+                                        </li>
+                                    </ul>
 
-                        {/* </Carousel> */}
-                    </div>
+                                </div>
+                            )
+                        })
+                    }
+
+                    {/* </Carousel> */}
+
                 </div>
             </div>
 

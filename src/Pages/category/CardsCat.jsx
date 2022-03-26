@@ -12,7 +12,6 @@ import "./CardsCat.css";
 import cx from "clsx"
 import { Col } from "react-bootstrap";
 
-
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
     margin: "0 auto",

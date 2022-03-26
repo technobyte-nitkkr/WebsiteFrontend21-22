@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./sponsors.css";
 import axios from "axios";
 import Keys from "../../config.keys";
+import Background from "../../components/Background/Background";
 
 const Sponsors = () => {
   var arr = ["left", "right", "top", "bottom"];
@@ -24,8 +25,9 @@ const Sponsors = () => {
   
   return (
     //   <div className="container">
-    <div style={{ marginBottom: '6rem' }}>
-
+    <>
+      <Background />
+    
       <div className="sponsor-wrapper">
         <h2 className="sponsor-headline typography-sponsor-headline">
           Our Amazing&nbsp;Sponsors
@@ -42,7 +44,7 @@ const Sponsors = () => {
                 <div className="sponsi-card-image">
                   <img
                     style={{
-                      objectFit: "contain",
+                      background:"white"
                     }}
                     src={item.imageUrl}
                   />
@@ -51,7 +53,6 @@ const Sponsors = () => {
               
                   <h4>
                     <a href={item.targetUrl} style={{
-                      color:'#FFFFFF',
                       textAlign:'center',
                       textDecoration:'none'
                     }}>{item.name}</a>
@@ -64,8 +65,8 @@ const Sponsors = () => {
             );
         })}
       </div>
-    </div> 
-    // </div>
+    
+    </>
   );
 };
 export default Sponsors;

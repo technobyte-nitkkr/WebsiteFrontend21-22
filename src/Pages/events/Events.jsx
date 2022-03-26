@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect , useState} from 'react'
 import { Row,Col, Card } from 'react-bootstrap';
 import { useParams, Link } from 'react-router-dom';
+import Background from '../../components/Background/Background';
 import EventCard from '../../components/EventCard/EventCard';
 
 import "./events.css"
@@ -35,6 +36,7 @@ const Events = () => {
     return (
         
         <div style={{width: "100%"}}>
+        <Background />
             <h1 style={{margin: "4vh",textAlign: "center", color: "white", fontSize: "7vh"}}> {category}</h1>
            { isLoading ? 
               <div>

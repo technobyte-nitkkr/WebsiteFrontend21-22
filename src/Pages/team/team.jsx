@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./team.css";
 import TeamAnimation from "../../components/team/teamAnimation";
 import TeamDetails from "../../components/team/teamDetails";
+import Background from "../../components/Background/Background";
 export default function Team() {
   return (
+
     <div className="team">
+      <Background />
+
       <div className="team-heading">Team Techspardha</div>
       <div className="sub-team-heading">
         "Meet the People who worked countless hours behind the scenes to bring

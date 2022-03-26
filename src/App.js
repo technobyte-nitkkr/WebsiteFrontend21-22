@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 import "./App.css";
-import Background from "./components/Background/Background";
+
 import Main from "./components/main/Main";
 import Nav from "./components/navbar/Nav";
 
@@ -28,6 +28,7 @@ import Testimonial from "./Pages/testimonial/Testimonial";
 import Developers from "./Pages/developers/Developers";
 import SplashScreen from "./components/extras/Splash";
 import Footer from "./components/extras/Footer";
+import KommunicateChat from "./chat";
 
 function App() {
   const initialState = useContext(Store);
@@ -55,12 +56,13 @@ function App() {
   );
   setTimeout(() => {
     setSplash(false);
-  }, 2000);
+  }, 5000);
 
-  return (
+  return (<>
+        <div class="backgroundsetting"></div>
     <Store.Provider value={[state, dispatch]}>
       <div className="main">
-        <Background />
+        
         <Router>
           {splash ? (
             <SplashScreen />
@@ -68,12 +70,14 @@ function App() {
             <>
               <Nav />
               <div className="routes">{routes}</div>
-              <Footer/>
+              <Footer />
             </>
           )}
         </Router>
       </div>
+      
     </Store.Provider>
+    </>
   );
 }
 
