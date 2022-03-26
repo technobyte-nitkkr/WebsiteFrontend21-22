@@ -107,7 +107,7 @@
 .time {
   justify-content: center;
   z-index: 2;
-  color: #4890ff !important;
+  color: white !important;
   margin-top: 5px;
   text-align: center;
   font-family:  'glitch';
@@ -139,9 +139,9 @@
   padding-right: 4vw;
   border-radius: 1rem;
   font-size: 3.2vh;
-  border: 4px solid #4890ff;
+  border: 4px solid white;
   box-sizing: border-box;
-  color: #4890ff;
+  color: white;
 }
 
 @media screen and (max-width: 1000px) and (orientation: portrait) {

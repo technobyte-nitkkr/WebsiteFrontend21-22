@@ -16,11 +16,12 @@ function Main() {
      
       <div className="buttons">
         <div className="learn">
-          <Link to="/about  "><span style={{color:"#4890ff"}}>Learn More</span></Link>
+          <Link to="/about  "><span >Learn More</span></Link>
         </div>
       </div>
       <TimelineHome />
       <KommunicateChat/>
+      
     </div>
     </>
   );
