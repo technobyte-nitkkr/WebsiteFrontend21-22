@@ -14,21 +14,25 @@ function CardsCat(props) {
   const category = props.name;
   
   return (
-    <Col Col xl={4} md={4} sm={6} xs={12} >
-    
+      <div className="cateogryWrapper">
       <Link to={`/events/${category}`}>
-      <Card className="cardOuter">
-        <CardMedia className="cardImage" image={props.img} />
-        <CardContent className="cardBody" >
-          <div className="cateName">{props.name}</div>
-          <Button className="Extra">
-            Know More 
-          </Button>
-        </CardContent>
-      </Card>
+      <div className="cardOuter">
+          <div className="cardImage">
+              <img src={props.img} alt="" width="100%" height="auto" />
+          </div>
+        <div className="cardTop">
+          <div className="cardBody">
+            <div className="cateName">
+              {props.name}
+            </div>
+              <Button className="Extra">
+                Know More
+              </Button>
+          </div>
+        </div>
+      </div>
       </Link>
-      
-    </Col>
+    </div>
   );
 }
 

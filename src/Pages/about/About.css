@@ -2,7 +2,6 @@ a.social {
     margin: 0 1rem;
     transition: transform 250ms;
     display: inline-block;
-    
   }
 
   a.social:hover {
@@ -29,12 +28,50 @@ a.social {
   .aboutscroll
 {
     text-align: center;
+    width: 100%;
 }
 
 .aboutimg
 {
     object-fit: cover;
-    padding-left: 10%;
+    
     width: 90%;
     max-height: 500px;
+}
+
+.Heading{
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  width: 80% !important;
+  margin: 20px auto;
+}
+
+.Description{
+  color: #4890ff;
+  width: 90%;
+  font-size: 18px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.d-block{
+  margin: 0 auto !important;
+  align-items: center;
+  justify-self: center;
+  
+  width: 80% !important;
+  /* background-color: red; */
+}
+
+  .aboutscroll1
+{
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.aboutscroll1  .d-block
+{
+  border-radius: 30px !important;
 }

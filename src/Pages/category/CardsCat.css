@@ -1,20 +1,55 @@
 .cardOuter{
-  	border-radius: 30px;
-		overflow: hidden;
-		box-shadow: 0px 4px 80px #4890ff2f !important;
-        background-color: rgba(204, 204, 204, 0.225) !important;
-		/* position: relative; */
 		margin: auto;
-    margin-top: 30px;
-    display: grid;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column ;
     align-items: center;
+    box-shadow: 0px 4px 80px #4890ff2f !important;
+    border-radius: 30px !important;
+    width: 90%;
+    align-content: center;
+    background-color: rgba(204, 204, 204, 0.225) !important;
+    position: relative;
+    z-index: 2;
+
     justify-content: center;
 }
 
+.card{
+    width: 100% !important;
+    height: 100% !important;
+    position: relative;
+		z-index: 1;
+    overflow: visible !important;
+}
+
 .cardImage{
-  position: relative;
-  
-  width: 250px;
-  height: 250px;
+  transform:translateY(-50%);
+  z-index: 0 !important;
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  background-color: none !important;
   border-radius: 30px;
+}
+
+.cardBody{
+  display: grid !important;
+  align-items: center;
+  justify-content: center;
+  transform:translateY(-50%);
+  
+  /* background-color: red !important; */
+}
+
+.cateName{
+  font-family: Poppins !important;
+  font-weight: 500;
+  font-size:35px;
+}
+
+.Extra{
+  text-decoration: none;
+  color: white !important;
+  text-transform:capitalize !important;
 }

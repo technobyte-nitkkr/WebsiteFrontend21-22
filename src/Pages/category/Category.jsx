@@ -37,13 +37,13 @@ function Category() {
       <div style={{margin: "20px", width:"90%"}} >
         {load ? 
           (
-            <Row>
+            <div className="categoriesOuter">
             {            
             data.map((x) => (
               <CardsCat name={x.categoryName} img={x.imgUrl} icon={x.icon} />
              ))
             }
-            </Row>
+            </div>
            )
            : 
            <></>}

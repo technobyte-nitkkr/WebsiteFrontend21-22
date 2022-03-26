@@ -51,7 +51,7 @@
   }
 
   .team-card-container {
-    border: 2px solid white;
+    /* border: 2px solid white; */
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
