@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-
+import Keys from "./config.keys";
 const KommunicateChat = () => {
   useEffect(() => {
     (function (d, m) {
       var kommunicateSettings = {
-        appId: `25eb6690418c40a9f14b5f66efb53583`,
+        appId: Keys.CHAT_BOT_APP_ID,
         popupWidget: true,
         automaticChatOpenOnNavigation: true,
       };
