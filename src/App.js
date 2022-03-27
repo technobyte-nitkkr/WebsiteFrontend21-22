@@ -1,3 +1,4 @@
+
 import { useContext, useReducer, useState } from "react";
 import Store from "./Store/Store";
 
@@ -5,7 +6,6 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  useHistory,
 } from "react-router-dom";
 
 import "./App.css";
@@ -28,7 +28,6 @@ import Testimonial from "./Pages/testimonial/Testimonial";
 import Developers from "./Pages/developers/Developers";
 import SplashScreen from "./components/extras/Splash";
 import Footer from "./components/extras/Footer";
-import KommunicateChat from "./chat";
 
 function App() {
   const initialState = useContext(Store);
@@ -56,27 +55,26 @@ function App() {
   );
   setTimeout(() => {
     setSplash(false);
-  }, 5000);
+  }, 2000);
 
-  return (<>
-        <div class="backgroundsetting"></div>
-    <Store.Provider value={[state, dispatch]}>
-      <div className="main">
-        
-        <Router>
-          {splash ? (
-            <SplashScreen />
-          ) : (
-            <>
-              <Nav />
-              <div className="routes">{routes}</div>
-              <Footer />
-            </>
-          )}
-        </Router>
-      </div>
-      
-    </Store.Provider>
+  return (
+    <>
+      <div class="backgroundsetting"></div>
+      <Store.Provider value={[state, dispatch]}>
+        <div className="main">
+          <Router>
+            {splash ? (
+              <SplashScreen />
+            ) : (
+              <>
+                <Nav />
+                <div className="routes">{routes}</div>
+                <Footer />
+              </>
+            )}
+          </Router>
+        </div>
+      </Store.Provider>
     </>
   );
 }

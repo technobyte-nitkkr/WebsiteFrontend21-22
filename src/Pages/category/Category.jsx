@@ -35,6 +35,7 @@ function Category() {
     <>
       <Background />
       <div style={{margin: "20px", width:"90%"}} >
+        <div className="headingGL"> Event Categories</div>
         {load ? 
           (
             <div className="categoriesOuter">

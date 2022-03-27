@@ -29,8 +29,8 @@ const Sponsors = () => {
       <Background />
     
       <div className="sponsor-wrapper">
-        <h2 className="sponsor-headline typography-sponsor-headline">
-          Our Amazing&nbsp;Sponsors
+        <h2 className="headingGL">
+          Our Amazing Sponsors
         </h2>
       </div>
       <div className="sponsi-container">

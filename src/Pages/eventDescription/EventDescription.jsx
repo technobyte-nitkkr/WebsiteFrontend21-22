@@ -150,7 +150,7 @@ const EventDescription = () => {
 
                { !isAuth ? <>
 
-                <Button disabled style={{color: "white", background: "transparent"}}>
+                <Button disabled style={{color: "white",border:'1px  solid white', background: "transparent"}}>
                    Login to Register  
                 </Button>
                </> : <>

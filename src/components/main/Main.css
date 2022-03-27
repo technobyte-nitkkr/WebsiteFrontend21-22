@@ -144,7 +144,7 @@
   color: white;
 }
 
-@media screen and (max-width: 1000px) and (orientation: portrait) {
+@media screen and (max-width: 1000px)  {
   .header-main {
     position: relative;
     display: flex;
@@ -205,13 +205,15 @@
     font-size: 20px;
   }
 
-  @media screen and (max-width: 1000px) and (min-width: 500px) and (orientation: portrait) {
+  @media screen and (max-width: 600px) {
     .head-main {
-      font-size: 4rem;
+      font-size: 3rem;
+      font-weight: 800 !important;
     }
 
     .time {
-      font-size: 2rem;
+      font-size: 1.2rem;
+      font-weight: 100;
     }
 
     .learn {

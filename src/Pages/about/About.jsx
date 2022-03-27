@@ -1,6 +1,6 @@
 import React from 'react'
 import Background from '../../components/Background/Background'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import img1 from '../../images/about_carousal/1.jpg';
 import img2 from '../../images/about_carousal/2.jpg';
 import img3 from '../../images/about_carousal/3.jpg';
@@ -12,14 +12,9 @@ import app3 from "../../images/app_carousal/1.png"
 import app4 from "../../images/app_carousal/1.png"
 import app5 from "../../images/app_carousal/1.png"
 import { Carousel, } from "react-bootstrap";
-import {
-    faFacebook,
-    faInstagram,
-    faLinkedin,
-    faYoutube
-  } from "@fortawesome/free-brands-svg-icons";
 
 import './About.css';  
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
 
 const About = () => {
     return (
@@ -27,7 +22,7 @@ const About = () => {
         <div style={{margin: "20px auto", alignItems: "center"}}>
             <Background />
            
-           <div className="Heading">
+        <div className="headingGL">
                 About Techspardha
            </div>
            
@@ -113,19 +108,26 @@ const About = () => {
 
                <a href="https://www.youtube.com/c/TechspardhaNITKuruksehtra"
                     className="youtube social">
-                    <FontAwesomeIcon icon={faYoutube} size="2x" />
+                    {/* <FontAwesomeIcon icon={faYoutube} size="2x" />
+                     */}
+                     <FaYoutube/>
                 </a>   
                 <a href="https://www.facebook.com/techspardha.nitkkr/"
                     className="facebook social">
-                    <FontAwesomeIcon icon={faFacebook} size="2x" />
+                    {/* <FontAwesomeIcon icon={faFacebook} size="2x" />
+                     */}
+                     <FaFacebook/>
                 </a>
                 <a href="https://www.instagram.com/tsnitkkr/?hl=en"
                     className="instagram social">
-                    <FontAwesomeIcon icon={faInstagram} size="2x" />
+                    {/* <FontAwesomeIcon icon={faInstagram} size="2x" /> */}
+                    <FaInstagram/>
                 </a>
                 <a href="https://www.linkedin.com/company/techspardha-nit-kurukshetra/?originalSubdomain=in"
                     className="linkedin social">
-                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    {/* <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                     */}
+                     <FaLinkedin/>
                 </a>
                </div>
                

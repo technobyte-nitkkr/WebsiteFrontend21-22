@@ -40,7 +40,7 @@ a.social {
 }
 
 .Heading{
-  font-size: 30px;
+  font-size: 2rem;
   color: white;
   text-align: center;
   width: 80% !important;
@@ -48,7 +48,7 @@ a.social {
 }
 
 .Description{
-  color: #4890ff;
+  color: white;
   width: 90%;
   font-size: 18px;
   margin: 0 auto;
@@ -74,4 +74,16 @@ a.social {
 .aboutscroll1  .d-block
 {
   border-radius: 30px !important;
+}
+
+@media screen and (max-width: 1000px){
+  .aboutscroll,.aboutscroll1{
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .aboutscroll,.aboutscroll1{
+    width: 100% !important;
+  }
 }

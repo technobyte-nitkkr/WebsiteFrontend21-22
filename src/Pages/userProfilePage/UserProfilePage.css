@@ -17,12 +17,14 @@ body{
 
 .container{
     min-height: 100vh;
+    width: 100%;
 }
 
 .mainContent{
     padding-top: 60px;
     align-items:center;
     justify-content: center;
+    width: 100%;
 }
 
 .userImage{
@@ -49,11 +51,9 @@ body{
     min-height: 70vh;
     padding-top: 20vh;
     text-align:center;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(182, 186, 194, 0.25);
-    border-radius: 12px;
-    border: 2px solid rgba(255, 255, 255, 0.175);
+   	box-shadow: 0px 4px 80px #4890ff2f;
+       border-radius: 30px;
+        background-color: rgba(204, 204, 204, 0.225);
 }
 
 .userDesc{

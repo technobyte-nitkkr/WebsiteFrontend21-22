@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './GuesLecture.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+// import { Carousel } from 'react-responsive-carousel';
 import Background from '../../components/Background/Background';
-
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 const Lecture = () => {
     const [guestList, SetGuestList] = useState([])
     const scrollref = useRef(null);
@@ -52,17 +52,17 @@ const Lecture = () => {
                                     <ul class="profile-social-links">
                                         <li>
                                             <a href="">
-                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-twitter.svg" />
+                                                <FaInstagram className="fa"/>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="">
-                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-envato.svg" />
+                                                <FaLinkedin className="fa"/>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="">
-                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-codepen.svg" />
+                                                <FaFacebook className="fa"/>
                                             </a>
                                         </li>
                                     </ul>

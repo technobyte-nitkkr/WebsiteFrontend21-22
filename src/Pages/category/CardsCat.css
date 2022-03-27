@@ -52,4 +52,6 @@
   text-decoration: none;
   color: white !important;
   text-transform:capitalize !important;
+  border: none;
+  background-color: transparent;
 }
