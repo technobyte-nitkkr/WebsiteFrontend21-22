@@ -57,8 +57,10 @@
     text-align: center;
 }
 
-.fa{
+.faSocial{
 	font-size: 2rem;
+	margin: 0;
+	/* background-color: blue; */
 }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
@@ -151,10 +153,16 @@
 		color: #888;
 	}
 
-	.profile-card .profile-social-links{
-		display: table;
-		width: 70%;
-		margin: 20px auto;
+	 .profile-social-links{
+		display: flex;
+		/* background-color: red; */
+		/* margin: 30px auto; */
+		margin: 30px auto;
+		padding: 0;
+		
+		align-items: center;
+		justify-content: center;
+		width: 80%;
 	}
 
 	.profile-card .profile-social-links li{
@@ -165,8 +173,8 @@
 	.profile-card .profile-social-links li a{
 		display: block;
 		text-align: center;
-		padding: 10px;
-		margin: 0 10px;
+		padding: 30px auto;
+		margin: 0 20px;
 		border-radius: 100%;
 		-webkit-transition: box-shadow 0.2s;
 		-moz-transition: box-shadow 0.2s;

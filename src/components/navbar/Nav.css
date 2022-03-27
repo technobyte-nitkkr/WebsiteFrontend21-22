@@ -125,6 +125,11 @@
   display: none;
 }
 
+ .nav-comp:hover ,.fa:hover{
+    color: #4890ff !important;
+    font-weight: bold;
+  }
+
 @media screen and (max-width: 720px) and (orientation: portrait) {
   .logo2 img {
     width: 50%;
@@ -256,10 +261,6 @@
     margin-right: 2.5rem !important; 
     text-align: end;
     right: 20px;
-  }
-
-  .nav-comp:hover {
-    color: #c559eb;
   }
 }
 

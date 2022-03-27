@@ -69,10 +69,10 @@ function Nav() {
 
             {isAuth ? (
               <>
-                <div className="nav-comp profile" style={{ float: "right" }}>
+                <div className="nav-comp " style={{ float: "right" }}>
                   <Link to="/user" onClick={renderSidebar}>
-                    <div className="mr-2 hover">
-                      <i className="fa fa-user icon" aria-hidden="true"></i>
+                    <div className="hover">
+                      <i className="fa fa-user  " aria-hidden="true"></i>
                     </div>
                   </Link>
                   <GoogleLogout
@@ -82,12 +82,12 @@ function Nav() {
                         className="login-button"
                         onClick={renderProps.onClick}
                         disabled={renderProps.disabled}
-                        style={{ color: "white" }}
+                        
                       >
                         Logout{" "}
                         <i
                           class="fas fa-sign-out-alt"
-                          style={{ color: "white" }}
+                          
                         ></i>
                       </p>
                     )}

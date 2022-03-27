@@ -33,6 +33,10 @@
   border-radius: 30px;
 }
 
+.cardOuter:hover {
+  color: #4890ff;
+}
+
 .cardBody{
   display: grid !important;
   align-items: center;

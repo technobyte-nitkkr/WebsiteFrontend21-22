@@ -52,7 +52,7 @@ export default function TeamDetails() {
                                     changePeople(e);
                                 }}
                                 className="teams"
-                                style={{ color: (current == x.section) ? "grey" : "white" }}
+                                style={{ color: (current == x.section) ? "#4890ff" : "white" }}
                             >
                                 {x.section}
                             </button>

@@ -52,17 +52,17 @@ const Lecture = () => {
                                     <ul class="profile-social-links">
                                         <li>
                                             <a href="">
-                                                <FaInstagram className="fa"/>
+                                                <FaInstagram className="faSocial"/>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="">
-                                                <FaLinkedin className="fa"/>
+                                                <FaLinkedin className="faSocial"/>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="">
-                                                <FaFacebook className="fa"/>
+                                                <FaFacebook className="faSocial"/>
                                             </a>
                                         </li>
                                     </ul>
