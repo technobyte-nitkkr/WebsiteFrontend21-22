@@ -1,12 +1,17 @@
 import React, { useEffect } from "react";
 import Keys from "./config.keys";
+
 const KommunicateChat = () => {
+  var userData = JSON.parse(localStorage.getItem("userdata"));
+  
   useEffect(() => {
     (function (d, m) {
       var kommunicateSettings = {
         appId: Keys.CHAT_BOT_APP_ID,
         popupWidget: true,
         automaticChatOpenOnNavigation: true,
+        "userId":  userData?.name,
+        "email": userData?.email
       };
 
       var s = document.createElement("script");
