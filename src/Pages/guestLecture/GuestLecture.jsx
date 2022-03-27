@@ -3,11 +3,12 @@ import './GuesLecture.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from 'react-responsive-carousel';
 import Background from '../../components/Background/Background';
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaArrowAltCircleDown, FaArrowAltCircleUp, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 const Lecture = () => {
     const [guestList, SetGuestList] = useState([])
     const scrollref = useRef(null);
     var lectures = [];
+    const [expanded, setExpanded] = useState(0)
 
     useEffect(() => {
         fetch('https://us-central1-techspardha-87928.cloudfunctions.net/api2/lectures',
@@ -26,6 +27,7 @@ const Lecture = () => {
                 console.log(err);
             })
     }, [])
+ 
     return (
 
         <div className="demo">
@@ -37,9 +39,9 @@ const Lecture = () => {
                 <div className="carouselGL">
 
                     {
-                        guestList.map(item => {
+                        guestList.map((item,index) => {
                             return (
-                                <div class="profile-card">
+                                <div key={index} class="profile-card">
                                     <header>
                                         
                                         <img src={item.imageUrl}  />
@@ -47,8 +49,26 @@ const Lecture = () => {
                                         <h2>{item.date}</h2>
                                     </header>
                                     <div class="profile-bio">
-                                        <p>{item.desc.length> 300 ? item.desc.substring(0,200): item.desc}</p>
+                                        <p>{ expanded!==index+1 ? item.desc.substring(0,200): item.desc}</p>
                                     </div>
+                                    {expanded !== index + 1 && <div className="buttonarrow" onClick={() => {
+                                        console.log("hello");
+
+                                        setExpanded(index + 1);
+
+                                        console.log(expanded)
+                                    }}>
+                                        Show More
+                                    </div>}
+                                    {expanded === index + 1 &&
+                                    <div className="buttonarrow" onClick={() => {
+                                            setExpanded(0);
+                                      
+                                        console.log(expanded)
+                                    }}>
+                                        Show Less
+                                       
+                                    </div>}
                                     <ul class="profile-social-links">
                                         <li>
                                             <a href="">

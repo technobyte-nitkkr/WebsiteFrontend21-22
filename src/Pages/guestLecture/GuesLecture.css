@@ -195,6 +195,17 @@
 		display: block;
 	}
 
+.buttonarrow
+{
+	text-decoration: none;
+	border: none;
+	width: 100%;
+	height: 20px;
+	margin-top: 20px;
+	background-color: transparent !important;
+	color: grey;
+}
+
 @media screen and (max-width: 1000px) {
   .carouselGL{
     grid-template-columns:  1fr  1fr ; 

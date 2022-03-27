@@ -81,7 +81,7 @@ const About = () => {
         </Carousel> 
         </div>
                <div style={{margin: "30px"}}>
-                   <div style={{color: "white", textAlign: "left", fontSize: "5vh", margin: "20px"}} >
+                   <div style={{color: "white", textAlign: "center", fontSize: "1.5rem", margin: "20px"}} >
                        Checkout Techspardha 18 Aftermovie : 
                    </div>
                    <div>

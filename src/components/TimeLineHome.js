@@ -23,6 +23,7 @@ const TimelineHome = () => {
           ...istate,
           timeline: res.data.data.events,
         });
+        console.log(res.data.data.events);
       } catch (error) {
         console.log(error);
       }
@@ -56,9 +57,6 @@ const TimelineHome = () => {
     var a = new Date(x.startTime);
     var b = new Date(y.startTime);
     return a - b;
-    if (a > b) return 1;
-    if (a < b) return -1;
-    return 0;
   });
 
   var now = new Date();

@@ -9,7 +9,7 @@ const Testimonial = () => {
   return (
     <Container style={{ width: "90%" }}>
       <Background />
-      <div className="heading">TESTIMONIALS</div>
+      <div className="headingGL">TESTIMONIALS</div>
       <div className="sub-heading">
         Let's read what students are saying about this fest...
       </div>

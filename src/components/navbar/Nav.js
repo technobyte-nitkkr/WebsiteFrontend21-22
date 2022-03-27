@@ -3,7 +3,7 @@ import "../navbar/Nav.css";
 import logo from "../assets/logo.png";
 
 import { GoogleLogout } from "react-google-login";
-import { withRouter, Link } from "react-router-dom";
+import { withRouter, Link, NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Keys from "../../config.keys";
 
@@ -44,40 +44,40 @@ function Nav() {
             <div onClick={renderSidebar} className="nav-comp closetext">
               Close X
             </div>
-            <Link to="/" onClick={renderSidebar} className="nav-comp">
+            <NavLink exact activeClassName="active-link" to="/" onClick={renderSidebar} className="nav-comp">
               Home
-            </Link>
-            <Link to="/categories" onClick={renderSidebar} className="nav-comp">
+            </NavLink>
+            <NavLink to="/categories" onClick={renderSidebar} className="nav-comp">
               Events
-            </Link>
-            <Link to="/sponsors" onClick={renderSidebar} className="nav-comp">
+            </NavLink>
+            <NavLink to="/sponsors" onClick={renderSidebar} className="nav-comp">
               Sponsors
-            </Link>
-            <Link to="/lectures" onClick={renderSidebar} className="nav-comp">
+            </NavLink>
+            <NavLink to="/lectures" onClick={renderSidebar} className="nav-comp">
               Lectures
-            </Link>
-            <Link to="/Team" onClick={renderSidebar} className="nav-comp">
+            </NavLink>
+            <NavLink to="/Team" onClick={renderSidebar} className="nav-comp">
               Team Tech
-            </Link>
-            <Link to="/devs" onClick={renderSidebar} className="nav-comp">
+            </NavLink>
+            <NavLink to="/devs" onClick={renderSidebar} className="nav-comp">
               Developers
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/testimonial"
               onClick={renderSidebar}
               className="nav-comp"
             >
               Testimonial
-            </Link>
+            </NavLink>
 
             {isAuth ? (
               <>
                 <div className="nav-comp " style={{ float: "right" }}>
-                  <Link to="/user" onClick={renderSidebar}>
+                  <NavLink to="/user" onClick={renderSidebar}>
                     
                       <i className="fa fa-user  " aria-hidden="true"></i>
                     
-                  </Link>
+                  </NavLink>
                   <GoogleLogout
                     clientId={Keys.OAUTH_CLIENT_ID}
                     render={(renderProps) => (

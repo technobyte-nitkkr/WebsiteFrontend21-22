@@ -61,6 +61,7 @@
 .nav {
   /* background-color: red; */
   align-items: center;
+  
   justify-content: center;
 
   display: flex;
@@ -106,8 +107,8 @@
   font-family: Poppins;
   font-weight: 500;
   font-size: 3.5vh;
-  margin: 0vh 0vh;
-  padding: 0vh 2vh;
+  margin: 0vh auto;
+  padding: 0 20px;
   text-decoration: none;
 }
 
@@ -130,7 +131,7 @@
     font-weight: bold;
   }
 
-@media screen and (max-width: 720px) and (orientation: portrait) {
+@media screen and (max-width: 600px)  {
   .logo2 img {
     width: 50%;
     height: auto;
@@ -250,9 +251,10 @@
     /* font-size: 18px; */
     
     line-height: 36px;
-    width: 100%;
+    
     text-align: center;
-    margin-right: 2.5rem !important; 
+    margin-right: 40px !important;
+    width: 100%;
     text-align: end;
     right: 20px;
   }
@@ -267,6 +269,6 @@
   .nav-comp {
     /* border: 1px solid greenyellow; */
     font-size: 1.7vw;
-    margin: 0rem 0rem 1rem 1rem;
+    padding : 0 1vw !important;
   }
 }
