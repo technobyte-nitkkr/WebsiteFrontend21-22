@@ -10,8 +10,9 @@ const KommunicateChat = () => {
         appId: Keys.CHAT_BOT_APP_ID,
         popupWidget: true,
         automaticChatOpenOnNavigation: true,
-        "userId":  userData?.name,
-        "email": userData?.email
+        "userId":  userData?.email,
+        "email": userData?.email,
+        "userName": userData?.name
       };
 
       var s = document.createElement("script");

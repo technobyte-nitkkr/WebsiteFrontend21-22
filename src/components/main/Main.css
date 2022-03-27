@@ -146,14 +146,13 @@
 
 @media screen and (max-width: 1000px)  {
   .header-main {
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: column;
     width: 100%;
     /* top: 15% !important; */
     align-items: center;
     /* border: 2px solid black; */
-    top: 0vh;
   }
 
   .head-main {
@@ -161,7 +160,7 @@
     margin-top: 30px;
     font-family: Poppins;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 45px;
     line-height: 81px;
     text-align: center;
