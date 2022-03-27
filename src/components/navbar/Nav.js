@@ -36,11 +36,14 @@ function Nav() {
           <input type="checkbox" onClick={renderSidebar} id="check" />
           <label htmlFor="check">
             <div className="menubuttonBurger"></div>
-            <div className="closetext">Close X</div>
+            
           </label>
         </div>
         <div className="sidebar">
           <div className="nav">
+            <div onClick={renderSidebar} className="nav-comp closetext">
+              Close X
+            </div>
             <Link to="/" onClick={renderSidebar} className="nav-comp">
               Home
             </Link>
@@ -71,9 +74,9 @@ function Nav() {
               <>
                 <div className="nav-comp " style={{ float: "right" }}>
                   <Link to="/user" onClick={renderSidebar}>
-                    <div className="hover">
+                    
                       <i className="fa fa-user  " aria-hidden="true"></i>
-                    </div>
+                    
                   </Link>
                   <GoogleLogout
                     clientId={Keys.OAUTH_CLIENT_ID}

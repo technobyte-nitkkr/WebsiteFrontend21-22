@@ -137,6 +137,12 @@
     margin: 0 auto;
   }
 
+  .closetext{
+    display: block;
+    z-index: 0;
+    position: relative;
+  }
+
   .logo{
     position: relative;
     left: 0 !important;
@@ -151,6 +157,8 @@
     /* background-color: red !important; */
     display: flex !important;
     height: 100vh !important;
+    z-index: 101;
+    
     overflow: hidden !important;
     
     flex-direction: row !important;
@@ -211,20 +219,6 @@
     transform: translateY(6px);
   }
 
-  .closetext {
-    display: none;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    /* line-height: 42px; */
-    color: white;
-    /* border:2px solid red; */
-    width: 170px;
-    z-index: 99;
-    text-align: right;
-  }
-
   .sidebar {
     text-align: right;
     position: relative;
@@ -267,7 +261,7 @@
 @media screen and (max-width: 1400px) {
   .nav{
     margin-top: 30px !important;
-    /* background-color: red; */
+    height: 90vh;
   }
 
   .nav-comp {

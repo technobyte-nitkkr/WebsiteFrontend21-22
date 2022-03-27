@@ -45,7 +45,7 @@
     /* height: 8%; */
     font-size: 1.5rem;
     font-weight: 700;
-    margin: 3px 0;
+    margin: 3px auto;
     padding: 1%;
     cursor: pointer;
   }
@@ -65,7 +65,7 @@
     /* background-color: #0e101b; */
 
     width: 90%;
-    margin: 0 auto
+    margin: 0 auto;
   }
 
   .team-card {
@@ -74,7 +74,7 @@
     /* display: grid; */
     border-radius: 6px;
     transition: 0.1s;
-    margin: 30px;
+    margin: 30px auto;
   }
 
   .tokenImage {
@@ -110,7 +110,7 @@
     }
 
     .team-card-container {
-      margin: 2%;
+      margin: 2% auto;
       width: 90%;
     }
 

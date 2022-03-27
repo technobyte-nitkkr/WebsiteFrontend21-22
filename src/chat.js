@@ -2,15 +2,16 @@ import React, { useEffect } from "react";
 import Keys from "./config.keys";
 
 const KommunicateChat = () => {
-  var userData = JSON.parse(localStorage.getItem("userdata"));
-  
   useEffect(() => {
+  var userData = JSON.parse(localStorage.getItem("userdata"));
     (function (d, m) {
       var kommunicateSettings = {
         appId: Keys.CHAT_BOT_APP_ID,
         popupWidget: true,
+        
         automaticChatOpenOnNavigation: true,
-        "userId":  userData?.email,
+        "contactNumber": userData?.phone,
+        "userId":userData?.email,
         "email": userData?.email,
         "userName": userData?.name
       };
