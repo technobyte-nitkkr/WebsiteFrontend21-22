@@ -47,12 +47,7 @@ const About = () => {
               <Carousel.Item>
                 <img className="d-block  aboutimg" alt="" src={app3} />
               </Carousel.Item>
-              <Carousel.Item>
-                <img className="d-block  aboutimg" alt="" src={app4} />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img className="d-block  aboutimg" alt="" src={app5} />
-              </Carousel.Item>
+            
             </Carousel>
           </div>
 
