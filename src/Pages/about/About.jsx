@@ -14,12 +14,12 @@ import app5 from "../../images/app_carousal/1.png"
 import { Carousel, } from "react-bootstrap";
 
 import './About.css';  
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube , FaGooglePlay} from 'react-icons/fa';
 
 const About = () => {
     return (
         
-        <div style={{margin: "20px auto", alignItems: "center"}}>
+        <div style={{margin: "10px auto", alignItems: "center"}}>
             <Background />
            
         <div className="headingGL">
@@ -31,11 +31,11 @@ const About = () => {
             </div>
 
         <div className="Heading">
-          Install the Techspardh App Now
+          Install the Techspardh App Now!
         </div>
 
           <div className="aboutscroll1">
-            <Carousel>
+            <Carousel interval={2000}> 
               <Carousel.Item>
                 <div className="wrapper">
                   <img className="d-block  aboutimg" alt="" src={app1} />
@@ -53,7 +53,7 @@ const About = () => {
 
         <div className="buttons">
           <div className="learn">
-            <a href="https://play.google.com/store/apps/details?id=com.nitkkr.altius"><span >Download Now</span></a>
+            <a href="https://play.google.com/store/apps/details?id=com.nitkkr.altius"><span ><FaGooglePlay size={30}/>  Download Now</span></a>
           </div>
         </div>
         <div className="Heading"> Some glimpses from the past...</div>
@@ -99,7 +99,7 @@ const About = () => {
                <div style={{color: "white", textAlign: "center", fontSize: "5vh"}}>
                   Follow Our Social Handles
               
-               <div style={{textAlign: "center", padding: "20px"}}>
+               <div style={{textAlign: "center", padding: "10px"}}>
 
                <a href="https://www.youtube.com/c/TechspardhaNITKuruksehtra"
                     className="youtube social">
