@@ -35,7 +35,7 @@ const Sponsors = () => {
       </div>
       <div className="sponsi-container">
         {SponsorList.map((item,index) => {
-          console.log(item.imageUrl);
+          console.log(item.link);
 
           // var s = arr[Math.floor(Math.random() * arr.length)];
            
@@ -52,7 +52,7 @@ const Sponsors = () => {
                 <div className="sponsi-card-text">
               
                   <h4>
-                    <a href={item.targetUrl} style={{
+                    <a href={item.link} style={{
                       textAlign:'center',
                       textDecoration:'none'
                     }}>{item.name}</a>

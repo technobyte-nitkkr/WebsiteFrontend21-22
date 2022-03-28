@@ -209,7 +209,7 @@ const EventDescription = () => {
         </div>
         </> : 
         <>
-           <h1 style = {{textAlign: 'center', color: 'white', fontSize: '70px'}}>
+           <h1 style = {{textAlign: 'center', color: 'white', fontSize: '50px'}}>
              Loading ...
            </h1>
         </>
