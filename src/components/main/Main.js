@@ -22,7 +22,7 @@ function Main() {
           </div>
         </div>
       </div>
-      <TimelineHome />
+      {/* <TimelineHome /> */}
       <KommunicateChat />
     </>
   );
