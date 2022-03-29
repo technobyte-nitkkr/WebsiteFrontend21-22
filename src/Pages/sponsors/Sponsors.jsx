@@ -13,9 +13,10 @@ const Sponsors = () => {
     console.log(SponsorList);
     const getSponsors = async () => {
       try {
-        var url = Keys.BASE_API + "/foodsponsors";
+        var url = Keys.BASE_API + "/sponsors";
         var response = await axios.get(url);
-        setSponsorList(response.data.data.foodSponsors);
+        setSponsorList(response.data.data.sponsors);
+        // response.data.data.sponsors.
       } catch (error) {
         console.log(error);
       }
@@ -28,43 +29,51 @@ const Sponsors = () => {
     <>
       <Background />
     
-      <div className="sponsor-wrapper">
-        <h2 className="headingGL">
-          Our Amazing Sponsors
-        </h2>
-      </div>
-      <div className="sponsi-container">
-        {SponsorList.map((item,index) => {
-          console.log(item.link);
+      {
+        SponsorList.map((category)=>{
+          return(
+            <>
+              <div className="sponsor-wrapper">
+                <h2 className="headingGL">
+                  {category.sponsorSection}
+                </h2>
+              </div>
+            <div className="sponsi-container">
+              {category.sponsors.map((item, index) => {
+                console.log(item.link);
 
-          // var s = arr[Math.floor(Math.random() * arr.length)];
-           
-            return (
-              <div key={index} className="sponsi-card-top">
-                <div className="sponsi-card-image">
-                  <img
-                    style={{
-                      background:"white"
-                    }}
-                    src={item.imageUrl}
-                  />
-                </div>
-                <div className="sponsi-card-text">
-              
-                  <h4>
-                    <a href={item.link} style={{
-                      textAlign:'center',
-                      textDecoration:'none'
-                    }}>{item.name}</a>
-                  </h4>
-              
-                  <br />
+                // var s = arr[Math.floor(Math.random() * arr.length)];
 
-                </div>
-                </div>
-            );
-        })}
-      </div>
+                return (
+                  <div key={index} className="sponsi-card-top">
+                    <div className="sponsi-card-image">
+                      <img
+                        style={{
+                          background: "white"
+                        }}
+                        src={item.imageUrl}
+                      />
+                    </div>
+                    <div className="sponsi-card-text">
+
+                      <h4>
+                        <a href={item.link} style={{
+                          textAlign: 'center',
+                          textDecoration: 'none'
+                        }}>{item.name}</a>
+                      </h4>
+
+                      <br />
+
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            </>
+          )
+        })
+      }
     
     </>
   );

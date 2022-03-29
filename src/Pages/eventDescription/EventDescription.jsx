@@ -140,12 +140,14 @@ const EventDescription = () => {
             >
             </Image>
              <div style={{  paddingTop : '20px'}} >
-               <h6>
+               {/* <h6>
                 Start Time : {new Date(Event.startTime).toLocaleString("en-US", {year: "numeric", month: "short", day: "2-digit", hour: "numeric" , minute: "2-digit"})}
                </h6>
                <h6>
                    End Time : {new Date(Event.endTime).toLocaleString("en-US", {year: "numeric", month: "short", day: "2-digit", hour: "numeric", minute: "2-digit" })}
-               </h6>
+               </h6> */}
+
+               {"Event Dates Coming Soon"}
                </div>
 
                { !isAuth ? <>

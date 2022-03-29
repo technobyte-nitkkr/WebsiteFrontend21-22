@@ -82,7 +82,8 @@ const TimelineHome = () => {
                     </span>
                   </Link>
                   <span className="date" style={{ marginBottom: "1rem" }}>
-                    {date(event.startTime)}
+                    {/* {date(event.startTime)} */}
+                    {"Event Dates Coming Soon"}
                   </span>
                 </div>
                 <div className="status">
