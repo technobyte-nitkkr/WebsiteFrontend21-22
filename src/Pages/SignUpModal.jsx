@@ -6,7 +6,6 @@ import Store from "../Store/Store";
 import { LOGIN } from "../Store/Types";
 
 export default function SignUpModal(props) {
-
     const [state, dispatch] = useContext(Store);
 
     const [formData, setFormData] = useState({
@@ -46,6 +45,26 @@ export default function SignUpModal(props) {
       
       const send = async (formData) => {
         try {
+          // validate the fields
+          if (formData.college === "") {
+            // handleFeedback("Please enter your college name");
+            // show alert
+            alert("Please enter your college name");
+            return;
+          }
+
+          if (formData.year === "") {
+            // handleFeedback("Please enter your year");
+            // show alert
+            alert("Please enter your year");
+            return;
+          }
+
+          if (formData.phone === "") {
+            handleFeedback("Please enter your phone number");
+            return;
+          }
+          
           const config = {
             headers: {
               "Content-Type": "application/json",
@@ -107,6 +126,7 @@ export default function SignUpModal(props) {
           <form style ={{textAlign : "center", padding : "10px"}} onSubmit={handleSubmit} method="POST">
                 <div style ={{padding : "10px"}}>
                   <input
+                   className="ModalInput"
                     name="college"
                     required="required"
                     type="string"
@@ -116,18 +136,21 @@ export default function SignUpModal(props) {
                 </div>
                 <div style ={{padding : "10px"}}>
                     <input
+                className="ModalInput"
                     name="phone"
                     required="required"
-                    type="string"
+                    type="text"
+                    // mobile no validation
+                    
                     placeholder="Mobile Number"
                     onChange={handleChange}
                   />
                 </div>
                 <div style ={{padding : "10px"}}>
 
-                <label for="year" style={{marginRight:"10px"}}>Year:</label>
-
-                    <select name="year" required="required" type="string">
+                <label for="year"  style={{marginRight:"10px"}}>Year:</label>
+                <br/>
+              <select onChange={handleChange} className="ModalInput" name="year" required="required" type="string">
                       <option value="Fresher">Fresher</option>
                       <option value="Sophomore">Sophomore</option>
                       <option value="Prefinal Year">Prefinal Year</option>
@@ -144,13 +167,3 @@ export default function SignUpModal(props) {
       </Modal>
     );
   }
-
-
-   
-
-  
-  
-  
-        
-      
-   
