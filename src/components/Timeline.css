@@ -12,6 +12,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 !important;
   /* background: black; */
   opacity: 0;
   /* animation: timeLineAnimation 0.5s ease-in 3s 1 forwards; */
