@@ -5,9 +5,11 @@ import axios from "axios";
 // import { Timeline, TimelineEvent } from "react-event-timeline";
 import dateFormat from "dateformat";
 import { Link } from "react-router-dom";
+
 // import HorizontalTimeline from "react-horizontal-timeline";
 import "./Timeline.css";
-import { Carousel } from "bootstrap";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import Carousel from "react-owl-carousel";
 const TimelineHome = () => {
   const { state, dispatch } = useContext(Store);
   const [istate, setState] = useState({
@@ -65,39 +67,48 @@ const TimelineHome = () => {
   return (
     <div className="timeline-wrapper">
       <ul className="timeline" id="timeline">
-        {istate.timeline ? (
-          istate.timeline.map((event, index) => {
-            return (
-              <li
-                key={index}
-                className="li complete"
-              >
-                <div className="timestamp">
-                  <Link
-                    className="primary"
-                    to={`/eventdetails/${event.eventCategory}/${event.eventName}`}
-                  >
-                    <span className="author">
-                      {event.eventName.split(" ")[0]}
-                    </span>
-                  </Link>
-                  <span className="date" style={{ marginBottom: "1rem" }}>
-                    {/* {date(event.startTime)} */}
-                    {"Event Dates Coming Soon"}
-                  </span>
-                </div>
-                <div className="status">
-                  <h6>
-                    {time(event.startTime)} - {time(event.endTime)}
-                  </h6>
-                </div>
-              </li>
-            );
-            // }
-          })
-        ) : (
-          <p></p>
-        )}
+        <Carousel
+          loop={true}
+          autoplay={true}
+          autoplaySpeed={4000}
+          dots={false}
+          slideBy={5}
+          items={5}
+          // navSpeed={100}
+          autoplayTimeout={8000}
+          autoplayHoverPause={true}
+        >
+          {istate.timeline ? (
+            istate.timeline
+              .filter((event) => event.startTime > now)
+              .map((event, index) => {
+                return (
+                  <li key={index} className="li complete">
+                    <div className="timestamp">
+                      <Link
+                        className="primary"
+                        to={`/eventdetails/${event.eventCategory}/${event.eventName}`}
+                      >
+                        <span className="author">{event.eventName}</span>
+                      </Link>
+                      <span className="date" style={{ marginBottom: "1rem" }}>
+                        {date(event.startTime)}
+                        {/* {"Event Dates Coming Soon"} */}
+                      </span>
+                    </div>
+                    <div className="status">
+                      <h6>
+                        {time(event.startTime)} - {time(event.endTime)}
+                      </h6>
+                    </div>
+                  </li>
+                );
+                // }
+              })
+          ) : (
+            <p></p>
+          )}
+        </Carousel>
       </ul>
     </div>
   );
