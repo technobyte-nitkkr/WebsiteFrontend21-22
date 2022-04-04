@@ -23,6 +23,7 @@ function Main() {
         </div>
       </div>
       <TimelineHome />
+      <span></span>
       <KommunicateChat />
     </>
   );
