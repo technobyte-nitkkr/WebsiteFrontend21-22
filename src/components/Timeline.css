@@ -13,8 +13,9 @@ a {
   align-items: center;
   justify-content: center;
   padding: 0 !important;
+  overflow-x: auto;
   /* background: black; */
-  opacity: 0;
+  /* opacity: 0; */
   /* animation: timeLineAnimation 0.5s ease-in 3s 1 forwards; */
   text-decoration: none !important;
   color: white !important;

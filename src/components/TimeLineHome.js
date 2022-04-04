@@ -76,12 +76,14 @@ const TimelineHome = () => {
           autoplaySpeed={4000}
           dots={false}
           slideBy={5}
-          responsive={{
-            0: { items: 1 },
-            600: { items: 2 },
-            1000: { items: 4 },
-            1200: { items: 5 },
-          }}
+           responsive={
+            {
+              0: { items: 1 },
+              600: { items: 2 },
+              1000: { items: 4 },
+              1200: { items: 5 }
+           }}
+
           // navSpeed={100}
           autoplayTimeout={8000}
           autoplayHoverPause={true}
