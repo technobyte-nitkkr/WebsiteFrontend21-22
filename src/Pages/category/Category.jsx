@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
-import OwlCarousel from "react-owl-carousel";
 import axios from "axios";
 import CardsCat from "./CardsCat";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./Category.css";
-import { Row } from "react-bootstrap";
 import Background from "../../components/Background/Background";
 
 function Category() {

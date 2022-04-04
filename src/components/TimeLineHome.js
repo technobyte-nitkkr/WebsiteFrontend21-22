@@ -5,11 +5,14 @@ import axios from "axios";
 // import { Timeline, TimelineEvent } from "react-event-timeline";
 import dateFormat from "dateformat";
 import { Link } from "react-router-dom";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 
 // import HorizontalTimeline from "react-horizontal-timeline";
 import "./Timeline.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import Carousel from "react-owl-carousel";
+
 const TimelineHome = () => {
   const { state, dispatch } = useContext(Store);
   const [istate, setState] = useState({
@@ -67,20 +70,18 @@ const TimelineHome = () => {
   return (
     <div className="timeline-wrapper">
       <ul className="timeline" id="timeline">
-        <Carousel
+        <OwlCarousel
           loop={true}
           autoplay={true}
           autoplaySpeed={4000}
           dots={false}
           slideBy={5}
-           responsive={
-            {
-              0: { items: 1 },
-              600: { items: 2 },
-              1000: { items: 4 },
-              1200: { items: 5 }
-           }}
-
+          responsive={{
+            0: { items: 1 },
+            600: { items: 2 },
+            1000: { items: 4 },
+            1200: { items: 5 },
+          }}
           // navSpeed={100}
           autoplayTimeout={8000}
           autoplayHoverPause={true}
@@ -115,7 +116,7 @@ const TimelineHome = () => {
           ) : (
             <p></p>
           )}
-        </Carousel>
+        </OwlCarousel>
       </ul>
     </div>
   );
