@@ -72,7 +72,7 @@ const EventDescription = () => {
         }
       }
       );
-      alert((res.data.status || " ") + "\n Checout Your Email for More Details");
+      alert((res.data.status || " ") + "\nPlease check your email for more details.");
       console.log(res.data);
       if (res.data.success) {
         setIsRegistered(true);
@@ -194,9 +194,11 @@ const EventDescription = () => {
                     <>
                       <h4>Rules: </h4>
                       <div style={{ fontSize: '15px' }}>
+                        <ul>
                         {Event.rules.map((rule) => (
-                          <p>{rule}</p>
+                          <li style={{margin: "2px"}}>{rule}</li>
                         ))}
+                        </ul>
                       </div>
                     </>}
 
