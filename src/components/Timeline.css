@@ -12,22 +12,16 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 !important;
   /* background: black; */
   opacity: 0;
   /* animation: timeLineAnimation 0.5s ease-in 3s 1 forwards; */
-  text-decoration: none !important;
-  color: white !important;
+  text-decoration: none;
 
   /* overflow-y: scroll; */
   /* margin-left: 1rem; */
   position: relative;
   /* left: -460rem; */
-  animation:  timeLineAnimation 0.5s ease-in 1s 1 forwards;
-}
-
-.owl-item {
-  color: white !important;
+  animation:  timeLineAnimation 0.5s ease-in 1s 1 forwards, scrollAuto 100s linear 5s infinite;
 }
 
 .timeline:hover{

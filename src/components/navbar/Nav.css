@@ -108,7 +108,7 @@
   font-weight: 500;
   font-size: 3.5vh;
   margin: 0vh auto;
-  padding: 0 20px;
+  padding: 0 auto;
   text-decoration: none;
 }
 
@@ -132,10 +132,10 @@
   }
 
 @media screen and (max-width: 600px)  {
-    
   .nav {
     height: 90vh !important;
   }
+
   .logo2 img {
     width: 50%;
     height: auto;

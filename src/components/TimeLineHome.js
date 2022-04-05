@@ -5,14 +5,9 @@ import axios from "axios";
 // import { Timeline, TimelineEvent } from "react-event-timeline";
 import dateFormat from "dateformat";
 import { Link } from "react-router-dom";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-
 // import HorizontalTimeline from "react-horizontal-timeline";
 import "./Timeline.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-
+import { Carousel } from "bootstrap";
 const TimelineHome = () => {
   const { state, dispatch } = useContext(Store);
   const [istate, setState] = useState({
@@ -28,8 +23,10 @@ const TimelineHome = () => {
           ...istate,
           timeline: res.data.data.events,
         });
-
-        console.log(res.data.data.events.filter((e) => e.endTime > Date.now()));
+        console.log(res.data.data.events);
+         console.log(
+           res.data.data.events.filter((e) => e.endTime > Date.now())
+         );
       } catch (error) {
         console.log(error);
       }
@@ -71,56 +68,34 @@ const TimelineHome = () => {
   return (
     <div className="timeline-wrapper">
       <ul className="timeline" id="timeline">
-        {istate.timeline.length > 0 && (
-          <OwlCarousel
-            loop={true}
-            autoplay={true}
-            autoplaySpeed={1000}
-            dots={false}
-            slideBy={5}
-            mouseDrag={false}
-            touchDrag={false}
-            pullDrag={false}
-            freeDrag={false}
-            // lazyContent={true}
-            responsive={{
-              0: { items: 1, slideBy: 1 },
-              600: { items: 2, slideBy: 1 },
-              1000: { items: 4 , slideBy: 1},
-              1200: { items: 5, slideBy: 1 },
-            }}
-            // navSpeed={100}
-            autoplayTimeout={2000}
-            autoplayHoverPause={true}
-          >
-            {istate.timeline.map((element, index) => {
-              return istate.timeline
-                .filter((event) => event.endTime > now)
-                .map((event, index) => {
-                  return (
-                    <li key={index} className="li complete">
-                      <div className="timestamp">
-                        <Link
-                          className="primary"
-                          to={`/eventdetails/${event.eventCategory}/${event.eventName}`}
-                        >
-                          <span className="author">{event.eventName}</span>
-                        </Link>
-                        <span className="date" style={{ marginBottom: "1rem" }}>
-                          {date(event.startTime)}
-                          {/* {"Event Dates Coming Soon"} */}
-                        </span>
-                      </div>
-                      <div className="status">
-                        <h6>
-                          {time(event.startTime)} - {time(event.endTime)}
-                        </h6>
-                      </div>
-                    </li>
-                  );
-                });
-            })}
-          </OwlCarousel>
+        {istate.timeline ? (
+          istate.timeline.map((event, index) => {
+            return (
+              <li key={index} className="li complete">
+                <div className="timestamp">
+                  <Link
+                    className="primary"
+                    to={`/eventdetails/${event.eventCategory}/${event.eventName}`}
+                  >
+                    <span className="author">
+                      {event.eventName}
+                    </span>
+                  </Link>
+                  <span className="date" style={{ marginBottom: "1rem" }}>
+                    {date(event.startTime)}
+                  </span>
+                </div>
+                <div className="status">
+                  <h6>
+                    {time(event.startTime)} - {time(event.endTime)}
+                  </h6>
+                </div>
+              </li>
+            );
+            // }
+          })
+        ) : (
+          <p></p>
         )}
       </ul>
     </div>
