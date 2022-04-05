@@ -47,6 +47,9 @@ function Nav() {
             <NavLink exact activeClassName="active-link" to="/" onClick={renderSidebar} className="nav-comp">
               Home
             </NavLink>
+            <NavLink exact activeClassName="active-link" to="/about" onClick={renderSidebar} className="nav-comp">
+              About
+            </NavLink>
             <NavLink to="/categories" onClick={renderSidebar} className="nav-comp">
               Events
             </NavLink>

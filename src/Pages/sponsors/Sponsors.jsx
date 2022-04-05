@@ -28,17 +28,17 @@ const Sponsors = () => {
     //   <div className="container">
     <>
       <Background />
-    
+      <div className="sponsor-wrapper">
+                <h2 className="headingGL">
+                  Sponsors
+                </h2>
+              </div>
+            <div className="sponsi-container">
       {
         SponsorList.map((category)=>{
           return(
             <>
-              <div className="sponsor-wrapper">
-                <h2 className="headingGL">
-                  {category.sponsorSection}
-                </h2>
-              </div>
-            <div className="sponsi-container">
+             
               {category.sponsors.map((item, index) => {
                 console.log(item.link);
 
@@ -61,20 +61,24 @@ const Sponsors = () => {
                           textAlign: 'center',
                           textDecoration: 'none'
                         }}>{item.name}</a>
+
+                         <br /> 
+                         
+                        {category.sponsorSection}
                       </h4>
 
-                      <br />
-
+                     
+                      
                     </div>
                   </div>
                 );
               })}
-            </div>
+            
             </>
           )
         })
       }
-    
+    </div>
     </>
   );
 };

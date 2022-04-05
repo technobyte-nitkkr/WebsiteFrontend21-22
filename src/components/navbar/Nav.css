@@ -132,6 +132,10 @@
   }
 
 @media screen and (max-width: 600px)  {
+    
+  .nav {
+    height: 90vh !important;
+  }
   .logo2 img {
     width: 50%;
     height: auto;

@@ -78,7 +78,11 @@ const TimelineHome = () => {
             autoplaySpeed={1000}
             dots={false}
             slideBy={5}
-            lazyContent={true}
+            mouseDrag={false}
+            touchDrag={false}
+            pullDrag={false}
+            freeDrag={false}
+            // lazyContent={true}
             responsive={{
               0: { items: 1, slideBy: 1 },
               600: { items: 2, slideBy: 1 },
