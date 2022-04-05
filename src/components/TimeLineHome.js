@@ -23,7 +23,7 @@ const TimelineHome = () => {
           ...istate,
           timeline: res.data.data.events,
         });
-        console.log(res.data.data.events);
+        console.log(res.data.data.events.sort((a, b) => a.eventName.toString().localeCompare(b.eventName.toString())));
          console.log(
            res.data.data.events.filter((e) => e.endTime > Date.now())
          );
