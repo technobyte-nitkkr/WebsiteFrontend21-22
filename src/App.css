@@ -22,6 +22,24 @@
   display: none;
 }
 
+.routes{
+  z-index: 105;
+  /* width: 100%; */
+  scroll-behavior: smooth;
+  /* background-color: red; */
+  backface-visibility: hidden;
+}
+
+.ModalInput{
+  /* border: none !important; */
+  border: 1px solid grey;
+  border-radius: 10px;
+  font-family: Poppins;
+  font-weight: 400;
+  width: 80% !important;
+  padding: 10px;
+}
+
 @media screen and (max-width: 700px) {
   .routes {
     margin-top: 10px !important;

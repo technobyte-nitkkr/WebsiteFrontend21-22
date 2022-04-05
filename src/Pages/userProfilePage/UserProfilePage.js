@@ -59,7 +59,7 @@ const UserProfilePage = () => {
           <></>
         ) : (
           <Container className="container">
-            <h1 style={{ textAlign: "center", color: "white" }}>
+            <h1 className="headingGL">
               Your Profile
             </h1>
             <Row className="mainContent">
@@ -111,7 +111,7 @@ const UserProfilePage = () => {
                   </div>
                 </Col>
               </Col>
-              <Col>
+              <Col style={{width: "100vw"}}>
                 <div className="regEvents-heading">
                   <h1>Your Registered Events</h1>
                 </div>

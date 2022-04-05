@@ -6,11 +6,12 @@ import img2 from '../../images/about_carousal/2.jpg';
 import img3 from '../../images/about_carousal/3.jpg';
 import img4 from '../../images/about_carousal/4.jpg';
 import img5 from '../../images/about_carousal/5.jpg';
-import app1 from "../../images/app_carousal/1.png"
-import app2 from "../../images/app_carousal/2.png"
-import app3 from "../../images/app_carousal/3.png"
-import app4 from "../../images/app_carousal/1.png"
-import app5 from "../../images/app_carousal/1.png"
+import app1 from "../../images/app_carousal/final1.png"
+import app2 from "../../images/app_carousal/final2.png"
+import app3 from "../../images/app_carousal/final3.png"
+import app4 from "../../images/app_carousal/final4.png"
+import app45 from "../../images/app_carousal/final45.png"
+import app5 from "../../images/app_carousal/final5.png"
 import { Carousel, } from "react-bootstrap";
 
 import './About.css';  
@@ -47,7 +48,15 @@ const About = () => {
               <Carousel.Item>
                 <img className="d-block  aboutimg" alt="" src={app3} />
               </Carousel.Item>
-            
+              <Carousel.Item>
+                <img className="d-block  aboutimg" alt="" src={app4} />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="d-block  aboutimg" alt="" src={app45} />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="d-block  aboutimg" alt="" src={app5} />
+              </Carousel.Item>
             </Carousel>
           </div>
 
@@ -96,7 +105,7 @@ const About = () => {
                    </div>
                </div>
 
-               <div style={{color: "white", textAlign: "center", fontSize: "5vh"}}>
+               <div style={{color: "white", textAlign: "center", fontSize: "2rem"}}>
                   Follow Our Social Handles
               
                <div style={{textAlign: "center", padding: "10px"}}>

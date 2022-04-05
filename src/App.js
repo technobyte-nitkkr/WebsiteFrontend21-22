@@ -67,10 +67,10 @@ function App() {
               <SplashScreen />
             ) : (
               <>
-                {/* <Nav />
+                <Nav />
                 <div className="routes">{routes}</div>
-                <Footer /> */}
-                <Main/>
+                <Footer />
+                {/* <Main/> */}
               </>
             )}
           </Router>

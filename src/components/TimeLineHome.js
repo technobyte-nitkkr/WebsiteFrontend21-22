@@ -24,6 +24,9 @@ const TimelineHome = () => {
           timeline: res.data.data.events,
         });
         console.log(res.data.data.events);
+         console.log(
+           res.data.data.events.filter((e) => e.endTime > Date.now())
+         );
       } catch (error) {
         console.log(error);
       }
@@ -68,17 +71,14 @@ const TimelineHome = () => {
         {istate.timeline ? (
           istate.timeline.map((event, index) => {
             return (
-              <li
-                key={index}
-                className="li complete"
-              >
+              <li key={index} className="li complete">
                 <div className="timestamp">
                   <Link
                     className="primary"
                     to={`/eventdetails/${event.eventCategory}/${event.eventName}`}
                   >
                     <span className="author">
-                      {event.eventName.split(" ")[0]}
+                      {event.eventName}
                     </span>
                   </Link>
                   <span className="date" style={{ marginBottom: "1rem" }}>

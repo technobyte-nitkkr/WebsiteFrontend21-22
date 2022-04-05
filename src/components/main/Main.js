@@ -12,7 +12,7 @@ function Main() {
       <div  className="header-main">
         <div className="head-main text_shadow">TECHSPARDHA</div>
         <div className="time">Unravelling Dimensions</div>
-        <div className="time" style={{fontSize: '2rem'} }>Coming Soon...</div>
+        {/* <div className="time">Theme Launch Soon</div> */}
 
         <div className="buttons">
           <div className="learn">
@@ -22,7 +22,8 @@ function Main() {
           </div>
         </div>
       </div>
-      {/* <TimelineHome /> */}
+      <TimelineHome />
+      <span></span>
       <KommunicateChat />
     </>
   );

@@ -4,9 +4,11 @@
   justify-content: space-evenly;
   flex-direction: row;
   justify-items: center;
-  width: 95%;
+  width: 98%;
   height: 10vh;
+  margin: 0;
   margin-top: 2vh;
+
   z-index: 200;
 }
 
@@ -16,10 +18,15 @@
   z-index: 97;
   margin: 0;
   padding: 0;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-items: center;
   height: 100%;
+}
+
+.sidebar{
+  width: 100%;
 }
 
 .logo {
@@ -108,7 +115,7 @@
   font-weight: 500;
   font-size: 3.5vh;
   margin: 0vh auto;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   text-decoration: none;
 }
 
@@ -132,6 +139,10 @@
   }
 
 @media screen and (max-width: 600px)  {
+  .nav {
+    height: 90vh !important;
+  }
+
   .logo2 img {
     width: 50%;
     height: auto;
@@ -170,13 +181,15 @@
   }
 
   .menubutton {
-    position: relative;
-
-    right: 10px;
-    top: 0px;
-
+    position: absolute;
+    right: 3%;
+    /* background-color: green; */
+    /* display: flex; */
+    /* right: 10px; */
+    /* top: 0px; */
+    /* background-color: green !important; */
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     align-items: center;
     z-index: 99;
   }
@@ -263,7 +276,7 @@
 @media screen and (max-width: 1400px) {
   .nav{
     margin-top: 30px !important;
-    height: 90vh;
+    height: auto;
   }
 
   .nav-comp {

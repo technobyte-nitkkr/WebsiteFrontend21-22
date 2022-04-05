@@ -32,7 +32,7 @@ export default function EventCard(props) {
               <p className="regEventName">
                 <h3>{props.eventName}</h3>
               </p>
-              <p className="Date">{format(new Date(props.startTime), "PPp")}</p>
+              {/* <p className="Date">{format(new Date(props.startTime), "PPp")}</p> */}
               <p style={{ color: "grey", fontSize: "18px" }}>Know More</p>
             </div>
           </Col>

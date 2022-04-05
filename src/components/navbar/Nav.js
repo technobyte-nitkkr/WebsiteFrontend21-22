@@ -36,7 +36,6 @@ function Nav() {
           <input type="checkbox" onClick={renderSidebar} id="check" />
           <label htmlFor="check">
             <div className="menubuttonBurger"></div>
-            
           </label>
         </div>
         <div className="sidebar">
@@ -44,16 +43,43 @@ function Nav() {
             <div onClick={renderSidebar} className="nav-comp closetext">
               Close X
             </div>
-            <NavLink exact activeClassName="active-link" to="/" onClick={renderSidebar} className="nav-comp">
+            <NavLink
+              exact
+              activeClassName="active-link"
+              to="/"
+              onClick={renderSidebar}
+              className="nav-comp"
+            >
               Home
             </NavLink>
-            <NavLink to="/categories" onClick={renderSidebar} className="nav-comp">
+            <NavLink
+              exact
+              activeClassName="active-link"
+              to="/about"
+              onClick={renderSidebar}
+              className="nav-comp"
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/categories"
+              onClick={renderSidebar}
+              className="nav-comp"
+            >
               Events
             </NavLink>
-            <NavLink to="/sponsors" onClick={renderSidebar} className="nav-comp">
+            <NavLink
+              to="/sponsors"
+              onClick={renderSidebar}
+              className="nav-comp"
+            >
               Sponsors
             </NavLink>
-            <NavLink to="/lectures" onClick={renderSidebar} className="nav-comp">
+            <NavLink
+              to="/lectures"
+              onClick={renderSidebar}
+              className="nav-comp"
+            >
               Lectures
             </NavLink>
             <NavLink to="/Team" onClick={renderSidebar} className="nav-comp">
@@ -74,9 +100,7 @@ function Nav() {
               <>
                 <div className="nav-comp " style={{ float: "right" }}>
                   <NavLink to="/user" onClick={renderSidebar}>
-                    
-                      <i className="fa fa-user  " aria-hidden="true"></i>
-                    
+                    <i className="fa fa-user  " aria-hidden="true"></i>
                   </NavLink>
                   <GoogleLogout
                     clientId={Keys.OAUTH_CLIENT_ID}
@@ -85,13 +109,8 @@ function Nav() {
                         className="login-button"
                         onClick={renderProps.onClick}
                         disabled={renderProps.disabled}
-                        
                       >
-                        Logout{" "}
-                        <i
-                          class="fas fa-sign-out-alt"
-                          
-                        ></i>
+                        Logout <i class="fas fa-sign-out-alt"></i>
                       </p>
                     )}
                     onLogoutSuccess={logout}
