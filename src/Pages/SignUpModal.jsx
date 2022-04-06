@@ -128,9 +128,9 @@ export default function SignUpModal(props) {
                   <input
                    className="ModalInput"
                     name="college"
-                    required="required"
+                    required="true"
                     type="string"
-                    placeholder="College name"
+                    placeholder="College Name"
                     onChange={handleChange}
                   />
                 </div>
@@ -138,8 +138,8 @@ export default function SignUpModal(props) {
                     <input
                 className="ModalInput"
                     name="phone"
-                    required="required"
-                    type="text"
+                    required="true"
+                    type="tel"
                     // mobile no validation
                     
                     placeholder="Mobile Number"
@@ -148,9 +148,8 @@ export default function SignUpModal(props) {
                 </div>
                 <div style ={{padding : "10px"}}>
 
-                <label for="year"  style={{marginRight:"10px"}}>Year:</label>
-                <br/>
               <select onChange={handleChange} className="ModalInput" name="year" required="required" type="string">
+                      <option value="" disabled selected>Study Year</option>
                       <option value="Fresher">Fresher</option>
                       <option value="Sophomore">Sophomore</option>
                       <option value="Prefinal Year">Prefinal Year</option>
@@ -158,8 +157,8 @@ export default function SignUpModal(props) {
                     </select>
                 </div>
                 <div style ={{padding : "10px"}}>
-                  <button type="submit" onClick={handleSubmit} >
-                    Register
+                  <button style={{color: "white", backgroundColor: "#4890ff", borderRadius: "5px", border: "2px solid #4890ff", fontSize: "20px"}} type="submit" onClick={handleSubmit} >
+                    Register 
                   </button>
                 </div>
               </form>
