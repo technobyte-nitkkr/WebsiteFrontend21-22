@@ -7,6 +7,7 @@ import './EventDescription.css';
 import Store from "../../Store/Store.js";
 import SignUpModal from '../SignUpModal';
 import Background from '../../components/Background/Background';
+import BouncingDotsLoader from '../../components/loader/Loader';
 
 const EventDescription = () => {
   const { category, event } = useParams();
@@ -222,9 +223,7 @@ const EventDescription = () => {
         </div>
       </> :
       <>
-        <h1 style={{ textAlign: 'center', color: 'white', fontSize: '50px' }}>
-          Loading ...
-        </h1>
+       <BouncingDotsLoader/>
       </>
   )
 }
