@@ -2,10 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import "./teamDetails.css";
 import "./teamDetails.scss";
 import axios from "axios";
+import BouncingDotsLoader from "../loader/Loader";
 export default function TeamDetails() {
     const [data, setData] = useState();
     const [people, setPeople] = useState();
     const [current, setCurrent] = useState();
+    const [isLoading, setIsLoading] = useState(false);
     const Ref = useRef();
 
     useEffect(() => {
@@ -32,7 +34,11 @@ export default function TeamDetails() {
             console.log(current);
             for (var i = 0; i < data.length; i++) {
                 if (data[i].section === e.target.id) {
+                    setIsLoading(true);
                     setPeople(data[i].people);
+                    setTimeout(() => {
+                        setIsLoading(false);
+                    }, 500);
                     // console.log(data[i].people);
                 }
             }
@@ -61,7 +67,7 @@ export default function TeamDetails() {
                     : ""}
             </div>
             <div ref={Ref} className="team-card-container">
-                {people
+                {!isLoading&& people
                     ? people.map((x) => {
                         return (
                             <div class="nft" style={{ padding: "5px", margin: "20px" }}>
@@ -78,7 +84,7 @@ export default function TeamDetails() {
                             </div>
                         );
                     })
-                    : ""}
+                    : <BouncingDotsLoader/>}
             </div>
         </div>
     );

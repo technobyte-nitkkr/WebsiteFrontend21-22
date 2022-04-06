@@ -1,10 +1,13 @@
 
 .mainContentGL{
-    position: relative;
-    min-width: 100%;
+    /* position: relative; */
+	position: relative;
+	/* background-color: blue; */
+    width: 90%  ;
 	margin: 0 auto;
-
+	padding: 0;
     /* top: 250px; */
+	/* width: 100% !important; */
      
     /* max-height: 400vh; */ 
     padding-bottom: 100px;
@@ -12,14 +15,11 @@
 
 .carouselGL{
     margin:auto;
-    display: grid;
+    display: flex;
     width: 90%;
 	margin: 10px auto;
+	flex-wrap: wrap;
 	text-align: center;
-    
-    grid-template-columns: 1fr; 
-    
-    grid-column-gap: 30px;
 }
 
 .guestLecture{
@@ -31,9 +31,6 @@
     border-right: none;
     text-align: center;
     width: 85%;
-    /* backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(182, 186, 194, 0.25); */
 }
 
 .col-md-8{
@@ -49,8 +46,10 @@
 	width: 100% !important;
 	font-weight: 500;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 
     /* text-align: center; */
     color: #fff;
@@ -73,7 +72,8 @@
 		/* position: relative; */
 		margin: auto;
 		margin-top: 30px;
-		width: 500px;
+		position: relative;
+		width: 24vw ;
 		/* background: rgba(255,255,255,1); */
 		/* top: 50%; */
 		/* transform: translateY(-50%); */
@@ -208,13 +208,13 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .carouselGL{
-    grid-template-columns:  1fr  1fr ; 
-}
+	.profile-card{
+		width: 38vw !important;
+	}
 }
 
 @media screen and (max-width: 800px) {
-  .carouselGL{
-    grid-template-columns:  1fr  ; 
-}
+	.profile-card{
+		width: 80vw !important;
+	}
 }

@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Slab:wght@700&display=swap");
 
 .event-body {
-    
     font-size: 10px;
+}
+
+.event-body img{
+  background-image: url('../../images/placeholder.jpg')!important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .event-card {
@@ -13,4 +19,3 @@ backdrop-filter: blur( 4px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
-

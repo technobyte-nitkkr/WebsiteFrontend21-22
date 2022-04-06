@@ -31,14 +31,6 @@ a.social {
     width: 100%;
 }
 
-.aboutimg
-{
-    object-fit: cover;
-    
-    width: 90%;
-    max-height: 500px;
-}
-
 .Heading{
   font-size: 2rem;
   color: white;

@@ -13,6 +13,7 @@ export default function TeamAnimation() {
       array[i] = array[j];
       array[j] = temp;
     }
+
     return array;
   };
 
@@ -80,9 +81,9 @@ export default function TeamAnimation() {
           {team2
             ? team2.map((x) => {
                 return (
-                  <div className="diamond">
+                  <div key={x.imageUrl} className="diamond">
                     <div className="diamond-shape">
-                      <img src={x.imageUrl}></img>
+                      <img key={x.imageUrl} src={x.imageUrl}></img>
                     </div>
                   </div>
                 );

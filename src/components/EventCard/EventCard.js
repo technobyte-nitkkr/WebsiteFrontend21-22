@@ -26,7 +26,7 @@ export default function EventCard(props) {
                 onError={(e) => {
                   e.target.onerror = null;
                   e.target.src =
-                    "https://res.cloudinary.com/dvhrzmkwd/image/upload/v1643788204/Unknown39825/eesglbsknedo9vvnclkx.jpg";
+                    "https://i.ibb.co/hcR8BXn/placeholder.jpg";
                 }}
               ></img>
               <p className="regEventName">

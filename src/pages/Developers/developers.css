@@ -33,3 +33,10 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+.team2 img{
+  background-image: url('../../images/placeholder.jpg')!important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

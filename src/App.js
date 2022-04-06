@@ -28,6 +28,7 @@ import Testimonial from "./Pages/testimonial/Testimonial";
 import Developers from "./Pages/developers/Developers";
 import SplashScreen from "./components/extras/Splash";
 import Footer from "./components/extras/Footer";
+import Notification from "./Pages/guestLecture/Notification";
 
 function App() {
   const initialState = useContext(Store);
@@ -49,6 +50,7 @@ function App() {
       />
       <Route path="/user" element={<UserProfilePage />} />
       <Route path="/sponsors" element={<Sponsors />} />
+      <Route path="/notification" element={<Notification/>} />
       <Route path="/testimonial" element={<Testimonial />} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>
