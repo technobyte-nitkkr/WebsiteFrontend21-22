@@ -11,9 +11,8 @@ const KommunicateChat = () => {
         
         automaticChatOpenOnNavigation: true,
         "contactNumber": userData?.phone,
-        "userId":userData?.email,
+        
         "email": userData?.email,
-        "userName": userData?.name
       };
 
       var s = document.createElement("script");
