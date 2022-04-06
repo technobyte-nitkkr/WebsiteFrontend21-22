@@ -7,7 +7,7 @@ import dateFormat from "dateformat";
 import { Link } from "react-router-dom";
 // import HorizontalTimeline from "react-horizontal-timeline";
 import "./Timeline.css";
-import { Carousel } from "bootstrap";
+
 const TimelineHome = () => {
   const { state, dispatch } = useContext(Store);
   const [istate, setState] = useState({
@@ -77,17 +77,15 @@ const TimelineHome = () => {
                     className="primary"
                     to={`/eventdetails/${event.eventCategory}/${event.eventName}`}
                   >
-                    <span className="author">
-                      {event.eventName}
-                    </span>
+                    <span className="author">{event.eventName}</span>
                   </Link>
                   <span className="date" style={{ marginBottom: "1rem" }}>
-                    {date(event.startTime)}
+                    {date(event.startTime)} - {time(event.startTime)}
                   </span>
                 </div>
                 <div className="status">
                   <h6>
-                    {time(event.startTime)} - {time(event.endTime)}
+                    {date(event.endTime)} - {time(event.endTime)}
                   </h6>
                 </div>
               </li>
