@@ -24,7 +24,7 @@ const Testimonial = () => {
                 <h3 class="title">{item.name}</h3>
                 <span class="post">
                   <p>
-                    {item.course} ( {item.branch} ), {item.year} year
+                    {item.course} ( {item.branch} ), {item.year} 
                   </p>
                 </span>
                 <p class="description">{item.review}</p>

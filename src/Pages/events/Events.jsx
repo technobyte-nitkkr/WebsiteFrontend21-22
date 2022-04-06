@@ -4,6 +4,7 @@ import { Row,Col, Card } from 'react-bootstrap';
 import { useParams, Link } from 'react-router-dom';
 import Background from '../../components/Background/Background';
 import EventCard from '../../components/EventCard/EventCard';
+import BouncingDotsLoader from '../../components/loader/Loader';
 
 import "./events.css"
 
@@ -39,9 +40,7 @@ const Events = () => {
         <Background />
             <h1 style={{padding: '1vh',margin: "4vh",textAlign: "center", color: "white", fontSize: "3rem"}}> {category}</h1>
            { isLoading ? 
-              <div>
-                Loading ... 
-              </div>  
+              <BouncingDotsLoader/>
             : 
               <div>
                 <Row> 

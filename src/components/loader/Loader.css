@@ -1,0 +1,32 @@
+.bouncing-loader {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin:30vh auto;
+  width: 100%;
+}
+
+.bouncing-loader > div {
+  width: 3rem;
+  height: 3rem;
+  margin: 3px 10px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 1;
+  animation: bouncing-loader 0.6s infinite alternate;
+}
+
+@keyframes bouncing-loader {
+  to {
+    /* opacity: 0.1; */
+    transform: translateY(-3rem);
+  }
+}
+
+.bouncing-loader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bouncing-loader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}

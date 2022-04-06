@@ -40,12 +40,16 @@ const Sponsors = () => {
             <>
              
               {category.sponsors.map((item, index) => {
-                console.log(item.link);
+                console.log(item);
 
                 // var s = arr[Math.floor(Math.random() * arr.length)];
 
                 return (
-                  <div key={index} className="sponsi-card-top">
+                  <div key={index} href={item.targetUrl} className="sponsi-card-top">
+                    <a href={item.targetUrl} style={{
+                          textAlign: 'center',
+                          textDecoration: 'none'
+                        }}>
                     <div className="sponsi-card-image">
                       <img
                         style={{
@@ -55,21 +59,15 @@ const Sponsors = () => {
                       />
                     </div>
                     <div className="sponsi-card-text">
-
-                      <h4>
-                        <a href={item.link} style={{
-                          textAlign: 'center',
-                          textDecoration: 'none'
-                        }}>{item.name}</a>
-
-                         <br /> 
-                         
+                      <h4 >
+                      <div style={{color: "white"}}>
+                        {item.name}<br/>
+                        </div>
                         {category.sponsorSection}
-                      </h4>
-
-                     
-                      
+                        
+                        </h4>
                     </div>
+                    </a>
                   </div>
                 );
               })}

@@ -29,12 +29,7 @@ export default function SignUpModal(props) {
         e.preventDefault();
        console.log(formData);
        send(formData);
-        setFormData({
-            college: "",
-            year: "",
-            phone: "",
-        });
-        props.onHide();
+       
       }; 
 
       const handleFeedback = (msg) => {
@@ -53,17 +48,26 @@ export default function SignUpModal(props) {
             return;
           }
 
+      
+          if (formData.phone === "") {
+            alert("Please enter your phone number");
+            return;
+          }
+
+          const regex = /^(?:[+0]9)?[0-9]{10,12}$/;
+          
+          if(regex.test(formData.phone) === false){
+            alert("Invalid phone number.")
+            return;
+          }
+
           if (formData.year === "") {
             // handleFeedback("Please enter your year");
             // show alert
             alert("Please enter your year");
             return;
           }
-
-          if (formData.phone === "") {
-            handleFeedback("Please enter your phone number");
-            return;
-          }
+          
           
           const config = {
             headers: {
@@ -76,6 +80,13 @@ export default function SignUpModal(props) {
           const response = await axios.put(`${Keys.BASE_API}/user`, body, config);
     
           console.log(response.data); 
+
+          setFormData({
+            college: "",
+            year: "",
+            phone: "",
+        });
+        props.onHide();
     
            dispatch({
              type: LOGIN,
@@ -94,6 +105,7 @@ export default function SignUpModal(props) {
           }, 2000);
         } catch (error) {
           console.log(error);
+          props.onHide();
           dispatch({
             type: "ADD_ERROR",
             payload: { msg: "Something went wrong." },
@@ -128,9 +140,9 @@ export default function SignUpModal(props) {
                   <input
                    className="ModalInput"
                     name="college"
-                    required="required"
+                    required="true"
                     type="string"
-                    placeholder="College name"
+                    placeholder="College Name"
                     onChange={handleChange}
                   />
                 </div>
@@ -138,8 +150,9 @@ export default function SignUpModal(props) {
                     <input
                 className="ModalInput"
                     name="phone"
-                    required="required"
-                    type="text"
+                    required="true"
+                    type="tel"
+                    pattern="[1-9]{1}[0-9]{9}"
                     // mobile no validation
                     
                     placeholder="Mobile Number"
@@ -148,9 +161,8 @@ export default function SignUpModal(props) {
                 </div>
                 <div style ={{padding : "10px"}}>
 
-                <label for="year"  style={{marginRight:"10px"}}>Year:</label>
-                <br/>
               <select onChange={handleChange} className="ModalInput" name="year" required="required" type="string">
+                      <option value="" disabled selected>Study Year</option>
                       <option value="Fresher">Fresher</option>
                       <option value="Sophomore">Sophomore</option>
                       <option value="Prefinal Year">Prefinal Year</option>
@@ -158,8 +170,8 @@ export default function SignUpModal(props) {
                     </select>
                 </div>
                 <div style ={{padding : "10px"}}>
-                  <button type="submit" onClick={handleSubmit} >
-                    Register
+                  <button style={{color: "white", backgroundColor: "#4890ff", borderRadius: "5px", border: "2px solid #4890ff", fontSize: "20px"}} type="submit" onClick={handleSubmit} >
+                    Register 
                   </button>
                 </div>
               </form>

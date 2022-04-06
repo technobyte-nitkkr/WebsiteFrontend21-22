@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Background from '../../components/Background/Background';
 import Card from '../../components/card/Card';
+import BouncingDotsLoader from '../../components/loader/Loader';
 import "./developers.css"
 
 const Developers = () => {
@@ -29,7 +30,10 @@ const Developers = () => {
   }, []);
 
   return (
-    <div style={{ position: "relative" }}>
+    isLoading ? (
+      <BouncingDotsLoader/>
+    ) : (
+        <div style = {{ position: "relative" }}>
       <Background />
       <div className='headingGL'>
         MEET OUR DEVELOPERS
@@ -42,7 +46,8 @@ const Developers = () => {
         }
 
       </div>
-    </div>
+    </div >
+    )
   );
 };
 
