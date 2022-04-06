@@ -8,8 +8,9 @@ import Store from "../../Store/Store.js";
 import SignUpModal from '../SignUpModal';
 import Background from '../../components/Background/Background';
 import BouncingDotsLoader from '../../components/loader/Loader';
-
+import { useNavigate } from 'react-router-dom';
 const EventDescription = () => {
+  let navigate = useNavigate();
   const { category, event } = useParams();
 
   const [Event, setEvent] = useState([]);
@@ -26,11 +27,12 @@ const EventDescription = () => {
   const getInfo = async () => {
     try {
       //fetching this event info
+
       const res = await axios.get(
         `https://us-central1-techspardha-87928.cloudfunctions.net/api2/events/description?eventCategory=${category}&eventName=${event}`
       );
       setEvent(res.data.data);
-
+      
       if (isAuth) {
         //fetching user registered events
         var myevents = [];
@@ -54,7 +56,11 @@ const EventDescription = () => {
           }
         })
       }
+
+      setLoading(false);
     } catch (err) {
+      setLoading(true)
+      navigate("/error");
       console.log(err);
     }
   };
@@ -106,6 +112,7 @@ const EventDescription = () => {
         localStorage.setItem('eventsUpdated', true);
       }
     } catch (err) {
+      navigate("/error");
       console.log(err);
       alert(err);
     }
@@ -126,7 +133,6 @@ const EventDescription = () => {
   useEffect(async () => {
     setLoading(true);
     await getInfo();
-    setLoading(false);
   }, []);
 
   return (

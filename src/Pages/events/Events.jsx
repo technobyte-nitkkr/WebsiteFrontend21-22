@@ -5,10 +5,11 @@ import { useParams, Link } from 'react-router-dom';
 import Background from '../../components/Background/Background';
 import EventCard from '../../components/EventCard/EventCard';
 import BouncingDotsLoader from '../../components/loader/Loader';
-
+import { useNavigate } from 'react-router-dom';
 import "./events.css"
 
 const Events = () => {
+  let navigate = useNavigate();
    const { category } = useParams();
 
    const [events, setEvents] = useState([]);
@@ -23,6 +24,7 @@ const Events = () => {
        console.log(res.data.data.events);
        setLoading(false);
      } catch (err) {
+       navigate("/error");
        console.log(err);
      }
    };
