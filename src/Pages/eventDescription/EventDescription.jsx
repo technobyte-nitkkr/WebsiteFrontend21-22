@@ -151,7 +151,7 @@ const EventDescription = () => {
                     style={{ borderRadius: '20px', boxShadow: '0px 4px 10px #4890ff2f' }}
                     onError={(e) => {
                       e.target.onerror = null;
-                      e.target.src = "https://res.cloudinary.com/dvhrzmkwd/image/upload/v1643788204/Unknown39825/eesglbsknedo9vvnclkx.jpg";
+                      e.target.src = "https://i.ibb.co/hcR8BXn/placeholder.jpg";
                     }}
                   >
                   </Image>

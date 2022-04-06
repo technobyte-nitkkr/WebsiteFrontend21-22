@@ -15,7 +15,7 @@ const Sponsors = () => {
       try {
         var url = Keys.BASE_API + "/sponsors";
         var response = await axios.get(url);
-        setSponsorList(response.data.data.sponsors.reverse());
+        setSponsorList(response.data.data.sponsors);
         // response.data.data.sponsors.
       } catch (error) {
         console.log(error);
