@@ -11,6 +11,7 @@ import { LOGOUT } from "../../Store/Types";
 
 import Store from "../../Store/Store";
 import LoginButton from "../extras/LoginButton";
+import { FaBell } from "react-icons/fa";
 
 function Nav() {
   const [{ isAuth, authLoading, user }, dispatch] = useContext(Store);
@@ -95,7 +96,7 @@ function Nav() {
             >
               Testimonial
             </NavLink>
-
+            
             {isAuth ? (
               <>
                 <div className="nav-comp " style={{ float: "right" }}>

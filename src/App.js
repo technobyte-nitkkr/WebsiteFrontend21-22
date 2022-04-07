@@ -29,6 +29,8 @@ import Developers from "./Pages/developers/Developers";
 import SplashScreen from "./components/extras/Splash";
 import Footer from "./components/extras/Footer";
 import Notification from "./Pages/guestLecture/Notification";
+import NotiButton from "./components/NotiButton/NotiButton";
+import KommunicateChat from "./chat";
 
 function App() {
   const initialState = useContext(Store);
@@ -72,6 +74,8 @@ function App() {
                 <Nav />
                 <div className="routes">{routes}</div>
                 <Footer />
+                <NotiButton />
+                <KommunicateChat />
                 {/* <Main/> */}
               </>
             )}
