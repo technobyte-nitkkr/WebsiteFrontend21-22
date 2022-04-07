@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './GuesLecture.css'
+import "./Notification.css"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from 'react-responsive-carousel';
 import Background from '../../components/Background/Background';
 import { FaArrowAltCircleDown, FaArrowAltCircleUp, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import {  Button } from 'react-bootstrap';
 const Notification = () => {
     const [notifications, setNotifications] = useState([]);
     const scrollref = useRef(null);
-    
+
     const [expanded, setExpanded] = useState(0)
 
     useEffect(() => {
@@ -26,7 +27,7 @@ const Notification = () => {
                 console.log(err);
             })
     }, [])
- 
+
     return (
 
         <>
@@ -34,29 +35,29 @@ const Notification = () => {
             <div className='headingGL'>
                 Notifications
             </div>
-            <div className="mainContentGL">
-                <div className="carouselGL">
+            <div className="mainContentNoti">
+                <div className="carouselNoti">
 
                     {
-                        notifications.map((item,index) => {
+                        notifications.map((item, index) => {
                             return (
-                                <div key={index} class="profile-card">
+                                <div key={index} class="profile-cardNoti">
                                     <header>
-                                        
-                                        <img src={item.notification.image} 
-                                        
+
+                                        <img src={item.notification.image}
+
                                             onError={(e) => {
                                                 e.target.onerror = null;
                                                 e.target.src =
                                                     "https://i.ibb.co/hcR8BXn/placeholder.jpg";
                                             }}
-                                        
+
                                         />
-                                        <h1>{item.notification.title}</h1>
-                                        <h2>{item.date}</h2>
+                                        <h3>{item.notification.title}</h3>
+                                        
                                     </header>
-                                    <div class="profile-bio">
-                                        <p>{ expanded!==index+1 ? item.notification.body.substring(0,10): item.notification.body}</p>
+                                    <div class="profile-bioNoti">
+                                        <p>{expanded !== index + 1 ? item.notification.body.substring(0, 0) : item.notification.body}</p>
                                     </div>
                                     {expanded !== index + 1 && <div className="buttonarrow" onClick={() => {
                                         console.log("hello");
@@ -68,17 +69,29 @@ const Notification = () => {
                                         Show More
                                     </div>}
                                     {expanded === index + 1 &&
-                                    <div className="buttonarrow" onClick={() => {
+                                        <div className="buttonarrow" onClick={() => {
                                             setExpanded(0);
-                                      
-                                        console.log(expanded)
-                                    }}>
-                                        Show Less
+
+                                            console.log(expanded)
+                                        }}>
+                                            Show Less
+
+                                        </div>}
+
+                                    <Button  
+                                        className="profile-social-links"
+                                        style={{
+                                            color: "whitesmoke",
+                                            backgroundColor: "#3864e8",
+                                            fontSize: "20px",
+                                            borderColor: "transparent"
+                                        }}
+                                        href={item.notification.link}
+                                        >
+
+                                        Link
                                        
-                                    </div>}
-                                    <ul class="profile-social-links">
-                                       
-                                    </ul>
+                                    </Button>
 
                                 </div>
                             )
