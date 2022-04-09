@@ -20,7 +20,7 @@ const Events = () => {
        const res = await axios.get(
          `https://us-central1-techspardha-87928.cloudfunctions.net/api2/events/description?eventCategory=${category}`
        );
-       setEvents(res.data.data.events);
+       setEvents(res.data.data.events.filter(event => event.startTime > new Date('2022-01-01')));
        console.log(res.data.data.events);
        setLoading(false);
      } catch (err) {
