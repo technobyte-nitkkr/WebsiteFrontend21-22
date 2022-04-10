@@ -28,6 +28,9 @@ import Testimonial from "./Pages/testimonial/Testimonial";
 import Developers from "./Pages/developers/Developers";
 import SplashScreen from "./components/extras/Splash";
 import Footer from "./components/extras/Footer";
+import Notification from "./Pages/guestLecture/Notification";
+import NotiButton from "./components/NotiButton/NotiButton";
+import KommunicateChat from "./chat";
 
 function App() {
   const initialState = useContext(Store);
@@ -49,6 +52,7 @@ function App() {
       />
       <Route path="/user" element={<UserProfilePage />} />
       <Route path="/sponsors" element={<Sponsors />} />
+      <Route path="/notification" element={<Notification/>} />
       <Route path="/testimonial" element={<Testimonial />} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>
@@ -70,6 +74,8 @@ function App() {
                 <Nav />
                 <div className="routes">{routes}</div>
                 <Footer />
+                <NotiButton />
+                <KommunicateChat />
                 {/* <Main/> */}
               </>
             )}

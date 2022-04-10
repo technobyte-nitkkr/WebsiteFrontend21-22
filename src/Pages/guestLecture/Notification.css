@@ -1,0 +1,104 @@
+
+.mainContentNoti{
+    /* position: relative; */
+	position: relative;
+	/* background-color: blue; */
+    width: 90%  ;
+	margin: 0 auto;
+	padding: 0;
+    /* top: 250px; */
+	/* width: 100% !important; */
+     
+    /* max-height: 400vh; */ 
+    padding-bottom: 100px;
+}
+
+.carouselNoti{
+    margin:auto;
+    display: flex;
+    width: 90%;
+	margin: 10px auto;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.col-md-8{
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+
+	.profile-cardNoti{
+		border-radius: 30px;
+		overflow: hidden;
+		box-shadow: 0px 4px 80px #4890ff2f;
+        background-color: rgba(204, 204, 204, 0.225);
+		/* position: relative; */
+		margin: auto;
+		margin-top: 30px;
+		position: relative;
+		width: 24vw ;
+		
+		/* padding: auto 10px !important; */
+	}
+
+	.profile-cardNoti header{
+		display: block;
+		position: relative;
+		/* background: rgba(255,255,255,1); */
+		text-align: center;
+		padding: 30px  20px;
+		z-index: 1;
+		overflow: hidden;
+	}
+
+	.profile-cardNoti header img{
+		overflow: hidden;
+		width:100%;
+		height: 200px;
+		border-radius: 20px;
+		
+		box-shadow: 0 1px 0 rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.1);
+	}
+
+	.profile-cardNoti header h3{
+		font-weight: 200;
+		font-size: 20px;
+		color: white;
+		/* letter-spacing: -3px; */
+		margin: 0;
+		padding: 0;
+	}
+
+	.profile-cardNoti  p{
+		font-weight: 100;
+		
+		color: white;
+		/* letter-spacing: .5px; */
+		margin: 0;
+		padding:0 10px;
+	}
+
+.buttonarrow
+{
+	text-decoration: none;
+	border: none;
+	width: 100%;
+	height: 20px;
+	margin-top: 20px;
+	background-color: transparent !important;
+	color: grey;
+}
+
+@media screen and (max-width: 1000px) {
+	.profile-cardNoti{
+		width: 38vw !important;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.profile-cardNoti{
+		width: 80vw !important;
+	}
+}

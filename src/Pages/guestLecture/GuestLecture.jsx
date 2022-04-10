@@ -30,7 +30,7 @@ const Lecture = () => {
  
     return (
 
-        <div className="demo">
+        <>
             <Background />
             <div className='headingGL'>
                 Guest Lectures
@@ -97,7 +97,7 @@ const Lecture = () => {
                 </div>
             </div>
 
-        </div>
+        </>
     )
 }
 
