@@ -183,6 +183,7 @@ const EventDescription = () => {
 
                   </div>
 
+<<<<<<< HEAD
               {
                 Event.eventName == "Hackshetra" ? <>
                 <div 
@@ -223,6 +224,33 @@ const EventDescription = () => {
                 </>
               }
 
+=======
+                  {!isAuth ? <>
+
+                    <Button disabled style={{ color: "white", border: '1px  solid white', background: "transparent" }}>
+                      Login to Register
+                    </Button>
+                  </> : <>
+
+                    <Button onClick={handleClick}
+                      style={{
+                        color: "whitesmoke",
+                        backgroundColor: (isRegistered) ? "#e84338" : "#3864e8",
+                        fontSize: "20px",
+                        borderColor: "transparent"
+                      }}>
+                      {
+                        isRegistered ? <>Unregister</> : <>Register</>
+                      }
+                    </Button>
+                    <SignUpModal
+                      show={modalShow}
+                      onHide={handleClose}
+                      user={user}
+                    />
+                  </>}
+
+>>>>>>> f257e40fbe6e75d687a5eba7015fdf90bc06fc25
                 </Col>
                 <Col >
                   <div style={{ textAlign: 'left', color: 'white', fontSize: '30px' }}>

@@ -10,6 +10,13 @@ body {
   margin-top: 30px;
 }
 
+.cateogryWrapper img{
+  background-image: url('../../images/placeholder.jpg')!important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .categoriesOuter {
   /* background-color: red; */
   display: flex;
