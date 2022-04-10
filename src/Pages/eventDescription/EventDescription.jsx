@@ -134,6 +134,17 @@ const EventDescription = () => {
     await getInfo();
   }, []);
 
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    }
+}, []);
+
   return (
     !isLoading ?
       <>
@@ -172,30 +183,45 @@ const EventDescription = () => {
 
                   </div>
 
+              {
+                Event.eventName == "Hackshetra" ? <>
+                {/* <div 
+                  class="apply-button" 
+                  data-hackathon-slug="hackshetra" 
+                  data-button-theme="light"
+                  style="height: 44px; width: 312px"
+                ></div> */}
+                <Button>
+                Apply with devfolio
+                </Button>
+                </>:
+                <>
                   {!isAuth ? <>
 
-                    <Button disabled style={{ color: "white", border: '1px  solid white', background: "transparent" }}>
-                      Login to Register
-                    </Button>
-                  </> : <>
+<Button disabled style={{ color: "white", border: '1px  solid white', background: "transparent" }}>
+  Login to Register
+</Button>
+</> : <>
 
-                    <Button onClick={handleClick}
-                      style={{
-                        color: "whitesmoke",
-                        backgroundColor: (isRegistered) ? "#e84338" : "#3864e8",
-                        fontSize: "20px",
-                        borderColor: "transparent"
-                      }}>
-                      {
-                        isRegistered ? <>Unregister</> : <>Register</>
-                      }
-                    </Button>
-                    <SignUpModal
-                      show={modalShow}
-                      onHide={handleClose}
-                      user={user}
-                    />
-                  </>}
+<Button onClick={handleClick}
+  style={{
+    color: "whitesmoke",
+    backgroundColor: (isRegistered) ? "#e84338" : "#3864e8",
+    fontSize: "20px",
+    borderColor: "transparent"
+  }}>
+  {
+    isRegistered ? <>Unregister</> : <>Register</>
+  }
+</Button>
+<SignUpModal
+  show={modalShow}
+  onHide={handleClose}
+  user={user}
+/>
+</>}
+                </>
+              }
 
                 </Col>
                 <Col >
