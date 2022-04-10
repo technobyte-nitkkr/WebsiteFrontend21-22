@@ -130,20 +130,21 @@ const EventDescription = () => {
   }
 
   useEffect(async () => {
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "https://apply.devfolio.co/v2/sdk.js";
+    var h = document.getElementsByTagName("head")[0];
+    h.appendChild(s);
+
     setLoading(true);
     await getInfo();
+    return () => {
+      h.removeChild(s);
+    }
   }, []);
 
-  React.useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://apply.devfolio.co/v2/sdk.js';
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    }
-}, []);
+  
 
   return (
     !isLoading ?
@@ -182,18 +183,15 @@ const EventDescription = () => {
                     }
 
                   </div>
-
               {
                 Event.eventName == "Hackshetra" ? <>
-                {/* <div 
+                <div 
                   class="apply-button" 
                   data-hackathon-slug="hackshetra" 
                   data-button-theme="light"
-                  style="height: 44px; width: 312px"
-                ></div> */}
-                <Button>
-                Apply with devfolio
-                </Button>
+                  // style={{"height: 44px; width: 312px"}}
+                  style={{height:"44px", width:"312px"}}
+                ></div>
                 </>:
                 <>
                   {!isAuth ? <>
