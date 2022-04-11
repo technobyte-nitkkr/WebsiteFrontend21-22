@@ -186,8 +186,8 @@ const EventDescription = () => {
               {
                 Event.eventName == "Hackshetra" ? <>
                 <div 
-                  class="apply-button" 
-                  data-hackathon-slug="hackshetra" 
+                  className="apply-button" 
+                  data-hackathon-slug="hackshetra22" 
                   data-button-theme="light"
                   // style={{"height: 44px; width: 312px"}}
                   style={{height:"44px", width:"312px"}}
