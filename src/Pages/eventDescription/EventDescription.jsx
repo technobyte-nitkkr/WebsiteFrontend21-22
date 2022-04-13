@@ -111,7 +111,7 @@ const EventDescription = () => {
         localStorage.setItem('eventsUpdated', true);
       }
     } catch (err) {
-      navigate("/error");
+      // navigate("/error");
       console.log(err);
       alert(err);
     }
@@ -143,8 +143,6 @@ const EventDescription = () => {
       h.removeChild(s);
     }
   }, []);
-
-  
 
   return (
     !isLoading ?
