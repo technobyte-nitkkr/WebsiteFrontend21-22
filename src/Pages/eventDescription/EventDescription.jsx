@@ -60,7 +60,7 @@ const EventDescription = () => {
       setLoading(false);
     } catch (err) {
       setLoading(true)
-      navigate("/error");
+      // navigate("/error");
     }
   };
 
